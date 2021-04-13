@@ -1,0 +1,139 @@
+/* pages/home/home.wxss */
+
+.yellow-container {
+  height: 160rpx;
+  background-color: #F8D35F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60rpx 70rpx 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.menu-icon{
+  width: 60rpx;
+  height: 30rpx;
+  background-size: cover;
+}
+
+.user-icon {
+  width: 80rpx;
+  height: 80rpx;
+  background-size: cover;
+}
+
+.white-container {
+  margin-top: -50rpx;
+  z-index: 10;
+  border-radius: 70rpx 70rpx 0 0;
+  background-color: #F1F1F0;
+  padding: 50rpx 0;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 20pt;
+  font-weight: 600;
+  margin: 0 0 0 80rpx;
+  width: 100%;
+}
+
+.donation-container-yellow {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 60rpx 70rpx;
+  margin: 30rpx auto;
+  display: flex;
+  align-items: flex-end;
+  justify-items: space-around;
+  background-color: #F8D35F;
+  /* border: 1px solid #24241E; */
+  border-radius: 20rpx;
+}
+
+.donation-title {
+  font-size: 17pt;
+  font-weight: 600;
+  margin: 0 40rpx 30rpx 0;
+  line-height: 1.1em;
+}
+
+/* .container-two-thirds {
+  width: 40%;
+}
+
+.container-one-third {
+  width: 20%;
+} */
+
+.donate-paw {
+  width: 70rpx;
+  height: 60rpx;
+  background-size: cover;
+}
+
+.donate-button {
+  border-radius: 20rpx;
+  padding: 10rpx 20rpx;
+  width: 200rpx;
+}
+
+.sub-title {
+  margin: 20rpx 0 0 80rpx;
+  font-size: 13pt;
+  font-weight: 600; 
+}
+
+.card-flexbox {
+  display: flex;
+  align-items: center;
+  /* width: 90%; */
+  padding: 20rpx 0 0 66rpx;
+  overflow: auto;
+  position: relative;
+  top: 4rpx;
+  left: 0rpx;
+  overscroll-behavior-x: contain;
+}
+
+.card {
+  background-color: #f1f1f0;
+  display: inline-block;
+  margin: 0 20rpx 30rpx 0;
+}
+
+.card-image {
+  width: 260rpx;
+  height: 260rpx;
+  /* background-color: #F8D35F; */
+  border-radius: 50rpx 50rpx 0 50rpx;
+  background-size: cover;
+  background-position: center;
+}
+
+.dog-age-gender {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 80%;
+  padding-left: 10%;
+  color: white;
+  font-size: 8pt;
+}
+
+.mini-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dog-name-yellow {
+  padding: 30rpx;
+  background-color: #F8D35F;
+  padding: 16rpx 40rpx 16rpx 50rpx;
+  border-radius: 0 0 0 50rpx;
+  font-weight: 500;
+  font-size: 10pt;
+}

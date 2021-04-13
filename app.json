@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/home/home",
+    "pages/welcome/welcome"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#F8D35F",
+    "navigationBarTitleText": "aDogtion | Adopt & Foster Dogs",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
