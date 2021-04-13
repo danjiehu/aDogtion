@@ -1,4 +1,8 @@
 /**app.wxss**/
+page {
+  font-family: "Verdana", "Helvetica Neue", sans-serif;
+}
+
 .container {
   height: 100%;
   display: flex;

@@ -1,0 +1,66 @@
+<!-- pages/home/home.wxml -->
+<view class="yellow-container">
+  <view class="menu-icon" style="background-image: url('/images/menu.svg')"></view>
+  <view class="user-icon" style="background-image: url('/images/user.svg')"></view>
+</view>
+<view class="white-container">
+  <view class="title">aDogtion</view>
+  <view class="donation-container-yellow">
+      <view>
+        <view class="donation-title">Donate and save lives!</view>
+        <view class="donate-paw" style="background-image: url('/images/paw.svg')"></view>
+      </view>
+      <view>
+        <button class="button-donate" style="padding: 20rpx 15rpx; border-radius: 50rpx; width: 200rpx; font-weight: 600;">donate</button>
+      </view>
+  </view>
+
+  <view class="sub-title">New Dogs</view>
+  <view class="card-flexbox">
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/furball.JPG')">
+        <view class="dog-age-gender">1 year • Female</view>
+      </view>
+      <view class="mini-flex">
+       <view class="do-not-delete-me"></view>
+       <view class="dog-name-yellow">Coco</view>
+      </view>
+    </view>
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/bruno.JPG')">
+        <view class="dog-age-gender">8 months • Male</view>
+      </view>
+      <view class="mini-flex">
+       <view></view>
+       <view class="dog-name-yellow">Bernardo</view>
+      </view>
+    </view>
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/coco.JPG')">
+        <view class="dog-age-gender">8 months • Female</view>
+      </view>
+      <view class="mini-flex">
+       <view></view>
+       <view class="dog-name-yellow">Bolita</view>
+      </view>
+    </view>
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/mike.JPG')">
+        <view class="dog-age-gender">8 months • Female</view>
+      </view>
+      <view class="mini-flex">
+       <view></view>
+       <view class="dog-name-yellow">Bolita</view>
+      </view>
+    </view>
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/cinnamon.JPG')">
+        <view class="dog-age-gender">8 months • Female</view>
+      </view>
+      <view class="mini-flex">
+       <view></view>
+       <view class="dog-name-yellow">Bolita</view>
+      </view>
+    </view>
+  </view>
+</view>
