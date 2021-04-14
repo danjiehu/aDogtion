@@ -22,14 +22,14 @@
   <view class="icon-container">
     <view class="mini-flex">
       <image class="icon-small" src="/images/time.svg"></image>
-      <view>5h</view>
+      <view class="small-txt grey-txt">5h</view>
     </view>
     <view class="two-icons">
-      <view class="mini-flex">
+      <view class="mini-flex small-txt">
         <image class="icon-small" src="/images/male.svg"></image>
         <view>Boy</view>
       </view>
-      <view class="mini-flex">
+      <view class="mini-flex small-txt">
         <image class="icon-small" src="/images/black.svg"></image>
         <view>Black</view>
       </view> 
@@ -38,8 +38,46 @@
 
   <!-- Dog description -->
   <view class="title">Coco</view>
-  <view class="left-border-box">Found at the market. Timid at first, loving, great with other animals.</view>
+  <view class="left-border-box grey-txt">Found at the market. Timid at first, loving, great with other animals.</view>
 
+  <view class="border-shadow"></view>
+  <view class="grey-container">
+    <view>
+      <view class="bold">3Y</view>
+      <view class="small-txt grey-txt">AGE</view>
+    </view>
+    <view>
+      <view class="bold">SMALL</view>
+      <view class="small-txt grey-txt">SIZE</view>
+    </view>
+    <view>
+      <view class="bold">7 KG</view>
+      <view class="small-txt grey-txt">WEIGHT</view>
+    </view>
+  </view>
+
+  <view class="flex-details">
+    <view class="mini-flex">
+      <image class="icon-small" src="/images/time.svg"></image>
+      <view class="bold grey-txt">VACCINATED</view>
+    </view>
+    <view class="mini-flex">
+      <image class="icon-small" src="/images/time.svg"></image>
+      <view class="bold grey-txt">NEUTERED</view>
+    </view>
+  </view>
+
+  <!-- tags -->
+  <view class="tags-container">
+    <view class="btn-grey grey-txt">obedient</view>
+    <view class="btn-grey grey-txt">friendly</view>
+  </view>
+
+  <view class="yellow-btn" bindtap="navigateToHome">
+    <view class="bold">FOSTER</view>
+    <view class="right-border"></view>
+    <view class="bold">ADOPT</view>
+  </view>
 
 </view>
   
