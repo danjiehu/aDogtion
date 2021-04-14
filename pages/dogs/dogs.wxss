@@ -1,0 +1,124 @@
+/* pages/dogs/dogs.wxss */
+
+.yellow-container {
+  height: 260rpx;
+  background-color: #f6c752;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60rpx 70rpx 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.grey-container {
+  margin-top: -50rpx;
+  z-index: 10;
+  border-radius: 70rpx 70rpx 0 0;
+  background-color: #F1F1F0;
+  padding: 70rpx 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 93vh;
+}
+
+.title {
+  font-size: 20pt;
+  margin: 0 0 0 80rpx;
+  width: 100%;
+}
+
+.playfair {
+  font-family: "Playfair display";
+}
+
+.filters {
+  display: inline-block;
+  color: #B6B1B1;
+  position: absolute;
+  right: 80rpx;
+  top: 280rpx;
+  font-size: 11pt;
+}
+
+.sub-title {
+  margin: 20rpx 0 0 80rpx;
+  font-size: 15pt;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 10;
+}
+
+.yellow-line {
+  width: 60rpx;
+  height: 20rpx;
+  background-color: #f6c752;
+  margin: -14rpx 0 0 80rpx;
+  z-index: 0;
+}
+
+.cards-masonry {
+  padding: 40rpx 70rpx 100rpx 70rpx;
+  column-count: 2;
+  column-gap: 40rpx;
+}
+
+.card {
+  box-sizing: border-box;
+  /* padding-bottom: 30rpx; */
+  width: 100%;
+  display: inline-block;
+}
+
+.img-full{
+  /* height: 400rpx; */
+  background-color: #f1f1f0;
+  border-radius: 32rpx 32rpx 0 32rpx;
+  width: 100%;
+  /* margin-top: -40rpx; */
+  z-index: 0;
+}
+
+.card-image {
+  height: 100%;
+  /* background-color: #F8D35F; */
+  border-radius: 40rpx 40rpx 0 40rpx;
+  background-size: cover;
+  background-position: center;
+}
+
+.dog-age-gender {
+  /* margin: -56rpx 0 20rpx 0; */
+  z-index: 100;
+  position: relative;
+  bottom: 52rpx;
+  right: 0;
+  width: 90%;
+  color: white;
+  font-size: 9pt;
+  text-align: right;
+}
+
+.mini-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dog-name-yellow {
+  background-color: #f6c752;
+  padding: 16rpx 40rpx 16rpx 50rpx;
+  border-radius: 0 0 0 50rpx;
+  font-size: 10pt;
+  margin-top: -38rpx;
+}
+
+.like-button {
+  width: 22rpx;
+  height: 22rpx;
+  margin-left: 82%;
+  z-index: 100;
+  position: relative;
+  top: 52rpx;
+  right: 0;
+}

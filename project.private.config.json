@@ -21,6 +21,19 @@
         {
           "name": "Welcome",
           "pathName": "pages/welcome/welcome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/dog/dog",
+          "pathName": "pages/dog/dog",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Dogs",
+          "pathName": "pages/dogs/dogs",
+          "query": "",
           "scene": null
         }
       ]
