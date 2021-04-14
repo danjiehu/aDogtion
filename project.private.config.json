@@ -25,6 +25,12 @@
           "scene": null
         },
         {
+          "name": "pages/dog/dog",
+          "pathName": "pages/dog/dog",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "contact",
           "pathName": "pages/contact/contact",
           "query": "",
@@ -33,6 +39,12 @@
         {
           "name": "booking",
           "pathName": "pages/booking/booking",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Dogs",
+          "pathName": "pages/dogs/dogs",
           "query": "",
           "scene": null
         }

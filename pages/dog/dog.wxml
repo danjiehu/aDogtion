@@ -1,0 +1,86 @@
+<!--pages/dog/dog.wxml-->
+
+<view class="photo-background">
+  <view class='swiper-wrapper'>
+    <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
+      <block wx:for="{{swiperList}}" wx:key="key1">
+        <swiper-item>
+          <image mode="aspectFill" class="swiper_image" src="{{item}}" lazy-load="true" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots" >
+      <block wx:for="{{swiperList}}" wx:key="key2">
+        <view class="dot {{index == activeSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="white-container">
+  <image class="btn-fav" src="/images/fav.svg"></image>
+  <view class="icon-container">
+    <view class="mini-flex">
+      <image class="icon-small" src="/images/time.svg"></image>
+      <view class="small-txt grey-txt">5h</view>
+    </view>
+    <view class="two-icons">
+      <view class="mini-flex small-txt">
+        <image class="icon-small" src="/images/male.svg"></image>
+        <view>Boy</view>
+      </view>
+      <view class="mini-flex small-txt">
+        <image class="icon-small" src="/images/black.svg"></image>
+        <view>Black</view>
+      </view> 
+    </view>
+  </view>
+
+  <!-- Dog description -->
+  <view class="title playfair">Coco</view>
+  <view class="left-border-box grey-txt">Found at the market. Timid at first, loving, great with other animals.</view>
+
+  <view class="border-shadow"></view>
+  <view class="grey-container">
+    <view>
+      <view class="bold">3Y</view>
+      <view class="small-txt grey-txt">AGE</view>
+    </view>
+    <view>
+      <view class="bold">SMALL</view>
+      <view class="small-txt grey-txt">SIZE</view>
+    </view>
+    <view>
+      <view class="bold">7 KG</view>
+      <view class="small-txt grey-txt">WEIGHT</view>
+    </view>
+  </view>
+
+  <view class="flex-details">
+    <view class="mini-flex">
+      <image class="icon-small" src="/images/time.svg"></image>
+      <view class="bold grey-txt">VACCINATED</view>
+    </view>
+    <view class="mini-flex">
+      <image class="icon-small" src="/images/time.svg"></image>
+      <view class="bold grey-txt">NEUTERED</view>
+    </view>
+  </view>
+
+  <!-- tags -->
+  <view class="tags-container">
+    <view class="btn-grey grey-txt playfair bold">obedient</view>
+    <view class="btn-grey grey-txt playfair bold">friendly</view>
+  </view>
+
+  <view class="yellow-btn" bindtap="navigateToHome">
+    <view class="bold playfair larger">FOSTER</view>
+    <view class="right-border"></view>
+    <view class="bold playfair larger">ADOPT</view>
+  </view>
+
+  <!-- back arrow -->
+  <image class="top-btn" src="/images/arrow.svg"></image>
+
+</view>
+  
