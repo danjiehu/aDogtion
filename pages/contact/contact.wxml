@@ -20,6 +20,8 @@
   </view>
   <!-- end of selected dog card -->
 
+  <!-- start of form-container -->
+  <view class="form-container">
   <form bindsubmit="submit">
     <view class="title">NAME</view>
     <input type="text" placeholder="your name" />
@@ -28,9 +30,11 @@
     <input type="number" placeholder="000 0000 0000" /> 
 
     <view class="title">MESSAGE</view>
-    <input type="type..." />
+    <input type="text" placeholder="leave your message..." />
 
-    <button form-type="submit">CONTINUE</button>
+    <button id="button" form-type="submit">CONTINUE</button>
   </form>
+  </view>
+   <!-- end of form-container -->
 
 </view>

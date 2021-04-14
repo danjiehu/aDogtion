@@ -18,8 +18,9 @@
   width: 100%;
   margin-top: -50rpx;
   padding: 29px 44px;
-  height: 100vh;
+  height: auto;
   background-color: #ffffff;
+  padding-bottom: 0px;
 }
 
 .title-container {
@@ -52,6 +53,7 @@
   background-color:#F1F1F0;
   width: 100%;
   align-items: center;
+  box-sizing: border-box;
 }
 
 #dog-photo {
@@ -75,12 +77,35 @@
   margin-top: 4px;
 }
 
+.form-container {
+  margin-top: 26px;
+}
+
 /* start of input name */
 .title {
-
+  color: #B6B1B1;
+  font-size: 16px;
+  margin-bottom: 13px;
 }
 
 input {
-
+  font-size: 18px;
+  margin-bottom: 23.5px;
+  color: #24241E;
+  font-weight: bold;
+  border-bottom: 1px solid #E4E4E4;
+  padding-bottom: 6.5px;
 }
 /* end of input message */
+
+#button {
+  font-family: 'Playfair Display';
+  padding: 24px 200px 34px 50px;
+  margin-right: 0px;
+  position: relative;
+  left: 44px;
+  margin-bottom: 0;
+  border-radius: 25px 0px 0px 0px;
+  background-color: #F8D35F;
+  margin-top: 66.5px;
+}
