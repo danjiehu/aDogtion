@@ -37,7 +37,7 @@
   </view>
 
   <!-- Dog description -->
-  <view class="title">Coco</view>
+  <view class="title playfair">Coco</view>
   <view class="left-border-box grey-txt">Found at the market. Timid at first, loving, great with other animals.</view>
 
   <view class="border-shadow"></view>
@@ -69,15 +69,18 @@
 
   <!-- tags -->
   <view class="tags-container">
-    <view class="btn-grey grey-txt">obedient</view>
-    <view class="btn-grey grey-txt">friendly</view>
+    <view class="btn-grey grey-txt playfair bold">obedient</view>
+    <view class="btn-grey grey-txt playfair bold">friendly</view>
   </view>
 
   <view class="yellow-btn" bindtap="navigateToHome">
-    <view class="bold">FOSTER</view>
+    <view class="bold playfair larger">FOSTER</view>
     <view class="right-border"></view>
-    <view class="bold">ADOPT</view>
+    <view class="bold playfair larger">ADOPT</view>
   </view>
+
+  <!-- back arrow -->
+  <image class="top-btn" src="/images/arrow.svg"></image>
 
 </view>
   

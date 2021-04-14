@@ -1,8 +1,8 @@
 // pages/dog/dog.js
 Page({
   data: {
-    swiperList: ['/images/coco.jpg'],
-    // swiperList: ['/images/coco.jpg', '/images/cinnamon.JPG', '/images/bruno.jpg'],
+    // swiperList: ['/images/coco.jpg'],
+    swiperList: ['/images/coco.jpg', '/images/cinnamon.JPG', '/images/bruno.jpg'],
     activeSwiper: 0
   },
 
