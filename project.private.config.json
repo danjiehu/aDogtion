@@ -25,8 +25,9 @@
           "scene": null
         },
         {
-          "name": "contact",
-          "pathName": "pages/home/home",
+          "name": "pages/contact/contact",
+          "pathName": "pages/contact/contact",
+          "query": "",
           "scene": null
         }
       ]
