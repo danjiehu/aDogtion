@@ -1,0 +1,23 @@
+<!--pages/bookSuccess/bookSuccess.wxml-->
+
+<view class="page-container">
+  <image id="tick-circle" src="/images/tick.png"></image>
+  <view class="h1">Your appointment has been booked</view>
+  <view class="h2">Coco will be waiting for you</view>
+
+  <view class="appointment-card">
+    <view class="dog-card">
+        <image id="dog-photo" src="/images/coco.jpg"></image>
+        <view>
+          <view class="dog-name">Coco</view>
+          <view class="dog-more">1 year • Male</view>
+        </view>
+    </view>
+
+    <view>Wed 24 April</view>
+    <view>09:30 am</view>
+  </view>
+
+  <button id="button">Go home</button>
+</view>
+
