@@ -1,0 +1,36 @@
+<!--pages/booking/booking.wxml-->
+
+<view class="yellow-container">
+  <image id="dog" src="/images/dog.png"></image>
+</view>
+
+<view class="white-container">
+  <view class="title-container">
+    <view class="yellow-circle"></view>
+    <view class="top-title">Booking your appointment</view>
+  </view>
+
+  <!-- start of selected dog card -->
+  <view class="dog-card">
+    <image id="dog-photo" src="/images/coco.jpg"></image>
+    <view>
+      <view class="dog-name">Coco</view>
+      <view class="dog-more">1 year • Male</view>
+    </view>
+  </view>
+  <!-- end of selected dog card -->
+
+  <!-- start of form-container -->
+  <view class="form-container">
+  <form bindsubmit="submit">
+
+    <view class="title">DATE</view>
+    <input type="text" placeholder="input date" />
+    <view>horizontal scroll</view>
+
+    <button id="button" form-type="submit">BOOK</button>
+  </form>
+  </view>
+   <!-- end of form-container -->
+
+</view>
