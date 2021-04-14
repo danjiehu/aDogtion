@@ -1,0 +1,40 @@
+<!--pages/contact/contact.wxml-->
+
+<view class="yellow-container">
+  <image id="dog" src="/images/dog.png"></image>
+</view>
+
+<view class="white-container">
+  <view class="title-container">
+    <view class="yellow-circle"></view>
+    <view class="top-title">Contact</view>
+  </view>
+
+  <!-- start of selected dog card -->
+  <view class="dog-card">
+    <image id="dog-photo" src="/images/coco.jpg"></image>
+    <view>
+      <view class="dog-name">Coco</view>
+      <view class="dog-more">1 year • Male</view>
+    </view>
+  </view>
+  <!-- end of selected dog card -->
+
+  <!-- start of form-container -->
+  <view class="form-container">
+  <form bindsubmit="submit">
+    <view class="title">NAME</view>
+    <input type="text" placeholder="your name" />
+
+    <view class="title">PHONE</view>
+    <input type="number" placeholder="000 0000 0000" /> 
+
+    <view class="title">MESSAGE</view>
+    <input type="text" placeholder="leave your message..." />
+
+    <button id="button" form-type="submit">CONTINUE</button>
+  </form>
+  </view>
+   <!-- end of form-container -->
+
+</view>

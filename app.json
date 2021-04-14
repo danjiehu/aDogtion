@@ -2,6 +2,8 @@
   "pages":[
     "pages/home/home",
     "pages/welcome/welcome",
+    "pages/contact/contact",
+    "pages/booking/booking",
     "pages/dog/dog",
     "pages/dogs/dogs"
   ],
