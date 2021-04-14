@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/contact/contact"
   ],
   "window":{
     "backgroundTextStyle":"light",

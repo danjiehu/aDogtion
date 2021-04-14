@@ -21,6 +21,12 @@
         {
           "name": "Welcome",
           "pathName": "pages/welcome/welcome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "contact",
+          "pathName": "pages/home/home",
           "scene": null
         }
       ]
