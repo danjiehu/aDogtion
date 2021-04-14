@@ -1,0 +1,45 @@
+<!--pages/dog/dog.wxml-->
+
+<view class="photo-background">
+  <view class='swiper-wrapper'>
+    <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
+      <block wx:for="{{swiperList}}" wx:key="key1">
+        <swiper-item>
+          <image mode="aspectFill" class="swiper_image" src="{{item}}" lazy-load="true" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots" >
+      <block wx:for="{{swiperList}}" wx:key="key2">
+        <view class="dot {{index == activeSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="white-container">
+  <image class="btn-fav" src="/images/fav.svg"></image>
+  <view class="icon-container">
+    <view class="mini-flex">
+      <image class="icon-small" src="/images/time.svg"></image>
+      <view>5h</view>
+    </view>
+    <view class="two-icons">
+      <view class="mini-flex">
+        <image class="icon-small" src="/images/male.svg"></image>
+        <view>Boy</view>
+      </view>
+      <view class="mini-flex">
+        <image class="icon-small" src="/images/black.svg"></image>
+        <view>Black</view>
+      </view> 
+    </view>
+  </view>
+
+  <!-- Dog description -->
+  <view class="title">Coco</view>
+  <view class="left-border-box">Found at the market. Timid at first, loving, great with other animals.</view>
+
+
+</view>
+  

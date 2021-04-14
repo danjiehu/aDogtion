@@ -2,7 +2,7 @@
 
 .yellow-container {
   height: 160rpx;
-  background-color: #F8D35F;
+  background-color: #F6C752;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@
   display: flex;
   align-items: flex-end;
   justify-items: space-around;
-  background-color: #F8D35F;
+  background-color: #F6C752;
   /* border: 1px solid #24241E; */
   border-radius: 20rpx;
 }
@@ -131,7 +131,7 @@
 
 .dog-name-yellow {
   padding: 30rpx;
-  background-color: #F8D35F;
+  background-color: #F6C752;
   padding: 16rpx 40rpx 16rpx 50rpx;
   border-radius: 0 0 0 50rpx;
   font-weight: 500;

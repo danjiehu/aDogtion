@@ -1,0 +1,138 @@
+/* pages/dog/dog.wxss */
+.photo-background {
+  /* height: 60vh; */
+  border-radius: 72rpx 0 0 72rpx;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 0;
+}
+ 
+
+/* swiper styles */
+
+.swiper-wrapper {
+  height: auto;
+  position: relative;
+  background-color: #000000;
+}
+ 
+.swipers {
+  height: 50vh;
+  opacity: 0.65;
+}
+ 
+.swiper-wrapper image {
+  width: 100%;
+  height: 100%;
+}
+ 
+.dots {
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-evenly;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125rpx;
+}
+ 
+/* dot css */
+
+.dot {
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin-right: 16rpx;
+  background-color: #fff;
+}
+ 
+/* active dot css  */
+ 
+.active {
+  background-color: #F6C752;
+  width: 9px;
+  height: 9px;
+}
+
+input {
+  font-size: 11pt;
+  padding-bottom: 20rpx;
+}
+
+.new-comment-flexbox {
+  display: flex;
+  align-content: baseline;
+  padding: 20rpx;
+}
+
+/* dog details css */
+
+.white-container {
+  margin-top: -70rpx;
+  z-index: 10;
+  border-radius: 70rpx 70rpx 0 0;
+  background-color: #F1F1F0;
+  padding: 50rpx 0;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+/* icons css */
+
+.btn-fav{
+  background-color: #f6c752;
+  border-radius: 14rpx;
+  height: 48rpx;
+  width: 48rpx;
+  padding: 36rpx;
+  position: fixed;
+  top: 42%;
+  left: 70%;
+}
+
+.icon-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.two-icons-container{
+  background-color: #F6C752;
+}
+
+.two-icons{
+  display: flex;
+  margin-right: 100rpx;
+}
+
+.icon-small{
+  height: 36rpx;
+  width: 36rpx;
+  margin-right: 10rpx;
+  padding: 0;
+}
+
+.title {
+  font-size: 20pt;
+  font-weight: 600;
+  margin: 0 0 0 80rpx;
+  width: 100%;
+}
+
+.mini-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 84rpx;
+}
+
+.left-border-box{
+  width: 75vw;
+  margin: 30rpx 60rpx 30rpx 85rpx;
+}

@@ -1,13 +1,15 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/welcome/welcome"
+    "pages/welcome/welcome",
+    "pages/dog/dog"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#F8D35F",
+    "navigationBarBackgroundColor": "#F6C752",
     "navigationBarTitleText": "aDogtion | Adopt & Foster Dogs",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
