@@ -10,6 +10,13 @@ page{
   z-index: 0;
 }
  
+.playfair {
+  font-family: "Playfair display";
+}
+
+.larger {
+  font-size: larger;
+}
 
 /* swiper styles */
 
@@ -208,7 +215,7 @@ input {
   right: 0;
   width: 80%;
   height: 150rpx;
-  padding: 50rpx 40px 0px 0rpx;
+  padding: 40rpx 0 0 0;
   box-sizing: border-box;
   border-radius: 50rpx 0 0 0;
   background-color: #f6c752;
@@ -219,4 +226,14 @@ input {
 .right-border {
   border-right: 1px solid #24241E;
   height: 40rpx;
+}
+
+.top-btn {
+  position: fixed;
+  top: 6%;
+  left: 6%;
+  height: 56rpx;
+  width: 56rpx;
+  margin-right: 10rpx;
+  padding: 0;
 }
