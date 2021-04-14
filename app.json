@@ -5,7 +5,8 @@
     "pages/contact/contact",
     "pages/booking/booking",
     "pages/dog/dog",
-    "pages/dogs/dogs"
+    "pages/dogs/dogs",
+    "pages/bookSuccess/bookSuccess"
   ],
   "window":{
     "backgroundTextStyle":"light",

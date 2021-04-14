@@ -1,0 +1,85 @@
+/* pages/bookSuccess/bookSuccess.wxss */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 131px 55px;
+  background-color: #F8D35F;
+  height: 100vh;
+}
+
+#tick-circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.h1{
+  font-family: "Playfair Display";
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.h2{
+  /* font-family: "Playfair Display"; */
+  font-size: 17px;
+  /* font-weight: bold; */
+  text-align: center;
+  margin-top: 43px;
+  margin-bottom: 19px;
+}
+
+.appointment-card {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 35px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.dog-card {
+  display: flex;
+  border-radius: 16px;
+  /* padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px; */
+  background-color:#FFFFFF;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 22px;
+}
+
+#dog-photo {
+  height: 72px;
+  width: 72px;
+  border-radius: 10px;
+  margin-right: 14px;
+}
+
+.dog-name {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Playfair Display";
+  width: 100%;
+}
+
+.dog-more {
+  color: #B6B1B1;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+#button {
+  border-radius: 25px;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  margin-top: 79px;
+  width: 128px;
+}
