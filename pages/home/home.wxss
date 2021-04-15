@@ -1,4 +1,8 @@
 /* pages/home/home.wxss */
+page{
+  width: 100vw;
+  box-sizing: border-box;
+}
 
 .yellow-container {
   height: 160rpx;
@@ -10,6 +14,7 @@
   width: 100%;
   box-sizing: border-box;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 .menu-icon{
@@ -37,7 +42,7 @@
 .title {
   font-size: 30pt;
   margin: 0 0 0 80rpx;
-  width: 100%;
+  width: 60%;
 }
 
 .playfair {
@@ -72,11 +77,11 @@
 }
 
 .dog-head {
-  width: 160rpx;
+  width: 200rpx;
   height: 100rpx;
   position: relative;
-  right: -114rpx;
-  bottom: 0;
+  right: -72rpx;
+  bottom: -16rpx;
   background-size: cover;
 }
 
@@ -85,7 +90,7 @@
   height: 140rpx;
   position: relative;
   right: -114rpx;
-  bottom: 30rpx;
+  bottom: 20rpx;
   background-size: cover;
 }
 
@@ -203,7 +208,7 @@
   font-size: 9pt;
   color: #24241E;
   line-height: 1em;
-  letter-spacing: 0.05em;
+  /* letter-spacing: 0.05em; */
   margin: 0 0 30rpx 0;
 }
 
@@ -215,4 +220,8 @@
   height: 300rpx;
   background-size: cover;
   margin: 0 20rpx 0 30rpx;
+}
+
+.bold{
+  font-weight: 600;
 }

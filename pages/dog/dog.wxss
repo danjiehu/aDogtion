@@ -1,13 +1,17 @@
 /* pages/dog/dog.wxss */
 page{
   color: #24241E;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .photo-background {
   /* height: 60vh; */
   border-radius: 72rpx 0 0 72rpx;
   width: 100vw;
   box-sizing: border-box;
   z-index: 0;
+  
 }
  
 .playfair {
@@ -34,8 +38,13 @@ page{
 .swiper-wrapper image {
   width: 100%;
   height: 100%;
+  
 }
  
+.swiper-image{
+  background-position: top;
+}
+
 .dots {
   height: 20rpx;
   display: flex;

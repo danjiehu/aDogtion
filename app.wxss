@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import "/style/style.wxss";
+
 page {
   font-family: "Verdana", "Helvetica Neue", sans-serif;
 }

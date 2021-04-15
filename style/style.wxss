@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Playfair display';
+  src: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lX2YjzJtyPc1EDr.eot');
+  src: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lX2YjzJtyPc1EDr.eot?#iefix') format('embedded-opentype'),
+      /* url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lX2YjqaoyStqeyG.woff2') format('woff2'), */
+      /* url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lX2YjhMrCi3BxGD.woff') format('woff'), */
+      /* url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lX2Yjao6RTDxIh0.ttf') format('truetype'), */
+      url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lX2YjBsOvt9KnbT.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

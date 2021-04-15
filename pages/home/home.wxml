@@ -1,64 +1,64 @@
 <!-- pages/home/home.wxml -->
+
 <view class="yellow-container">
-  <view class="menu-icon" style="background-image: url('/images/menu.svg')"></view>
-  <view class="user-icon" style="background-image: url('/images/user.svg')"></view>
+  <!-- <view class="menu-icon" style="background-image: url('/images/menu.svg')"></view>
+  <view class="user-icon" style="background-image: url('/images/user.svg')"></view> -->
 </view>
+
+        <!-- TWO BUTTONS -->
+
 <view class="grey-container">
-  <view class="title playfair">aDogtion</view>
-  <view class="butt-flexbox">
+
+  <view class="title playfair bold">aDogtion</view>
+  <view class="butt-flexbox" bindtap="navigateToDogs">
     <view class="butt-card">
-      <view class="butt-title playfair">Adopt</view>
+      <view class="butt-title playfair bold">Adopt</view>
       <view class="butt-text">87 dogs</view>
       <view class="dog-head" style="background-image: url(/images/dog-head.svg)"></view>
     </view>
-    <view class="butt-card">
-      <view class="butt-title playfair">Foster</view>
+    <view class="butt-card" bindtap="navigateToDogs">
+      <view class="butt-title playfair bold">Foster</view>
       <view class="butt-text">45 dogs</view>
       <view class="dog-butt" style="background-image: url(/images/dog-butt.svg)"></view>
     </view>
   </view>
+
+   <!-- NEW DOGS CARDS -->
+
   <view class="sub-title playfair">New Dogs</view>
   <view class="card-flexbox">
-    <view class="card">
-      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/furball.JPG')">
-        <view class="dog-age-gender">1 year • Female</view>
+    <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
+      <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
+        <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.image[0].path}}')">
+          <view class="dog-age-gender">{{dog.age}} years • {{dog.gender}}</view>
+        </view>
+        <view class="mini-flex">
+          <view class="do-not-delete-me"></view>
+          <view class="dog-name-yellow playfair bold">{{dog.name}}</view>
+        </view>
       </view>
-      <view class="mini-flex">
-       <view class="do-not-delete-me"></view>
-       <view class="dog-name-yellow playfair">Coco</view>
-      </view>
-    </view>
-    <view class="card">
-      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/bruno.JPG')">
-        <view class="dog-age-gender">8 months • Male</view>
-      </view>
-      <view class="mini-flex">
-       <view></view>
-       <view class="dog-name-yellow playfair">Bernardo</view>
-      </view>
-    </view>
-    <view class="card">
-      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/coco.JPG')">
-        <view class="dog-age-gender">8 months • Female</view>
-      </view>
-      <view class="mini-flex">
-       <view></view>
-       <view class="dog-name-yellow playfair">Bolita</view>
-      </view>
-    </view>
+    </block>
   </view>
+
+  
+    
+        <!-- DONATION -->
+
   <view class="wide-card card-donation-yellow">
       <view>
-        <view class="donation-title playfair">Donate and save lives!</view>
+        <view class="donation-title playfair bold">Donate and save lives!</view>
         <view class="donate-paw" style="background-image: url('/images/paw.svg')"></view>
       </view>
       <view>
         <button class="round-button white playfair" style="width: 200rpx;">donate</button>
       </view>
   </view>
+
+       <!-- ABOUT US  -->
+
   <view class="wide-card card-about-white">
       <view>
-        <view class="about-us-title playfair">About us</view>
+        <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
         <button class="round-button yellow playfair" style="width: 250rpx;">learn more</button>
       </view>
