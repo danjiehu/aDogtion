@@ -1,0 +1,71 @@
+<!--pages/profile/profile.wxml-->
+<view class="white-container">
+  <view class="center">
+    <view class="user-icon" style="background-image: url('/images/user.svg')"></view>
+    <view class="subtitle">username</view>
+  </view>   
+</view>
+
+<view class="grey-container">
+  
+  <view class="sub-title playfair">Your Favorite Dogs</view>
+  <view class="card-flexbox">
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/furball.JPG')">
+        <view class="dog-age-gender">1 year • Female</view>
+      </view>
+      <view class="mini-flex">
+       <view class="do-not-delete-me"></view>
+       <view class="dog-name-yellow playfair">Coco</view>
+      </view>
+    </view>
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/bruno.JPG')">
+        <view class="dog-age-gender">8 months • Male</view>
+      </view>
+      <view class="mini-flex">
+       <view></view>
+       <view class="dog-name-yellow playfair">Bernardo</view>
+      </view>
+    </view>
+    <view class="card">
+      <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('/images/coco.JPG')">
+        <view class="dog-age-gender">8 months • Female</view>
+      </view>
+      <view class="mini-flex">
+       <view></view>
+       <view class="dog-name-yellow playfair">Bolita</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Success Stories  -->
+  <view class="sub-title playfair">Success Stories</view>
+  <view class="wide-card card-donation-yellow">
+      <view>
+        <view class="donation-title playfair bold">Donate and save lives!</view>
+      </view>
+      <view>
+        <button class="round-button white playfair" style="width: 200rpx;">donate</button>
+      </view>
+  </view>
+
+  <!-- Donate Stories -->
+  <view class="wide-card card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1601758124331-9410bf99002f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGRvZyUyMGxvdmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60) ">
+    <view>
+      <view class="white-txt playfair bold">Olivia & Almond</view>
+      <view class="white-txt small-txt">A love story</view>
+    </view>
+    <image mode="widthFix" class="icon-btn" src="/images/arrow.svg"></image>
+  </view>
+  <view class="wide-card card-about-white">
+      <view>
+        <view class="about-us-title playfair bold">About us</view>
+        <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
+        <button class="round-button yellow playfair" style="width: 250rpx;">learn more</button>
+      </view>
+      <view>
+        <view class="image-dog-about" style="background-image: url('/images/dog-about-us.svg')"></view>
+      </view>
+  </view>
+</view>

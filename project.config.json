@@ -73,6 +73,43 @@
         {
           "name": "pages/home/home",
           "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/welcome/welcome",
+          "pathName": "pages/welcome/welcome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/contact/contact",
+          "pathName": "pages/contact/contact",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/dogs/dogs",
+          "pathName": "pages/dogs/dogs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/booking/booking",
+          "pathName": "pages/booking/booking",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bookSuccess/bookSuccess",
+          "pathName": "pages/bookSuccess/bookSuccess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
           "scene": null
         }
       ]
