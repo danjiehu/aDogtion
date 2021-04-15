@@ -17,7 +17,7 @@ page{
 
 .center{
   margin: 0 auto;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .bold{
@@ -25,15 +25,15 @@ page{
 }
 
 .user-icon {
-  width: 122rpx;
-  height: 122rpx;
+  width: 142rpx;
+  height: 142rpx;
   background-size: cover;
   margin: 0 auto;
 }
 
-.subtitle{
+.medium-txt{
   padding-top: 15rpx; 
-  font-size: small;
+  font-size: medium;
   font-weight: 400;
   padding-left: 10rpx;
   text-align: center;
@@ -59,55 +59,42 @@ page{
   font-family: "Playfair display";
 }
 
-.butt-flexbox {
-  display: flex;
-  justify-content: space-around;
-  width: 88%;
-  margin: 40rpx auto;
-}
-
-.butt-card {
-  background-color: white;
-  border-radius: 24rpx;
-  width: 80%;
-  margin: 10rpx;
-  padding: 30rpx 40rpx;
+.empty-container{
+  background-color: #fff;
+  height: 620rpx;
+  width: 90%;
   box-sizing: border-box;
-  height: 200rpx;
+  border-radius: 40rpx;
+  margin: 30px auto 0;
+  padding: 60rpx 90rpx;
 }
 
-.butt-title {
-  font-size: 15pt;
-  font-weight: 500;
+.empty-img{
+  width: 200rpx;
+  height: 177rpx;
+  margin: 20rpx auto;
+  display: block;
+  padding-bottom: 20rpx;
 }
 
-.butt-text {
-  font-size: 9pt;
+.empty-title{
+  margin: 0rpx auto;
+  font-size: larger;
+  padding-bottom: 20rpx;
+}
+
+.center-txt{
+  text-align: center;
+  margin: 0rpx auto;
+}
+
+.grey-txt{
   color: #B6B1B1;
-}
-
-.dog-head {
-  width: 160rpx;
-  height: 100rpx;
-  position: relative;
-  right: -114rpx;
-  bottom: 0;
-  background-size: cover;
-}
-
-.dog-butt {
-  width: 160rpx;
-  height: 140rpx;
-  position: relative;
-  right: -114rpx;
-  bottom: 30rpx;
-  background-size: cover;
 }
 
 .sub-title {
   margin: 40rpx 0 0 76rpx;
-  font-size: 14pt;
-  font-weight: 600;
+  font-size: larger;
 }
 
 .card-flexbox {
@@ -188,6 +175,17 @@ page{
   font-weight: 700;
 }
 
+.btn{
+  border-radius: 50rpx;
+  padding: 18rpx 40rpx;
+  border-radius: 50rpx;
+  font-weight: 700;
+  width: 200rpx;
+  /* margin: 0 auto; */
+  text-align: center;
+  margin-top: 70rpx;
+}
+
 .white {
   background-color: white;
 }
@@ -200,7 +198,7 @@ page{
   background-color: #f6c752;
 }
 
-.small-txt{
+.smaller-txt{
   font-size: smaller;
 }
 
@@ -218,7 +216,7 @@ page{
 }
 
 .small-txt{
-  font-size: smaller;
+  font-size: small;
 }
 
 .icon-btn{

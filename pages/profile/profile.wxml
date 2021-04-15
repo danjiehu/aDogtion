@@ -2,29 +2,44 @@
 <view class="white-container">
   <view class="center">
     <view class="user-icon" style="background-image: url('/images/user.svg')"></view>
-    <view class="subtitle">username</view>
+    <view class="medium-txt">username</view>
   </view>   
 </view>
 
-<view class="grey-container">
-  
-  <view class="sub-title playfair">Your Favorite Dogs</view>
-  <view class="card-flexbox">
-    <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
-      <view class="card">
-        <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.image[0].path}}')">
-          <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
+<view class="grey-container">  
+  <!-- <block wx:if="{{currentUser && favorite}}"> -->
+    <!-- <view class="sub-title playfair">Your Favorite Dogs</view>
+    <view class="card-flexbox">
+      <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
+        <view class="card">
+          <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.image[0].path}}')">
+            <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
+          </view>
+          <view class="mini-flex">
+          <view class="do-not-delete-me"></view>
+          <view class="dog-name-yellow playfair">{{dog.name}}</view>
+          </view>
         </view>
-        <view class="mini-flex">
-        <view class="do-not-delete-me"></view>
-        <view class="dog-name-yellow playfair">{{dog.name}}</view>
-        </view>
-      </view>
-    </block>
-  </view>
-
+      </block> -->
+    <!-- </block> -->
+  <!-- </view> -->
+  <!-- <block wx:else> -->
+    <view class="empty-container">
+      <image class="empty-img" src="/images/empty.svg"></image>
+      <!-- <block wx:if="{{!favorite}}"> -->
+        <!-- <view class="empty-title bold playfair center-txt">No favorites yet</view>
+        <view class="small-txt grey-txt center-txt center-txt">Feel free to add you favorite dogs here, click in the button below to browse them</view>
+        <view class="btn yellow playfair center">browse dogs</view> -->
+      <!-- </block>   -->
+      <!-- <block wx:if="{{!currentUser}}"> -->
+        <view class="empty-title bold playfair center-txt">Oops!</view>
+        <view class="small-txt grey-txt center-txt center-txt">Looks like you don't have any account yet, please click below to create one</view>
+        <button class="round-button yellow playfair" style="width: 350rpx;  margin-top: 70rpx;">create an account</button>
+      <!-- </block>   -->
+    </view>
+  <!-- </block> -->
   <!-- Success Stories  -->
-  <view class="sub-title playfair">Success Stories</view>
+  <view class="sub-title playfair bold">Success Stories</view>
   <view class="wide-card card-donation-yellow">
       <view>
         <view class="donation-title playfair bold">Donate and save lives!</view>
@@ -38,7 +53,7 @@
   <view class="wide-card card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1601758124331-9410bf99002f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGRvZyUyMGxvdmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60) ">
     <view>
       <view class="white-txt playfair bold">Olivia & Almond</view>
-      <view class="white-txt small-txt">A love story</view>
+      <view class="white-txt smaller-txt">A love story</view>
     </view>
     <image mode="widthFix" class="icon-btn" src="/images/arrow.svg"></image>
   </view>
