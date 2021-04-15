@@ -4,6 +4,7 @@
   <image id="dog" src="/images/dog.png"></image>
 </view>
 
+<!-- start of white container -->
 <view class="white-container">
   <view class="title-container">
     <view class="yellow-circle"></view>
@@ -25,7 +26,21 @@
   <form bindsubmit="submit">
 
     <view class="title">DATE</view>
-    <input type="text" placeholder="input date" />
+    <!-- <input type="text" placeholder="input date" /> -->
+    <!-- start of date picker -->
+      <view class="date-container">
+        <picker mode="date" value="{{date}}" start="2021-04-01" end="2022-04-01" bindchange="bindDateChange">
+          <view wx:if="{{selectedDate}}" class="dateInput">
+            {{selectedDate}}
+          </view>
+          <view wx:else class="dateInput">
+              tap to select your visit date
+          </view>
+        </picker>
+        <image id="arrow-right" src="/images/arrow_right.png" mode="aspectFit"></image>
+      </view>
+    <!-- end of date picker -->
+
     <view>horizontal scroll</view>
 
     <button id="button" form-type="submit">BOOK</button>
@@ -34,3 +49,4 @@
    <!-- end of form-container -->
 
 </view>
+<!-- end of white container -->
