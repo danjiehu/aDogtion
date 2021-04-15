@@ -25,7 +25,7 @@
           "scene": null
         },
         {
-          "name": "pages/dog/dog",
+          "name": "Dog Page",
           "pathName": "pages/dog/dog",
           "query": "",
           "scene": null
@@ -55,8 +55,9 @@
           "scene": null
         },
         {
-          "name": "pages/profile/profile",
+          "name": "Profile",
           "pathName": "pages/profile/profile",
+          "query": "",
           "scene": null
         }
       ]

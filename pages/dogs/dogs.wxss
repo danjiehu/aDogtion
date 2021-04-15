@@ -1,4 +1,8 @@
 /* pages/dogs/dogs.wxss */
+page{
+  width: 100%;
+  box-sizing: border-box;
+}
 
 .yellow-container {
   height: 260rpx;

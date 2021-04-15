@@ -25,33 +25,49 @@
       <view class="small-txt grey-txt">5h</view>
     </view>
     <view class="two-icons">
-      <view class="mini-flex small-txt">
+      <view wx:if="{{dog.gender === 'male'}}" class="mini-flex small-txt">
         <image class="icon-small" src="/images/male.svg"></image>
-        <view>Boy</view>
+        <view>{{dog.gender}}</view>
       </view>
-      <view class="mini-flex small-txt">
+      <view wx:if="{{dog.gender === 'female'}}" class="mini-flex small-txt">
+        <image class="icon-small" src="/images/female.svg"></image>
+        <view>{{dog.gender}}</view>
+      </view>
+      <view wx:if="{{dog.color === 'white'}}" class="mini-flex small-txt">
+        <image class="icon-small" src="/images/white.svg"></image>
+        <view>{{dog.color}}</view>
+      </view> 
+      <view wx:if="{{dog.color === 'brown'}}" class="mini-flex small-txt">
+        <image class="icon-small" src="/images/brown.svg"></image>
+        <view>{{dog.color}}</view>
+      </view> 
+      <view wx:if="{{dog.color === 'black'}}" class="mini-flex small-txt">
         <image class="icon-small" src="/images/black.svg"></image>
-        <view>Black</view>
+        <view>{{dog.color}}</view>
+      </view> 
+      <view wx:if="{{dog.color === 'multicolor'}}" class="mini-flex small-txt">
+        <image class="icon-small" src="/images/multicolor.svg"></image>
+        <view>{{dog.color}}</view>
       </view> 
     </view>
   </view>
 
   <!-- Dog description -->
-  <view class="title playfair">Coco</view>
-  <view class="left-border-box grey-txt">Found at the market. Timid at first, loving, great with other animals.</view>
+  <view class="title playfair">{{dog.name}}</view>
+  <view class="left-border-box grey-txt">{{dog.description}}</view>
 
   <view class="border-shadow"></view>
   <view class="grey-container">
     <view>
-      <view class="bold">3Y</view>
+      <view class="bold">{{dog.age}}</view>
       <view class="small-txt grey-txt">AGE</view>
     </view>
     <view>
-      <view class="bold">SMALL</view>
+      <view class="bold">{{dog.size}}</view>
       <view class="small-txt grey-txt">SIZE</view>
     </view>
     <view>
-      <view class="bold">7 KG</view>
+      <view class="bold">{{dog.weight}} KG</view>
       <view class="small-txt grey-txt">WEIGHT</view>
     </view>
   </view>
@@ -59,18 +75,20 @@
   <view class="flex-details">
     <view class="mini-flex">
       <image class="icon-small" src="/images/time.svg"></image>
-      <view class="bold grey-txt">VACCINATED</view>
+      <view class="bold grey-txt" wx:if="{{dog.vaccinated}}">VACCINATED</view>
     </view>
     <view class="mini-flex">
       <image class="icon-small" src="/images/time.svg"></image>
-      <view class="bold grey-txt">NEUTERED</view>
+      <view class="bold grey-txt" wx:if="{{dog.spayed}}">SPAYED</view>
     </view>
   </view>
 
   <!-- tags -->
   <view class="tags-container">
-    <view class="btn-grey grey-txt playfair bold">obedient</view>
-    <view class="btn-grey grey-txt playfair bold">friendly</view>
+    <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_obedient}}">obedient</view>
+    <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_friendly}}">friendly</view>
+    <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_calm}}">calm</view>
+    <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_social}}">social</view>
   </view>
 
   <view class="yellow-btn" bindtap="navigateToHome">
@@ -80,7 +98,7 @@
   </view>
 
   <!-- back arrow -->
-  <image class="top-btn" src="/images/arrow.svg"></image>
+  <image class="top-btn" src="/images/arrow.svg" bindtap="goBack"></image>
 
 </view>
   

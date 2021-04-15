@@ -1,66 +1,37 @@
-// pages/profile/profile.js
+const app = getApp()
+
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
+    dogs: [],
+    currentUser: null
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
 
+    const self = this
+    let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
+
+    Dogs.find().then(
+      (res) => { 
+        console.log('Dogs have been loaded',res)
+        self.setData({
+          dogs: res.data.objects
+        })
+      }, (err) => {
+        console.log('dogs failed failed',err)
+      }
+    )
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
+  navigateToDog: function(e) {
+    console.log('calling a dog', e)
+    wx.navigateTo({
+      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
+    })
   }
+
 })

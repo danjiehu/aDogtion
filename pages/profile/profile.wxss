@@ -1,5 +1,10 @@
 /* pages/profile/profile.wxss */
 
+page{
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .white-container{
   background-color: #fff;
   padding-top: 150rpx;
