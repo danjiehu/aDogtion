@@ -88,24 +88,79 @@
   margin-bottom: 13px;
 }
 
-input {
-  font-size: 18px;
+.date-container {
+  display: flex;
+  /* width: 287px; */
+  /* justify-content: space-between; */
+}
+
+picker {
+  width: 100%;
+}
+
+.dateInput {
+  font-size: 14px;
   margin-bottom: 23.5px;
   color: #24241E;
   font-weight: bold;
   border-bottom: 1px solid #E4E4E4;
   padding-bottom: 6.5px;
 }
+
+#arrow-right {
+  width: 8px;
+  height: 18px;
+  position: absolute;
+  right: 44px;
+}
 /* end of input message */
 
+.album {
+  white-space: nowrap;
+}
+
 #button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   font-family: 'Playfair Display';
   padding: 24px 200px 34px 50px;
   margin-right: 0px;
-  position: relative;
-  left: 44px;
-  margin-bottom: 0;
+  /* position: relative; */
+  /* left: 44px; */
+  /* margin-bottom: 0; */
   border-radius: 25px 0px 0px 0px;
   background-color: #F8D35F;
-  margin-top: 66.5px;
+  /* margin-top: 138px; */
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+  /* width: 100vw; */
+}
+
+.scroll-view-item_H{
+  /* width: 45%; */
+  /* height: 300rpx; */
+  display: inline-block;
+  width: 63px;
+  height: 30px;
+  background-color: #F1F1F0;
+  text-align: center;
+  padding: 11px 15px;
+  margin-right: 10px;
+  line-height: 30px;
+  border-radius: 34px;
+}
+
+.selected {
+  display: inline-block;
+  width: 63px;
+  height: 30px;
+  background-color: #F8D35F;
+  text-align: center;
+  padding: 11px 15px;
+  margin-right: 10px;
+  line-height: 30px;
+  border-radius: 34px;
 }

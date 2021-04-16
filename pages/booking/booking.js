@@ -1,65 +1,62 @@
 // pages/booking/booking.js
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
+    toView: 'green',
+    selectedDate: null,
+    timeSlots:["09:00","10:00","11:00","12:00","13:00"],
+    selectedIndex:null
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
+  scroll(e) {
+    console.log(e)
+  },
+
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      selectedDate: e.detail.value
+    })
+  },
+
+  // start of defining selectTimeslot
+  selectTimeslot: function(e){
+    console.log("selectTimeslot", e.currentTarget.dataset.id )
+    this.setData({
+      selectedIndex: e.currentTarget.dataset.id 
+    })
+  },
+  // start of defining selectTimeslot
+
   onLoad: function (options) {
 
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+
   onReady: function () {
 
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
+  onShow: function (e) {
+    console.log("timeSlots",this.data.timeSlots)
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
   onHide: function () {
 
   },
 
-  /**
-   * Lifecycle function--Called when page unload
-   */
   onUnload: function () {
 
   },
 
-  /**
-   * Page event handler function--Called when user drop down
-   */
   onPullDownRefresh: function () {
 
   },
 
-  /**
-   * Called when page reach bottom
-   */
   onReachBottom: function () {
 
   },
 
-  /**
-   * Called when user click on the top right corner to share
-   */
   onShareAppMessage: function () {
 
   }

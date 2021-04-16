@@ -4,6 +4,7 @@
   <image id="dog" src="/images/dog.png"></image>
 </view>
 
+<!-- start of white container -->
 <view class="white-container">
   <view class="title-container">
     <view class="yellow-circle"></view>
@@ -25,8 +26,36 @@
   <form bindsubmit="submit">
 
     <view class="title">DATE</view>
-    <input type="text" placeholder="input date" />
-    <view>horizontal scroll</view>
+    <!-- <input type="text" placeholder="input date" /> -->
+    <!-- start of date picker -->
+      <view class="date-container">
+        <picker mode="date" value="{{date}}" start="2021-04-01" end="2022-04-01" bindchange="bindDateChange">
+          <view wx:if="{{selectedDate}}" class="dateInput">
+            {{selectedDate}}
+          </view>
+          <view wx:else class="dateInput">
+              tap to select your visit date
+          </view>
+        </picker>
+        <image id="arrow-right" src="/images/arrow_right.png" mode="aspectFit"></image>
+      </view>
+    <!-- end of date picker -->
+
+    <!-- start of timeslots -->
+    <!-- <scroll-view scroll-x="true" style="width: 100%; white-space: nowrap;">
+        <view style="width:100px">1</view>
+        <view style="width:100px">2</view>
+        <view style="width:100px">3</view> -->
+        <!-- <view class="time-slot" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
+    <!-- </scroll-view> -->
+
+    <view class="timeslots-container">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100vw">
+          <view class="scroll-view-item_H {{index==selectedIndex?'selected':''}}" wx:for="{{timeSlots}}" wx:for-item="timeSlot" wx:for-index="index" bindtap="selectTimeslot" data-id="{{index}}">{{timeSlot}}</view> 
+          <!-- <view wx:else class="scroll-view-item_H" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
+        </scroll-view>
+    </view>
+    <!-- end of timeslots -->
 
     <button id="button" form-type="submit">BOOK</button>
   </form>
@@ -34,3 +63,4 @@
    <!-- end of form-container -->
 
 </view>
+<!-- end of white container -->
