@@ -13,6 +13,7 @@
 }
 
 .white-container {
+  /* position: relative; */
   border-radius: 70rpx 70rpx 0 0;
   box-sizing: border-box;
   width: 100%;
@@ -121,17 +122,12 @@ picker {
 
 #button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  right: 0px;
+  bottom: 0px;
   font-family: 'Playfair Display';
   padding: 24px 200px 34px 50px;
-  margin-right: 0px;
-  /* position: relative; */
-  /* left: 44px; */
-  /* margin-bottom: 0; */
   border-radius: 25px 0px 0px 0px;
   background-color: #F8D35F;
-  /* margin-top: 138px; */
 }
 
 .scroll-view_H{
