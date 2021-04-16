@@ -120,15 +120,18 @@ picker {
 }
 
 #button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   font-family: 'Playfair Display';
   padding: 24px 200px 34px 50px;
   margin-right: 0px;
-  position: relative;
-  left: 44px;
-  margin-bottom: 0;
+  /* position: relative; */
+  /* left: 44px; */
+  /* margin-bottom: 0; */
   border-radius: 25px 0px 0px 0px;
   background-color: #F8D35F;
-  margin-top: 66.5px;
+  /* margin-top: 138px; */
 }
 
 .scroll-view_H{
@@ -160,8 +163,4 @@ picker {
   margin-right: 10px;
   line-height: 30px;
   border-radius: 34px;
-}
-
-.timeslots-container {
-
 }
