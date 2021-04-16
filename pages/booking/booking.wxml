@@ -41,7 +41,21 @@
       </view>
     <!-- end of date picker -->
 
-    <view>horizontal scroll</view>
+    <!-- start of timeslots -->
+    <!-- <scroll-view scroll-x="true" style="width: 100%; white-space: nowrap;">
+        <view style="width:100px">1</view>
+        <view style="width:100px">2</view>
+        <view style="width:100px">3</view> -->
+        <!-- <view class="time-slot" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
+    <!-- </scroll-view> -->
+
+    <view class="timeslots-container">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100vw">
+          <view class="scroll-view-item_H {{index==selectedIndex?'selected':''}}" wx:for="{{timeSlots}}" wx:for-item="timeSlot" wx:for-index="index" bindtap="selectTimeslot" data-id="{{index}}">{{timeSlot}}</view> 
+          <!-- <view wx:else class="scroll-view-item_H" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
+        </scroll-view>
+    </view>
+    <!-- end of timeslots -->
 
     <button id="button" form-type="submit">BOOK</button>
   </form>

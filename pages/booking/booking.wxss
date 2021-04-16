@@ -115,6 +115,9 @@ picker {
 }
 /* end of input message */
 
+.album {
+  white-space: nowrap;
+}
 
 #button {
   font-family: 'Playfair Display';
@@ -126,4 +129,39 @@ picker {
   border-radius: 25px 0px 0px 0px;
   background-color: #F8D35F;
   margin-top: 66.5px;
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+  /* width: 100vw; */
+}
+
+.scroll-view-item_H{
+  /* width: 45%; */
+  /* height: 300rpx; */
+  display: inline-block;
+  width: 63px;
+  height: 30px;
+  background-color: #F1F1F0;
+  text-align: center;
+  padding: 11px 15px;
+  margin-right: 10px;
+  line-height: 30px;
+  border-radius: 34px;
+}
+
+.selected {
+  display: inline-block;
+  width: 63px;
+  height: 30px;
+  background-color: #F8D35F;
+  text-align: center;
+  padding: 11px 15px;
+  margin-right: 10px;
+  line-height: 30px;
+  border-radius: 34px;
+}
+
+.timeslots-container {
+
 }
