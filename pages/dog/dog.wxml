@@ -53,7 +53,7 @@
   </view>
 
   <!-- Dog description -->
-  <view class="title playfair">{{dog.name}}</view>
+  <view class="title playfair bold">{{dog.name}}</view>
   <view class="left-border-box grey-txt">{{dog.description}}</view>
 
   <view class="border-shadow"></view>
