@@ -57,7 +57,7 @@
       <view class="two-thirds">
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-        <button class="round-button yellow playfair" style="width: 250rpx; margin-right: 90rpx;">learn more</button>
+        <!-- <button class="round-button yellow playfair" style="width: 250rpx; margin-right: 90rpx;">learn more</button> -->
       </view>
       <view>
         <view class="image-dog-about" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXcJ5jjCGAXtdzz.svg')"></view>
