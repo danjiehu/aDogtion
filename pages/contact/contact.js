@@ -12,7 +12,6 @@ Page({
 
   // start of onload get selected dog profile
   onLoad: function (res) {
-
     console.log("onLoadRes",res)
     this.setData({
       currentUser: app.globalData.userInfo,
@@ -61,9 +60,6 @@ Page({
           wx.showToast({
             title: 'contact received!',
           })
-          // wx.navigateTo({
-          //   url: `/pages/booking/booking?id=${page.data.dogId}`,
-          // })
         },
         (err)=>{
           console.log("saveFailed", err.code)
