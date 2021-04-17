@@ -7,7 +7,6 @@ Component({
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
-
   },
 
   ready: function (options) {
@@ -52,33 +51,6 @@ Component({
     })
   },
 
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-    // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    let self = this
-    wx.getUserProfile({
-      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        let userInfo = res.userInfo
-        wx.setStorageSync('userInfo', userInfo)
-        getApp().globalData.userInfo = userInfo
-        this.setData({
-          currentUser: userInfo,
-          hasUserInfo: true
-        })
-        wx.BaaS.auth.loginWithWechat(userInfo).then(
-        (res) => {
-          console.log('bass update', res);
-          self.setData({currentUser: res});
-          wx.setStorageSync('userInfo', res)
-        },
-        err => {
-          console.log('error!', err)
-        }
-       )
-      }
-    })
-  },
 
   methods: {
     getUserInfo(e) {
@@ -88,7 +60,34 @@ Component({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
       })
-  
+    },
+
+    getUserProfile(e) {
+      // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
+      // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+      let self = this
+      wx.getUserProfile({
+        desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+        success: (res) => {
+          let userInfo = res.userInfo
+          wx.setStorageSync('userInfo', userInfo)
+          getApp().globalData.userInfo = userInfo
+          this.setData({
+            currentUser: userInfo,
+            hasUserInfo: true
+          })
+          wx.BaaS.auth.loginWithWechat(userInfo).then(
+          (res) => {
+            console.log('bass update', res);
+            self.setData({currentUser: res});
+            wx.setStorageSync('userInfo', res)
+          },
+          err => {
+            console.log('error!', err)
+          }
+         )
+        }
+      })
     }
   }
 
