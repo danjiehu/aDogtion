@@ -1,11 +1,8 @@
 <!-- pages/home/home.wxml -->
 
-<view class="yellow-container">
-  <!-- <view class="menu-icon" style="background-image: url('/images/menu.svg')"></view>
-  <view class="user-icon" style="background-image: url('/images/user.svg')"></view> -->
-</view>
+<view class="yellow-container"></view>
 
-        <!-- TWO BUTTONS -->
+<!-- TWO BUTTONS -->
 
 <view class="grey-container">
 
@@ -14,12 +11,12 @@
     <view class="butt-card">
       <view class="butt-title playfair bold">Adopt</view>
       <view class="butt-text">87 dogs</view>
-      <view class="dog-head" style="background-image: url(/images/dog-head.svg)"></view>
+      <view class="dog-head" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg')"></view>
     </view>
     <view class="butt-card" bindtap="navigateToFosterDogs">
       <view class="butt-title playfair bold">Foster</view>
       <view class="butt-text">45 dogs</view>
-      <view class="dog-butt" style="background-image: url(/images/dog-butt.svg)"></view>
+      <view class="dog-butt" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicSNi9iNslLZ.svg')"></view>
     </view>
   </view>
 
@@ -47,7 +44,7 @@
   <view class="wide-card card-donation-yellow">
       <view>
         <view class="donation-title playfair bold">Donate and save lives!</view>
-        <view class="donate-paw" style="background-image: url('/images/paw.svg')"></view>
+        <view class="donate-paw" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbic15k0C1UWpK.svg')"></view>
       </view>
       <view>
         <button class="round-button white playfair" style="width: 200rpx;">donate</button>
@@ -57,13 +54,13 @@
        <!-- ABOUT US  -->
 
   <view class="wide-card card-about-white">
-      <view>
+      <view class="two-thirds">
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-        <button class="round-button yellow playfair" style="width: 250rpx;">learn more</button>
+        <button class="round-button yellow playfair" style="width: 250rpx; margin-right: 90rpx;">learn more</button>
       </view>
       <view>
-        <view class="image-dog-about" style="background-image: url('/images/dog-about-us.svg')"></view>
+        <view class="image-dog-about" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXcJ5jjCGAXtdzz.svg')"></view>
       </view>
   </view>
 </view>

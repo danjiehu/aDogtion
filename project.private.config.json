@@ -13,12 +13,6 @@
     "miniprogram": {
       "list": [
         {
-          "name": "Home",
-          "pathName": "pages/home/home",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "Welcome",
           "pathName": "pages/welcome/welcome",
           "query": "",

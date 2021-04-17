@@ -18,35 +18,35 @@
 </view>
 
 <view class="white-container">
-  <image class="btn-fav" src="/images/fav.svg"></image>
+  <image class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicbXFooHVS1Z.svg"></image>
   <view class="icon-container">
     <view class="mini-flex">
-      <image class="icon-small" src="/images/time.svg"></image>
+      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
       <view class="small-txt grey-txt">5h</view>
     </view>
     <view class="two-icons">
       <view wx:if="{{dog.gender === 'male'}}" class="mini-flex small-txt">
-        <image class="icon-small" src="/images/male.svg"></image>
+        <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicRrXoHzzxQz.svg"></image>
         <view>{{dog.gender}}</view>
       </view>
       <view wx:if="{{dog.gender === 'female'}}" class="mini-flex small-txt">
-        <image class="icon-small" src="/images/female.svg"></image>
+        <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicV2LojXDtUV.svg"></image>
         <view>{{dog.gender}}</view>
       </view>
       <view wx:if="{{dog.color === 'white'}}" class="mini-flex small-txt">
-        <image class="icon-small" src="/images/white.svg"></image>
+        <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbic2SmhBRMDUC.svg"></image>
         <view>{{dog.color}}</view>
       </view> 
       <view wx:if="{{dog.color === 'brown'}}" class="mini-flex small-txt">
-        <image class="icon-small" src="/images/brown.svg"></image>
+        <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicUrXvwclzRf.svg"></image>
         <view>{{dog.color}}</view>
       </view> 
       <view wx:if="{{dog.color === 'black'}}" class="mini-flex small-txt">
-        <image class="icon-small" src="/images/black.svg"></image>
+        <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicuCi19Mzk27.svg"></image>
         <view>{{dog.color}}</view>
       </view> 
       <view wx:if="{{dog.color === 'multicolor'}}" class="mini-flex small-txt">
-        <image class="icon-small" src="/images/multicolor.svg"></image>
+        <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicOhab6njbuQ.svg"></image>
         <view>{{dog.color}}</view>
       </view> 
     </view>
@@ -74,11 +74,11 @@
 
   <view class="flex-details">
     <view class="mini-flex">
-      <image class="icon-small" src="/images/time.svg"></image>
+      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
       <view class="bold grey-txt" wx:if="{{dog.vaccinated}}">VACCINATED</view>
     </view>
     <view class="mini-flex">
-      <image class="icon-small" src="/images/time.svg"></image>
+      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
       <view class="bold grey-txt" wx:if="{{dog.spayed}}">SPAYED</view>
     </view>
   </view>

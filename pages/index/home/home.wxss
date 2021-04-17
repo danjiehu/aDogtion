@@ -5,16 +5,9 @@ page{
 }
 
 .yellow-container {
-  height: 160rpx;
+  height: 18vh;
   background-color: #f6c752;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 60rpx 70rpx 60rpx;
   width: 100%;
-  box-sizing: border-box;
-  background-size: cover;
-  box-sizing: border-box;
 }
 
 .menu-icon{
@@ -194,9 +187,15 @@ page{
 
 .card-about-white {
   background-color: white;
-  margin: 60rpx auto 100rpx auto;
+  margin: 60rpx auto 220rpx auto;
   /* height: 310rpx; */
-  padding: 20rpx 0 40rpx 50rpx;
+  padding: 0 50rpx 50rpx 50rpx;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.two-thirds {
+  width: 60%;
 }
 
 .about-us-title {
@@ -214,10 +213,10 @@ page{
 
 .image-dog-about {
   position: relative;
-  top: -10rpx;
-  right: 0;
-  width: 270rpx;
-  height: 300rpx;
+  top: -20rpx;
+  right: 40rpx;
+  width: 260rpx;
+  height: 280rpx;
   background-size: cover;
   margin: 0 20rpx 0 30rpx;
 }
