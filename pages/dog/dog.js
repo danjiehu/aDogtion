@@ -55,6 +55,13 @@ Page({
     wx.navigateBack({
       delta: 1,
     })
+  },
+
+  navigateToContact: function(e) {
+    console.log('going to contact', e)
+    wx.navigateTo({
+      url: `/pages/contact/contact?id=${this.data.dog.id}`,
+    })
   }
 
 })

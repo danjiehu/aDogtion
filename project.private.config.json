@@ -27,19 +27,19 @@
         {
           "name": "Dog Page",
           "pathName": "pages/dog/dog",
-          "query": "",
+          "query": "id=6075a34cfd4ebb40b9a7a354",
           "scene": null
         },
         {
           "name": "contact",
           "pathName": "pages/contact/contact",
-          "query": "",
+          "query": "id=6075a34cfd4ebb40b9a7a354",
           "scene": null
         },
         {
           "name": "booking",
           "pathName": "pages/booking/booking",
-          "query": "",
+          "query": "id=6075a34cfd4ebb40b9a7a354",
           "scene": null
         },
         {
@@ -51,7 +51,7 @@
         {
           "name": "bookSuccess",
           "pathName": "pages/bookSuccess/bookSuccess",
-          "query": "",
+          "query": "id=6075a34cfd4ebb40b9a7a354",
           "scene": null
         },
         {

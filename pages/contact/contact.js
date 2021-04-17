@@ -1,66 +1,43 @@
 // pages/contact/contact.js
+const app = getApp()
+
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
+    dog: []
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
 
+    let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
+    
+    const self = this
+    Dogs.get(options.id).then(
+      (res) => {
+        console.log('dog id', res)
+        self.setData ({
+          dog: res.data
+        })
+        // console.log(res.data)
+        let image = res.data.image[0].path
+      },
+      (err) => {
+        console.log('error', err)
+      }
+    )
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
+  
   onShow: function () {
 
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
+  navigateToSuccess: function(e) {
+    console.log('going to success', e)
+    wx.navigateTo({
+      url: `/pages/bookSuccess/bookSuccess?id=${this.data.dog.id}`,
+    })
   }
 })

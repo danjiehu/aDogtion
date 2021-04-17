@@ -1,23 +1,22 @@
 <!--pages/bookSuccess/bookSuccess.wxml-->
 
 <view class="page-container">
-  <image id="tick-circle" src="/images/tick.png"></image>
-  <view class="h1">Your appointment has been booked</view>
-  <view class="h2">Coco will be waiting for you</view>
+  <image class="tick-circle" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXcJ510CdRVmiZB.svg"></image>
+  <view class="title playfair">Thank you</view>
+  <view class="sub-title">Our staff will get back to you soon!</view>
+  <view class="sub-title">{{dog.name}} will be waiting for you</view>
 
   <view class="appointment-card">
     <view class="dog-card">
-        <image id="dog-photo" src="/images/coco.jpg"></image>
+        <image class="dog-photo" src="{{dog.image[0].path}}"></image>
         <view>
-          <view class="dog-name">Coco</view>
-          <view class="dog-more">1 year • Male</view>
+          <view class="dog-name playfair">{{dog.name}}</view>
+          <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
         </view>
     </view>
-
-    <view>Wed 24 April</view>
-    <view>09:30 am</view>
   </view>
 
-  <button id="button">Go home</button>
+  <view class="button-home">Go home</view>
 </view>
-
+    <!-- <view>Wed 24 April</view> -->
+    <!-- <view>09:30 am</view> -->
