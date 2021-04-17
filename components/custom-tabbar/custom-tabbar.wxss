@@ -34,28 +34,31 @@
 
 cover-view {
   font-size: 40rpx;
-  color: #B6B1B1;
+  /* color: #B6B1B1; */
   font-family: "Playfair display";
+  font-weight: bold;
+  overflow: visible;
+  display: block;
+}
+
+.txt {
+  font-size: 40rpx;
+  /* color: #B6B1B1; */
+  font-weight: bold;
+  display: block;
+  width: 200rpx;
+}
+
+.fontWeight{
   font-weight: bold;
 }
 
-.txt{
-  font-size: 40rpx;
-  color: #B6B1B1;
-  font-family: "Playfair display";
-  font-weight: bold;
-}
-.fontWeight{
-  font-weight: bold;
-  font-family: "Playfair display";
-}
 .bg_rec{
   background: #f6c752;
   width: 80rpx;
-  min-height: auto;
-  height: 20rpx;
+  height: 26rpx;
   margin-top: -20rpx;
-  vertical-align: text-bottom;
+  margin-left: 24%;
   border-radius: 0;
   z-index: -10;
 }
