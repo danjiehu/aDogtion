@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tabbar": "../../../components/custom-tabbar/custom-tabbar",
+    "dogs": "dogs/dogs",
+    "profile": "profile/profile",
+    "home": "home/home"
+  }
+}

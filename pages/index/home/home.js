@@ -1,13 +1,14 @@
+// pages/home/home.js
 const app = getApp()
 
-Page({
+Component({
 
   data: {
     dogs: [],
     currentUser: null
   },
 
-  onLoad: function (options) {
+  ready: function (options) {
     this.setData({
       currentUser: app.globalData.userInfo
     })
@@ -26,12 +27,22 @@ Page({
       }
     )
   },
+  
+  methods: {
+    navigateToDog: function(e) {
+      console.log('calling a dog', e)
+      wx.navigateTo({
+        url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
+      })
+    },
 
-  navigateToDog: function(e) {
-    console.log('calling a dog', e)
-    wx.navigateTo({
-      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
-    })
+    navigateToDogs: function(e) {
+      this.triggerEvent("toAdoptDogs")
+    },
+
+    navigateToFosterDogs: function(e) {
+      this.triggerEvent("toFosterDogs")
+    },
   }
 
 })

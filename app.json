@@ -1,19 +1,18 @@
 {
-  "pages":[
-    "pages/home/home",
+  "pages": [
     "pages/welcome/welcome",
     "pages/contact/contact",
     "pages/booking/booking",
     "pages/dog/dog",
-    "pages/dogs/dogs",
     "pages/bookSuccess/bookSuccess",
-    "pages/profile/profile"
+    "components/custom-tabbar/custom-tabbar",
+    "pages/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6C752",
     "navigationBarTitleText": "aDogtion | Adopt & Foster Dogs",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
   "style": "v2",
@@ -21,7 +20,7 @@
   "plugins": {
     "sdkPlugin": {
       "version": "2.3.0",
-      "provider": "wxc6b86e382a1e3294" 
+      "provider": "wxc6b86e382a1e3294"
     }
   }
 }
