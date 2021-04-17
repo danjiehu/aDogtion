@@ -16,7 +16,7 @@ Component({
     const self = this
     let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
 
-    Dogs.limit(5).find().then(
+    Dogs.limit(7).find().then(
       (res) => { 
         console.log('Dogs have been loaded',res)
         self.setData({

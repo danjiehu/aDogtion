@@ -2,11 +2,19 @@
 
 <view class="yellow-container"></view>
 <view class="grey-container">
-  <view class="title playfair">Find your dog</view>
-  <view class="filters playfair">FILTERS</view>
-  <view class="sub-title playfair {{category == 'adopt'? 'active' : ''}}" bindtap="switchTab" data-category='adopt'>Adopt</view>
+  <view class="top-flex">
+    <view class="title playfair">Find your dog</view>
+    <view class="filters playfair">FILTERS</view>
+  </view>
+  <view class="menu-tab {{category == 'adopt'? 'active' : ''}}" bindtap="switchTab" data-category='adopt'>
+    <view class="sub-title playfair">Adopt</view>
+    <view class="yellow-underline"></view>
+  </view>
   
-  <view class="sub-title playfair {{category == 'foster'? 'active' : ''}}" bindtap="switchTab" data-category='foster'>Foster</view>
+  <view class="menu-tab {{category == 'foster'? 'active' : ''}}" bindtap="switchTab" data-category='foster'>
+    <view class="sub-title playfair">Foster</view>
+    <view class="yellow-underline"></view>
+  </view>
   <!-- <view class="yellow-line"></view> -->
 
   <view class="cards-masonry">
@@ -20,19 +28,6 @@
           <view class="dog-name-yellow playfair">{{dog.name}}</view>
           </view>
         </view>
-      <!-- </view> -->
-
-      <!-- <view wx:if="{{dog.foster}}">
-        <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
-          <image class="like-button" src="/images/fav-white.svg"></image>
-          <image mode="widthFix" class="img-full" src="{{dog.image[0].path}}"></image>
-          <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
-          <view class="mini-flex">
-          <view class="do-not-delete-me"></view>
-          <view class="dog-name-yellow playfair">{{dog.name}}</view>
-          </view>
-        </view>
-      </view> -->
     </block>
   </view>
 </view>
