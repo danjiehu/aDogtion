@@ -37,7 +37,7 @@ Page({
   navigateToHome: function(e) {
     console.log('going to home', e)
     wx.navigateTo({
-      url: `/pages/home/home`,
+      url: `/pages/index/index`,
     })
   }
 })
