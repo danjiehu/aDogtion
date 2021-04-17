@@ -72,8 +72,10 @@ Page({
           if (err.code == 400) {
             console.log(400)
             wx.showModal({
-              title: 'Failed',
-              content: 'please enter an valid phone number'
+              title: 'submit failed',
+              content: 'please enter a valid phone number',
+              showCancel: false,
+              confirmText: "go back"
             })
           }
         } 
