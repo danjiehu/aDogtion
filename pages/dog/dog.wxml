@@ -59,15 +59,15 @@
   <view class="border-shadow"></view>
   <view class="grey-container">
     <view>
-      <view class="bold">{{dog.age}}</view>
+      <view class="details bold">{{dog.age}}</view>
       <view class="small-txt grey-txt">AGE</view>
     </view>
     <view>
-      <view class="bold">{{dog.size}}</view>
+      <view class="details bold caps">{{dog.size}}</view>
       <view class="small-txt grey-txt">SIZE</view>
     </view>
     <view>
-      <view class="bold">{{dog.weight}} KG</view>
+      <view class="details bold">{{dog.weight}} KG</view>
       <view class="small-txt grey-txt">WEIGHT</view>
     </view>
   </view>
@@ -98,7 +98,7 @@
   </view>
 
   <!-- back arrow -->
-  <image class="top-btn" src="/images/arrow.svg" bindtap="goBack"></image>
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXeVTJY3y3AoCNe.svg" bindtap="goBack"></image>
 
 </view>
   

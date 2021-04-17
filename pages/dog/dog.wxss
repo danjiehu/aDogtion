@@ -1,5 +1,5 @@
 /* pages/dog/dog.wxss */
-page{
+page {
   color: #24241E;
   width: 100%;
   box-sizing: border-box;
@@ -95,7 +95,7 @@ input {
   border-radius: 70rpx 70rpx 0 0;
   background-color: #fff;
   padding: 50rpx 0;
-  height: 60vh;
+  min-height: 50vh;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
@@ -119,8 +119,10 @@ input {
   align-items: center;
   justify-content: space-between;
   padding-top: 50rpx;
-  margin-bottom: 50rpx;
+  margin-bottom: 30rpx;
   margin-right: 90rpx;
+  box-sizing: border-box;
+  width: 86%;
 }
 
 .two-icons-container{
@@ -140,18 +142,20 @@ input {
 }
 
 .title {
-  font-size: 20pt;
-  font-weight: 600;
+  font-size: 18pt;
+  /* font-weight: 600; */
   margin: 0 0 0 80rpx;
-  width: 100%;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .small-txt{
-  font-size: smaller;
+  font-size: 9pt;
 }
 
 .grey-txt{
   color: #B6B1B1;
+  font-size: 10pt;
 }
 
 .mini-flex {
@@ -161,8 +165,8 @@ input {
   align-items: center;
 }
 
-.left-border-box{
-  margin: 30rpx 70rpx 30rpx 113rpx;
+.left-border-box {
+  margin: 16rpx 70rpx 16rpx 113rpx;
   border-left: 1px solid #707070;
   padding-left: 30rpx;
 }
@@ -177,23 +181,22 @@ input {
   width: 76%;
   box-sizing: border-box;
   padding: 60rpx 70rpx;
-  margin: 50rpx 70rpx;
-  border-radius: 30rpx;
+  margin: 40rpx 70rpx;
+  border-radius: 22rpx;
   z-index: 0;
-  height: 180rpx;
+  height: 137rpx;
 }
 
 .grey-container {
   background-color: #F1F1F0;
   width: 76%;
   box-sizing: border-box;
-  padding: 60rpx 70rpx;
-  margin: 30rpx auto;
-  border-radius: 30rpx;
+  padding: 40rpx 70rpx;
+  margin: -154rpx auto 30rpx auto;
+  border-radius: 22rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: -204rpx;
 }
 
 .flex-details{
@@ -241,8 +244,16 @@ input {
   position: fixed;
   top: 6%;
   left: 6%;
-  height: 56rpx;
-  width: 56rpx;
-  margin-right: 10rpx;
+  height: 20rpx;
+  width: 40rpx;
+  margin: 2% 0 0 10rpx;
   padding: 0;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.details {
+  font-size: 10pt;
 }
