@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<tabbar
+  bindchangeTab="changeTab"
+  selected="{{activeTab}}"
+/>
+<home
+  wx:if="{{activeTab == 0}}"
+  bindtoAdoptDogs="toAdoptDogs"
+  bindtoFosterDogs="toFosterDogs"
+/>
+<dogs
+  wx:if="{{activeTab == 1}}"
+  foster="{{foster}}"
+/>
+<profile
+  wx:if="{{activeTab == 2}}"
+/>

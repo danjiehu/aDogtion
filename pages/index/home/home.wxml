@@ -16,7 +16,7 @@
       <view class="butt-text">87 dogs</view>
       <view class="dog-head" style="background-image: url(/images/dog-head.svg)"></view>
     </view>
-    <view class="butt-card" bindtap="navigateToDogs">
+    <view class="butt-card" bindtap="navigateToFosterDogs">
       <view class="butt-title playfair bold">Foster</view>
       <view class="butt-text">45 dogs</view>
       <view class="dog-butt" style="background-image: url(/images/dog-butt.svg)"></view>
@@ -66,4 +66,7 @@
         <view class="image-dog-about" style="background-image: url('/images/dog-about-us.svg')"></view>
       </view>
   </view>
+</view>
+<view class="container">
+ <CustomTab />
 </view>
