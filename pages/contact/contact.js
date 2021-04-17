@@ -61,9 +61,9 @@ Page({
           wx.showToast({
             title: 'contact received!',
           })
-          // wx.navigateTo({
-          //   url: `/pages/booking/booking?id=${page.data.dogId}`,
-          // })
+          wx.navigateTo({
+            url: `/pages/bookSuccess/bookSuccess?id=${page.data.dogId}`,
+          })
         },
         (err)=>{
           console.log("saveFailed", err.code)
@@ -80,14 +80,17 @@ Page({
           }
         } 
       )
-  },
+  }
+
+  // navigateToSuccess: function(e) {
+  //   let self = this
+  //   console.log('going to success', e)
+  //   wx.navigateTo({
+  //     url: `/pages/bookSuccess/bookSuccess?id=${self.data.dog.id}`,
+  //   })
+  // }
 
 // end of page
 })
 
-//   navigateToSuccess: function(e) {
-//     console.log('going to success', e)
-//     wx.navigateTo({
-//       url: `/pages/bookSuccess/bookSuccess?id=${this.data.dog.id}`,
-//     })
-//   }
+
