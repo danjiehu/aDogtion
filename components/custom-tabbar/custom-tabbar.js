@@ -13,9 +13,9 @@ Component({
     }, {
       text: "Dogs"
     },
-    // {
-    //   text: "Me"
-    // }
+    {
+      text: "Me"
+    }
   ]
   },
   attached() {
