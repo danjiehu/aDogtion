@@ -2,10 +2,13 @@
 <cover-view class="tab-bar">
   <cover-view class="tab-bar-border"></cover-view>
   <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item"  data-pagePath="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
-    <cover-view class="txt fontWeight" wx:if="{{selected == index}}" style="color: {{selected == index ? selectedColor : color}}">{{item.text}}
-      <cover-view class="bg_rec"></cover-view> 
-  </cover-view> 
-    <view class="txt" wx:if="{{selected != index}}">{{item.text}}</view>
+    <cover-view wx:if="{{selected == index}}" >
+      <cover-view class="txt" style="color: {{selectedColor}}">{{item.text}}</cover-view>
+      <cover-view class="bg_rec"></cover-view>
+    </cover-view>
+    <cover-view wx:else>
+      <cover-view class="txt" style="color: {{color}}">{{item.text}}</cover-view>
+    </cover-view>
   </cover-view>
 </cover-view>
 
