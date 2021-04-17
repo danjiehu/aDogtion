@@ -2,10 +2,11 @@
 Page({
   data: {
     activeTab: 0,
-
-    // for the dogs tab
+    // for the dogs tab\
+    adopt: false,
     foster: false
   },
+
   changeTab(e){
     this.setData({
       activeTab: e.detail
@@ -17,7 +18,8 @@ Page({
       activeTab: 1
     })
     this.setData({
-      foster: false
+      foster: false,
+      adopt: true
     })
   },
 
@@ -26,7 +28,8 @@ Page({
       activeTab: 1
     })
     this.setData({
-      foster: true
+      foster: true,
+      adopt: false
     })
   }
 })

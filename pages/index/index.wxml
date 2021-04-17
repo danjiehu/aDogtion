@@ -11,6 +11,7 @@
 <dogs
   wx:if="{{activeTab == 1}}"
   foster="{{foster}}"
+  adopt="{{adopt}}"
 />
 <profile
   wx:if="{{activeTab == 2}}"

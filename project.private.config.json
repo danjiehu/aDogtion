@@ -13,12 +13,6 @@
     "miniprogram": {
       "list": [
         {
-          "name": "Home",
-          "pathName": "pages/home/home",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "Welcome",
           "pathName": "pages/welcome/welcome",
           "query": "",
@@ -43,20 +37,8 @@
           "scene": null
         },
         {
-          "name": "Dogs",
-          "pathName": "pages/dogs/dogs",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "bookSuccess",
           "pathName": "pages/bookSuccess/bookSuccess",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "Profile",
-          "pathName": "pages/profile/profile",
           "query": "",
           "scene": null
         },

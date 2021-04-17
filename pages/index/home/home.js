@@ -16,11 +16,11 @@ Component({
     const self = this
     let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
 
-    Dogs.find().then(
+    Dogs.limit(5).find().then(
       (res) => { 
         console.log('Dogs have been loaded',res)
         self.setData({
-          dogs: res.data.objects
+          dogs: res.data.objects.reverse()
         })
       }, (err) => {
         console.log('dogs failed failed',err)

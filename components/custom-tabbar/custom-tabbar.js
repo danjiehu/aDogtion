@@ -28,7 +28,6 @@ Component({
       })
       this.triggerEvent("changeTab", data.index)
     //  wx.switchTab({url})
-
     }
   }
 })
