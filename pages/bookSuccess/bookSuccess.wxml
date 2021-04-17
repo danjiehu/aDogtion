@@ -16,7 +16,7 @@
     </view>
   </view>
 
-  <view class="button-home">Go home</view>
+  <view class="button-home" bindtap="navigateToHome">Go home</view>
 </view>
     <!-- <view>Wed 24 April</view> -->
     <!-- <view>09:30 am</view> -->
