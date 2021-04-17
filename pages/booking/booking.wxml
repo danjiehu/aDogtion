@@ -1,22 +1,22 @@
 <!--pages/booking/booking.wxml-->
 
 <view class="yellow-container">
-  <image id="dog" src="/images/dog.png"></image>
+  <view class="dog" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXcJ5jjCGAXtdzz.svg')"></view>
 </view>
 
 <!-- start of white container -->
 <view class="white-container">
   <view class="title-container">
     <view class="yellow-circle"></view>
-    <view class="top-title">Booking your appointment</view>
+    <view class="top-title playfair">Meet the dog</view>
   </view>
 
   <!-- start of selected dog card -->
   <view class="dog-card">
-    <image id="dog-photo" src="/images/coco.jpg"></image>
+    <image class="dog-photo" src="{{dog.image[0].path}}"></image>
     <view>
-      <view class="dog-name">Coco</view>
-      <view class="dog-more">1 year • Male</view>
+      <view class="dog-name playfair">{{dog.name}}</view>
+      <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
     </view>
   </view>
   <!-- end of selected dog card -->
@@ -34,10 +34,10 @@
             {{selectedDate}}
           </view>
           <view wx:else class="dateInput">
-              tap to select your visit date
+              Choose the date
           </view>
         </picker>
-        <image id="arrow-right" src="/images/arrow_right.png" mode="aspectFit"></image>
+        <image class="arrow-right" src="/images/arrow_right.png" mode="aspectFit"></image>
       </view>
     <!-- end of date picker -->
 
@@ -57,7 +57,7 @@
     </view>
     <!-- end of timeslots -->
 
-    <button id="button" form-type="submit">BOOK</button>
+    <button class="btn-yellow" form-type="submit" style="font-family: 'Playfair Display'">BOOK</button>
   </form>
   </view>
    <!-- end of form-container -->

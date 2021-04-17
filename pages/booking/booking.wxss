@@ -1,15 +1,26 @@
 /* pages/booking/booking.wxss */
 
-.yellow-container {
-  background-color: #f8d35f;
+page {
+  color: #131313;
 }
 
-#dog {
-  width: 137.09px;
-  height: 143.87px;
-  margin-left: 187.5px;
-  margin-top: 120px;
-  margin-bottom: 45rpx;
+.yellow-container {
+  background-color: #f6c752;
+  height: 40vh;
+}
+
+.playfair {
+  font-family: "Playfair display";
+}
+
+.dog {
+  width: 240rpx;
+  height: 260rpx;
+  background-size: cover;
+  margin: 0 20rpx 0 30%;
+  position: fixed;
+  top: 344rpx;
+  right: 100rpx;
 }
 
 .white-container {
@@ -18,7 +29,7 @@
   box-sizing: border-box;
   width: 100%;
   margin-top: -50rpx;
-  padding: 29px 44px;
+  padding: 60rpx 90rpx;
   height: auto;
   background-color: #ffffff;
   padding-bottom: 0px;
@@ -27,72 +38,64 @@
 .title-container {
   display: flex;
   align-items: baseline;
-  margin-bottom: 23px;
+  margin-bottom: 50rpx;
 }
 
 .yellow-circle {
-  height: 10px;
-  width: 10px;
+  height: 20rpx;
+  width: 20rpx;
   background-color:#F8D35F;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-right: 30rpx;
 }
 
 .top-title {
-  font-family: 'Playfair Display';
-  font-size: 19px;
-  font-weight: bold;
+  font-size: 20pt;
 }
 
 .dog-card {
   display: flex;
   /* align-items: baseline; */
-  border-radius: 16px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  border-radius: 30rpx;
+  padding: 30rpx;
   background-color:#F1F1F0;
   width: 100%;
   align-items: center;
   box-sizing: border-box;
 }
 
-#dog-photo {
-  height: 100px;
-  width: 100px;
-  border-radius: 10px;
-  margin-right: 14px;
+.dog-photo {
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 20rpx;
+  margin-right: 30rpx;
 }
 
 .dog-name {
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Playfair Display";
+  font-size: 12pt;
   width: 100%;
 }
 
 .dog-more {
   color: #B6B1B1;
-  font-size: 16px;
+  font-size: 10pt;
   width: 100%;
-  margin-top: 4px;
+  margin-top: 10rpx;
 }
 
 .form-container {
-  margin-top: 26px;
+  margin-top: 50rpx;
 }
 
 /* start of input name */
 .title {
   color: #B6B1B1;
-  font-size: 16px;
-  margin-bottom: 13px;
+  font-size: smaller;
+  margin-bottom: 20rpx;
 }
 
 .date-container {
   display: flex;
-  /* width: 287px; */
-  /* justify-content: space-between; */
 }
 
 picker {
@@ -100,19 +103,19 @@ picker {
 }
 
 .dateInput {
-  font-size: 14px;
-  margin-bottom: 23.5px;
+  font-size: medium;
+  margin-bottom: 50rpx;
   color: #24241E;
   font-weight: bold;
   border-bottom: 1px solid #E4E4E4;
-  padding-bottom: 6.5px;
+  padding-bottom: 15rpx;
 }
 
-#arrow-right {
-  width: 8px;
-  height: 18px;
+.arrow-right {
+  width: 16rpx;
+  height: 36rpx;
   position: absolute;
-  right: 44px;
+  right: 90rpx;
 }
 /* end of input message */
 
@@ -120,14 +123,16 @@ picker {
   white-space: nowrap;
 }
 
-#button {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  font-family: 'Playfair Display';
-  padding: 24px 200px 34px 50px;
-  border-radius: 25px 0px 0px 0px;
-  background-color: #F8D35F;
+.btn-yellow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 150rpx;
+  padding: 40rpx 0 0 0;
+  box-sizing: border-box;
+  border-radius: 50rpx 0 0 0;
+  background-color: #f6c752;
 }
 
 .scroll-view_H{
@@ -139,24 +144,24 @@ picker {
   /* width: 45%; */
   /* height: 300rpx; */
   display: inline-block;
-  width: 63px;
-  height: 30px;
+  width: 120rpx;
+  height: 60rpx;
   background-color: #F1F1F0;
   text-align: center;
-  padding: 11px 15px;
-  margin-right: 10px;
-  line-height: 30px;
-  border-radius: 34px;
+  padding: 20rpx 30rpx;
+  margin-right: 20rpx;
+  line-height: 1.3em;
+  border-radius: 70rpx;
 }
 
 .selected {
   display: inline-block;
-  width: 63px;
-  height: 30px;
-  background-color: #F8D35F;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #f6c752;
   text-align: center;
-  padding: 11px 15px;
-  margin-right: 10px;
-  line-height: 30px;
-  border-radius: 34px;
+  padding: 20rpx 30rpx;
+  margin-right: 20rpx;
+  line-height: 1.3em;
+  border-radius: 70rpx;
 }

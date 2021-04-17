@@ -1,21 +1,21 @@
 <!--pages/contact/contact.wxml-->
 
 <view class="yellow-container">
-  <image id="dog" src="/images/dog.png"></image>
+  <view class="dog" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXcJ5jjCGAXtdzz.svg')"></view>
 </view>
 
 <view class="white-container">
   <view class="title-container">
     <view class="yellow-circle"></view>
-    <view class="top-title">Contact</view>
+    <view class="top-title playfair">Contact</view>
   </view>
 
   <!-- start of selected dog card -->
   <view class="dog-card">
-    <image id="dog-photo" src="/images/coco.jpg"></image>
+    <image class="dog-photo" src="{{dog.image[0].path}}"></image>
     <view>
-      <view class="dog-name">Coco</view>
-      <view class="dog-more">1 year • Male</view>
+      <view class="dog-name playfair">{{dog.name}}</view>
+      <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
     </view>
   </view>
   <!-- end of selected dog card -->
@@ -27,12 +27,12 @@
     <input type="text" placeholder="your name" />
 
     <view class="title">PHONE</view>
-    <input type="number" placeholder="000 0000 0000" /> 
+    <input type="number" placeholder="your mobile" /> 
 
     <view class="title">MESSAGE</view>
-    <input type="text" placeholder="leave your message..." />
+    <input type="text" placeholder="your message" />
 
-    <button id="button" form-type="submit">CONTINUE</button>
+    <button class="btn-yellow" form-type="submit" bindtap="navigateToSuccess" style="font-family: 'Playfair Display';">SUBMIT</button>
   </form>
   </view>
    <!-- end of form-container -->

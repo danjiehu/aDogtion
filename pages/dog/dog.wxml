@@ -91,7 +91,7 @@
     <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_social}}">social</view>
   </view>
 
-  <view class="yellow-btn" bindtap="navigateToHome">
+  <view class="yellow-btn" bindtap="navigateToContact">
     <view class="bold playfair larger">FOSTER</view>
     <view class="right-border"></view>
     <view class="bold playfair larger">ADOPT</view>

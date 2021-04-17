@@ -1,60 +1,58 @@
 /* pages/bookSuccess/bookSuccess.wxss */
+page {
+  color: #131313;
+}
+
 .page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   box-sizing: border-box;
-  padding: 131px 55px;
+  padding: 260rpx 10rpx;
   background-color: #F8D35F;
   height: 100vh;
 }
 
-#tick-circle {
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  margin-bottom: 16px;
-}
-
-.h1{
+.playfair {
   font-family: "Playfair Display";
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
 }
 
-.h2{
-  /* font-family: "Playfair Display"; */
-  font-size: 17px;
-  /* font-weight: bold; */
+.tick-circle {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 0 auto 30rpx auto;
+  display: block;
+}
+
+.title {
+  font-size: 20pt;
   text-align: center;
-  margin-top: 43px;
-  margin-bottom: 19px;
+  margin: 60rpx;
+}
+
+.sub-title {
+  font-size: medium;
+  text-align: center;
 }
 
 .appointment-card {
   background-color: #FFFFFF;
-  border-radius: 24px;
-  padding: 35px;
-  font-weight: bold;
-  font-size: 15px;
+  border-radius: 40rpx;
+  padding: 40rpx;
+  width: 60%;
+  box-sizing: border-box;
+  margin: 100rpx auto;
 }
 
 .dog-card {
   display: flex;
-  border-radius: 16px;
-  /* padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px; */
+  /* border-radius: 32rpx; */
   background-color:#FFFFFF;
   width: 100%;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 22px;
+  /* margin-bottom: 50rpx; */
 }
 
-#dog-photo {
+.dog-photo {
   height: 72px;
   width: 72px;
   border-radius: 10px;
@@ -76,10 +74,13 @@
   font-weight: 500;
 }
 
-#button {
-  border-radius: 25px;
+.button-home {
+  border-radius: 50rpx;
   font-family: "Playfair Display";
   font-weight: bold;
-  margin-top: 79px;
-  width: 128px;
+  padding: 20rpx 50rpx;
+  background-color: white;
+  margin: 80rpx auto;
+  text-align: center;
+  width: 20%;
 }
