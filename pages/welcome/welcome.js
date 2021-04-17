@@ -12,7 +12,7 @@ Page({
 
   navigateToHome: function() {
     wx.navigateTo({
-      url: '/pages/home/home'
+      url: '/pages/index/home/home'
     })
     console.log('navigate')
   }

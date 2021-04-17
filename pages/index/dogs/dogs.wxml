@@ -4,20 +4,35 @@
 <view class="grey-container">
   <view class="title playfair">Find your dog</view>
   <view class="filters playfair">FILTERS</view>
-  <view class="sub-title playfair {{!foster? 'active' : ''}}">Adopt</view>
-  <view class="sub-title playfair {{foster? 'active' : ''}}">Foster</view>
-  <view class="yellow-line"></view>
+  <view class="sub-title playfair {{category == 'adopt'? 'active' : ''}}" bindtap="switchTab" data-category='adopt'>Adopt</view>
+  
+  <view class="sub-title playfair {{category == 'foster'? 'active' : ''}}" bindtap="switchTab" data-category='foster'>Foster</view>
+  <!-- <view class="yellow-line"></view> -->
+
   <view class="cards-masonry">
-    <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
-      <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
-        <image class="like-button" src="/images/fav-white.svg"></image>
-        <image mode="widthFix" class="img-full" src="{{dog.image[0].path}}"></image>
-        <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
-        <view class="mini-flex">
-        <view class="do-not-delete-me"></view>
-        <view class="dog-name-yellow playfair">{{dog.name}}</view>
+    <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
+        <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
+          <image class="like-button" src="/images/fav-white.svg"></image>
+          <image mode="widthFix" class="img-full" src="{{dog.image[0].path}}"></image>
+          <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
+          <view class="mini-flex">
+          <view class="do-not-delete-me"></view>
+          <view class="dog-name-yellow playfair">{{dog.name}}</view>
+          </view>
         </view>
-      </view>
+      <!-- </view> -->
+
+      <!-- <view wx:if="{{dog.foster}}">
+        <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
+          <image class="like-button" src="/images/fav-white.svg"></image>
+          <image mode="widthFix" class="img-full" src="{{dog.image[0].path}}"></image>
+          <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
+          <view class="mini-flex">
+          <view class="do-not-delete-me"></view>
+          <view class="dog-name-yellow playfair">{{dog.name}}</view>
+          </view>
+        </view>
+      </view> -->
     </block>
   </view>
 </view>

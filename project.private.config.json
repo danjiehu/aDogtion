@@ -37,21 +37,9 @@
           "scene": null
         },
         {
-          "name": "Dogs",
-          "pathName": "pages/dogs/dogs",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "bookSuccess",
           "pathName": "pages/bookSuccess/bookSuccess",
           "query": "id=6075a34cfd4ebb40b9a7a354",
-          "scene": null
-        },
-        {
-          "name": "Profile",
-          "pathName": "pages/profile/profile",
-          "query": "",
           "scene": null
         },
         {

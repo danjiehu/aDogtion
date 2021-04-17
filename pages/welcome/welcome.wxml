@@ -1,13 +1,13 @@
 <!--pages/welcome/welcome.wxml-->
-<view class="welcome">
+<view class="yellow-container">
   <view class="text-area">
-    <view class="welcome-hawoof">Hawoof!</view>
-    <view class="welcome-title">Welcome to aDogtion</view>
-    <view class="welcome-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-    <view class="welcome-text">All these dogs need is a little love.</view>
+    <view class="sub-title playfair">Hawoof!</view>
+    <view class="title playfair">Welcome to aDogtion</view>
+    <view class="paragraph">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
+    <view class="paragraph">All these dogs need is a little love.</view>
     <!-- <view class="welcome-text">You can support them in many ways: by adopting, fostering, donating, and simply spreading the word.</view> -->
   </view>
-  <view class="white-button" bindtap="navigateToHome">
+  <view class="white-button playfair" bindtap="navigateToHome">
     <button style="font-size: 16pt; margin: 0;">CONTINUE</button>
   </view>
 </view>

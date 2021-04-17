@@ -35,6 +35,7 @@ page{
 
 .playfair {
   font-family: "Playfair display";
+  font-weight: bold;
 }
 
 .filters {
@@ -129,5 +130,18 @@ page{
 
 
 .active {
-  color: red;
+  background: #f6c752;
+  width: 80rpx;
+  min-height: auto;
+  height: 20rpx;
+  /* margin-top: 10rpx; */
+  vertical-align: text-bottom;
+  border-radius: 0;
+  margin: -14rpx 0 0 80rpx;
+  z-index: 0;
+}
+
+.yellow-underline{
+  width: 50%;
+  display: block;
 }

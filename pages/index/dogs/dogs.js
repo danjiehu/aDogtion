@@ -5,12 +5,18 @@ Component({
     foster: {
       type: Boolean,
       value: false
+    },
+    adopt: {
+      type: Boolean,
+      value: false
     }
   },
 
   data: {
-    dogs: [],
-    currentUser: null
+    dogs:[],
+    selected_dogs: [],
+    currentUser: null,
+    category:""
   },
 
   ready: function (options) {
@@ -18,17 +24,15 @@ Component({
     this.setData({
       currentUser: app.globalData.userInfo
     })
-    this.data.foster? this.getFosterDogs() : this.getDogs()
+    this.getDogsFromIndex();
   },
 
   methods: {
-    getDogs(){
+    getAllDogs(){
       const self = this
       let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
-  
       Dogs.find().then(
         (res) => { 
-          console.log('Dogs have been loaded',res)
           self.setData({
             dogs: res.data.objects
           })
@@ -37,30 +41,44 @@ Component({
         }
       )
     },
-
-    getFosterDogs(){
-      this.setData({
-        dogs: []
-      })
-      // const self = this
-      // let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
-  
-      // Dogs.find().then(
-      //   (res) => { 
-      //     console.log('Dogs have been loaded',res)
-      //     self.setData({
-      //       dogs: res.data.objects
-      //     })
-      //   }, (err) => {
-      //     console.log('dogs failed failed',err)
-      //   }
-      // )
+    
+    getDogsFromIndex(){
+      let category = this.properties.foster? "foster": "adopt";
+      this.setData({category})
+      this.getSelectedDogs(category);
     },
+
+    getDogsFromDogs(category){
+      this.setData({category})
+      this.getSelectedDogs(category);
+    },
+    
+    getSelectedDogs(category){
+      const self = this
+      let FosterDogs = new wx.BaaS.TableObject('adogtion_dogs')
+      let query = new wx.BaaS.Query()
+      query.compare(category, '=', true)
+      FosterDogs.setQuery(query).find().then(
+        (res) => { 
+          self.setData({
+            selected_dogs: res.data.objects
+          })
+        }, (err) => {
+          console.log('dogs failed failed',err)
+        }
+      )
+    },
+    
     navigateToDog: function(e) {
       console.log('calling a dog', e)
-      wx.switchTab({
+      wx.navigateTo({
         url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
       })
+    },
+
+    switchTab: function(e){
+      console.log(e)
+      this.getDogsFromDogs(e.currentTarget.dataset.category)
     }
   }
 
