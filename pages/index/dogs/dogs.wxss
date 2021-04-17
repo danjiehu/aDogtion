@@ -5,15 +5,9 @@ page{
 }
 
 .yellow-container {
-  height: 260rpx;
+  height: 14vh;
   background-color: #f6c752;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 60rpx 70rpx 60rpx;
   width: 100%;
-  box-sizing: border-box;
-  background-size: cover;
 }
 
 .grey-container {

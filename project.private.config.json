@@ -47,6 +47,12 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "Dogs",
+          "pathName": "pages/index/dogs/dogs",
+          "query": "",
+          "scene": null
         }
       ]
     }
