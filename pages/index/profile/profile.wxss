@@ -222,7 +222,7 @@ page{
   font-size: small;
 }
 
-.icon-btn{
+.icon-btn {
   height: 56rpx;
   width: 56rpx;
   background-color: #f6c752;

@@ -55,7 +55,7 @@
       <view class="white-txt playfair bold">Olivia & Almond</view>
       <view class="white-txt smaller-txt">A love story</view>
     </view>
-    <image mode="widthFix" class="user-icon" src=""></image>
+    <image mode="widthFix" class="icon-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXp4FViufPrbFv3.svg"></image>
   </view>
   <view class="wide-card card-about-white">
       <view>
