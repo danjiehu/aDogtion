@@ -29,6 +29,9 @@ page{
   height: 142rpx;
   background-size: cover;
   margin: 0 auto;
+  /* filter: brightness(70%); */
+  background-color: #f1f1f0;
+  border-radius: 50%;
 }
 
 .medium-txt{
@@ -226,7 +229,7 @@ page{
   padding: 30rpx;
   border-radius: 30rpx 0rpx 0 0rpx;
   position: absolute;
-  bottom: 119rpx;
+  bottom: -100rpx;
   right: 21px;
 }
 
