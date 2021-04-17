@@ -12,25 +12,25 @@
 
   <!-- start of selected dog card -->
   <view class="dog-card">
-    <image class="dog-photo" src="{{dog.image[0].path}}"></image>
+    <image class="dog-photo" src="{{dogImagePath}}"></image>
     <view>
-      <view class="dog-name playfair">{{dog.name}}</view>
-      <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
+      <view class="dog-name playfair">{{dogProfile.name}}</view>
+      <view class="dog-more">{{dogProfile.age}} • {{dogProfile.gender}}</view>
     </view>
   </view>
   <!-- end of selected dog card -->
 
   <!-- start of form-container -->
   <view class="form-container">
-  <form bindsubmit="submit">
+  <form bindsubmit="submitContact">
     <view class="title">NAME</view>
-    <input type="text" placeholder="your name" />
+    <input type="text" placeholder="your name" name="name" />
 
     <view class="title">PHONE</view>
-    <input type="number" placeholder="your mobile" /> 
+    <input type="number" placeholder="your mobile"  name="phone"  /> 
 
     <view class="title">MESSAGE</view>
-    <input type="text" placeholder="your message" />
+    <input type="text" placeholder="your message" name="message" />
 
     <button class="btn-yellow" form-type="submit" bindtap="navigateToSuccess" style="font-family: 'Playfair Display';">SUBMIT</button>
   </form>
