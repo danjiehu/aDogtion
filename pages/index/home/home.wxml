@@ -27,7 +27,7 @@
     <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
       <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
         <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.image[0].path}}')">
-          <view class="dog-age-gender">{{dog.age}} years • {{dog.gender}}</view>
+          <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
         </view>
         <view class="mini-flex">
           <view class="do-not-delete-me"></view>
@@ -41,7 +41,7 @@
     
         <!-- DONATION -->
 
-  <view class="wide-card card-donation-yellow">
+  <!-- <view class="wide-card card-donation-yellow">
       <view>
         <view class="donation-title playfair bold">Donate and save lives!</view>
         <view class="donate-paw" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbic15k0C1UWpK.svg')"></view>
@@ -49,7 +49,7 @@
       <view>
         <button class="round-button white playfair" style="width: 200rpx;">donate</button>
       </view>
-  </view>
+  </view> -->
 
        <!-- ABOUT US  -->
 
