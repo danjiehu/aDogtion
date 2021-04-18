@@ -46,9 +46,6 @@ Component({
     
   },
 
-  
-
-
   methods: {
     
     navigateToDogs: function(e) {
