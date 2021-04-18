@@ -5,28 +5,28 @@ page{
   box-sizing: border-box;
 }
 
-.white-container{
+.white-container {
   background-color: #fff;
   padding-top: 150rpx;
   z-index: 500;
-  height: 260rpx;
+  height: 11vh;
   margin: 0 auto;
   border-radius: 0 0 70rpx 70rpx;
   position: sticky;
 }
 
-.center{
+.center {
   margin: 0 auto;
   /* width: 50%; */
 }
 
-.bold{
+.bold {
   font-weight: 600;
 }
 
 .user-icon {
-  width: 142rpx;
-  height: 142rpx;
+  width: 80rpx;
+  height: 80rpx;
   background-size: cover;
   margin: 0 auto;
   /* filter: brightness(70%); */
@@ -34,7 +34,7 @@ page{
   border-radius: 50%;
 }
 
-.medium-txt{
+.medium-txt {
   padding-top: 15rpx; 
   font-size: medium;
   font-weight: 400;
@@ -50,6 +50,7 @@ page{
   padding: 50rpx 0;
   width: 100%;
   box-sizing: border-box;
+  min-height: 80vh;
 }
 
 .title {
@@ -62,9 +63,9 @@ page{
   font-family: "Playfair display";
 }
 
-.empty-container{
+.empty-container {
   background-color: #fff;
-  height: 620rpx;
+  /* height: 620rpx; */
   width: 90%;
   box-sizing: border-box;
   border-radius: 40rpx;
@@ -72,7 +73,7 @@ page{
   padding: 60rpx 90rpx;
 }
 
-.empty-img{
+.empty-img {
   width: 200rpx;
   height: 177rpx;
   margin: 20rpx auto;
@@ -80,18 +81,18 @@ page{
   padding-bottom: 20rpx;
 }
 
-.empty-title{
+.empty-title {
   margin: 0rpx auto;
   font-size: larger;
   padding-bottom: 20rpx;
 }
 
-.center-txt{
+.center-txt {
   text-align: center;
   margin: 0rpx auto;
 }
 
-.grey-txt{
+.grey-txt {
   color: #B6B1B1;
 }
 
@@ -178,13 +179,13 @@ page{
   font-weight: 700;
 }
 
-.btn{
+.btn {
   border-radius: 50rpx;
   padding: 18rpx 40rpx;
   border-radius: 50rpx;
   width: 200rpx;
   text-align: center;
-  margin-top: 70rpx;
+  margin: 50rpx auto 0 auto;
   font-weight: bold;
 }
 
@@ -232,9 +233,9 @@ page{
   background-color: #f6c752;
   padding: 30rpx;
   border-radius: 30rpx 0rpx 0 0rpx;
-  position: absolute;
-  bottom: -100rpx;
-  right: 21px;
+  position: relative;
+  bottom: -56rpx;
+  left: 305rpx;
 }
 
 .card-about-white {
