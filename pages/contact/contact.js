@@ -4,7 +4,7 @@ const app = getApp()
 Page({
 
   data: {
-    currentUser: null,
+    // currentUser: null,
     dogId: null,
     dogProfile: {},
     dogImagePath: null
@@ -15,7 +15,7 @@ Page({
 
     console.log("onLoadRes",res)
     this.setData({
-      currentUser: app.globalData.userInfo,
+      // currentUser: app.globalData.userInfo,
       dogId: res.id
     })
 
@@ -48,7 +48,7 @@ Page({
       let newForm = forms.create()
 
       newForm.set({
-        user_id: page.data.currentUser,
+        // user_id: page.data.currentUser,
         dog_id: page.data.dogId,
         name: res.detail.value.name,
         phone: res.detail.value.phone,
@@ -66,30 +66,22 @@ Page({
           })
         },
         (err)=>{
-          console.log("saveFailed", err.code)
-          console.log(err.message)
-          console.log("type", typeof(err))
-          if (err.code == 400) {
-            console.log(400)
-            wx.showModal({
-              title: 'submit failed',
-              content: 'please enter a valid phone number',
-              showCancel: false,
-              confirmText: "go back"
-            })
-          }
+          // console.log("saveFailed", err)
+          // console.log(err.message)
+          // console.log("type", typeof(err))
+          // if (err.code == 400) {
+          //   wx.showModal({
+          //     title: 'submit failed',
+          //     content: 'please make sure all the fields are entered correctly',
+          //     showCancel: false,
+          //     confirmText: "go back"
+          //   })
+          // } 
         } 
       )
   }
 
-  // navigateToSuccess: function(e) {
-  //   let self = this
-  //   console.log('going to success', e)
-  //   wx.navigateTo({
-  //     url: `/pages/bookSuccess/bookSuccess?id=${self.data.dog.id}`,
-  //   })
-  // }
-
+ 
 // end of page
 })
 

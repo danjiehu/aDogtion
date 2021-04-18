@@ -32,7 +32,7 @@
     <view class="title">MESSAGE</view>
     <input type="text" placeholder="your message" name="message" />
 
-    <button class="btn-yellow" form-type="submit" bindtap="navigateToSuccess" style="font-family: 'Playfair Display';">SUBMIT</button>
+    <button class="btn-yellow" form-type="submit" style="font-family: 'Playfair Display';">SUBMIT</button>
   </form>
   </view>
    <!-- end of form-container -->
