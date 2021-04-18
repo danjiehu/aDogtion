@@ -91,14 +91,23 @@
     <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_social}}">social</view>
   </view>
 
-  <view class="yellow-btn" bindtap="navigateToContact">
-    <view class="bold playfair larger">FOSTER</view>
-    <view class="right-border"></view>
-    <view class="bold playfair larger">ADOPT</view>
-  </view>
+  <!-- <block wx:if="{{!currentUser}}">
+    <view class="yellow-btn" bindtap="navigateToUser">
+      <view class="bold playfair larger">FOSTER</view>
+      <view class="right-border"></view>
+      <view class="bold playfair larger">ADOPT</view>
+    </view>
+  </block> -->
+  <!-- <block wx:else> -->
+    <view class="yellow-btn" bindtap="navigateToContact">
+      <view class="bold playfair larger">FOSTER</view>
+      <view class="right-border"></view>
+      <view class="bold playfair larger">ADOPT</view>
+    </view>
+  <!-- </block> -->
 
   <!-- back arrow -->
-  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXeVTJY3y3AoCNe.svg" bindtap="goBack"></image>
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
 
 </view>
   
