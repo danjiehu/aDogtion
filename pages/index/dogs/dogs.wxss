@@ -133,9 +133,9 @@ page {
   z-index: 0;
 } */
 
-.yellow-underline {
-  /* display: block; */
-}
+/* .yellow-underline {
+  display: block;
+} */
 
 .active .yellow-underline {
   display: block;
