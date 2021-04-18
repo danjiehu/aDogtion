@@ -4,17 +4,24 @@ const app = getApp()
 Page({
 
   data: {
-    currentUser: null,
+    currentUser: wx.getStorageSync('userInfo'),
     dogId: null,
     dogProfile: {},
-    dogImagePath: null
+    dogImagePath: null,
+    name: null,
+    mobile: null,
+    message: null,
+    alertName: false,
+    alertPhone: false,
+    alertMessage: false
   },
 
   // start of onload get selected dog profile
   onLoad: function (res) {
     console.log("onLoadRes",res)
     this.setData({
-      currentUser: app.globalData.userInfo,
+      // currentUser: wx.getStorageSync('userInfo.openid'),
+      // currentUser: app.globalData.userInfo,
       dogId: res.id
     })
 
@@ -40,55 +47,86 @@ Page({
 
   },
 
+  // start of clearAlert
+  clearAlert: function(){
+    this.setData({
+      alertName: false,
+      alertPhone: false,
+      alertMessage: false
+    })
+  },
+  // end of clearAlert
+
   submitContact: function(res) {
     console.log("subContact-res",res)
       let page = this
       let forms = new wx.BaaS.TableObject('adogtion_forms')
       let newForm = forms.create()
+      let name = res.detail.value.name
+      let phone = res.detail.value.phone
+      let message = res.detail.value.message
 
+      if (!name){
+        page.setData({
+          alertName: true
+          })
+        }
+
+      if (!phone){
+          page.setData({
+            alertPhone: true
+            })
+        }
+
+      if (!message){
+        page.setData({
+          alertMessage: true
+          })
+      }
+
+      if (name&&phone&&message)
       newForm.set({
-        user_id: page.data.currentUser,
+        user_id: page.data.currentUser.id,
         dog_id: page.data.dogId,
-        name: res.detail.value.name,
-        phone: res.detail.value.phone,
-        message: res.detail.value.message
+        name,
+        phone,
+        message
       })
 
       newForm.save().then(
         (res)=>{
           console.log("saveSuccess",res)
           wx.showToast({
-            title: 'contact received!',
+            title: 'received!',
           })
           wx.navigateTo({
-            url: `/pages/bookSuccess/bookSuccess?id=${page.data.dogId}`,
+            url: `/pages/booking/booking?id=${page.data.dogId}`,
           })
         },
         (err)=>{
-          console.log("saveFailed", err.code)
+          console.log("saveFailed", err)
           console.log(err.message)
-          console.log("type", typeof(err))
-          if (err.code == 400) {
-            console.log(400)
-            wx.showModal({
-              title: 'submit failed',
-              content: 'please enter a valid phone number',
-              showCancel: false,
-              confirmText: "go back"
-            })
-          }
+          page.setData({
+            alertPhone: true
+          })
+          // console.log("type", typeof(err))
+          // if(err.message.includes("phone")){
+          // }
+          // if (err.code == 400) {
+          //   wx.showModal({
+          //     title: 'submit failed',
+          //     content: 'please make sure all the fields are entered correctly',
+          //     showCancel: false,
+          //     confirmText: "go back"
+          //   })
+          // } 
         } 
       )
-  }
+  
+    //end of submit function
+    }
 
-  // navigateToSuccess: function(e) {
-  //   let self = this
-  //   console.log('going to success', e)
-  //   wx.navigateTo({
-  //     url: `/pages/bookSuccess/bookSuccess?id=${self.data.dog.id}`,
-  //   })
-  // }
-
+ 
 // end of page
 })
 
