@@ -6,7 +6,8 @@ page {
 
 .yellow-container {
   background-color: #f6c752;
-  height: 40vh;
+  height: 35vh;
+  position: relative;height: 65vh + 50rpx;
 }
 
 .playfair {
@@ -18,19 +19,22 @@ page {
   height: 260rpx;
   background-size: cover;
   margin: 0 20rpx 0 30%;
-  position: fixed;
-  top: 344rpx;
+  position: absolute;
   right: 100rpx;
+  bottom: 50rpx;
+  /* position: fixed;
+  top: 344rpx;
+  right: 100rpx; */
 }
 
 .white-container {
-  /* position: relative; */
+  position: relative;
   border-radius: 70rpx 70rpx 0 0;
   box-sizing: border-box;
   width: 100%;
   margin-top: -50rpx;
-  padding: 60rpx 90rpx;
-  height: auto;
+  padding: 60rpx 90rpx 300rpx 90rpx;
+  height: 65vh + 50rpx;
   background-color: #ffffff;
   padding-bottom: 0px;
 }
