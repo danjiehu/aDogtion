@@ -5,7 +5,8 @@ page {
 
 .yellow-container {
   background-color: #f6c752;
-  height: 40vh;
+  height: 35vh;
+  position: relative;
 }
 
 .playfair {
@@ -17,18 +18,19 @@ page {
   height: 260rpx;
   background-size: cover;
   margin: 0 20rpx 0 30%;
-  position: relative;
-  top: 344rpx;
-  left: 200rpx;
+  position: absolute;
+  right: 100rpx;
+  bottom: 50rpx;
 }
 
 .white-container {
+  position: relative;
   border-radius: 70rpx 70rpx 0 0;
   box-sizing: border-box;
   width: 100%;
   margin-top: -50rpx;
-  padding: 60rpx 90rpx;
-  height: auto;
+  padding: 60rpx 90rpx 300rpx 90rpx;
+  height: 65vh + 50rpx;
   background-color: #ffffff;
   padding-bottom: 0px;
 }
@@ -90,21 +92,27 @@ page {
   color: #B6B1B1;
   font-size: small;
   margin-bottom: 10rpx;
+  margin-top: 30rpx;
 }
 
 input {
   font-size: medium;
-  margin-bottom: 30rpx;
   color: #24241E;
   font-weight: regular;
   border-bottom: 1px solid #E4E4E4;
   padding-bottom: 16rpx;
 }
-
 /* end of input message */
 
+.alert {
+  margin-top: 5rpx;
+  font-size: medium;
+  color: red;
+}
+
+
 .btn-yellow {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 80%;

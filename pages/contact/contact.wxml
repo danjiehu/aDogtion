@@ -21,16 +21,22 @@
   <!-- end of selected dog card -->
 
   <!-- start of form-container -->
-  <view class="form-container">
+  <view class="form-container" bindtap="clearAlert">
   <form bindsubmit="submitContact">
     <view class="title">NAME</view>
     <input type="text" placeholder="your name" name="name" />
+    <view class="alert" wx:if="{{alertName}}">don't leave name empty</view>
 
     <view class="title">PHONE</view>
     <input type="number" placeholder="your mobile"  name="phone"  /> 
+    <view class="alert" wx:if="{{alertPhone}}">please enter a valid phone number</view>
 
     <view class="title">MESSAGE</view>
     <input type="text" placeholder="your message" name="message" />
+    <view class="alert" wx:if="{{alertMessage}}">leave a message for {{dogProfile.name}}</view>
+
+    <view style="height:300rpx;"></view>
+    <!-- this is a divider for submit button -->
 
     <button class="btn-yellow" form-type="submit" style="font-family: 'Playfair Display';">SUBMIT</button>
   </form>
