@@ -99,11 +99,11 @@
     </view>
   </block> -->
   <!-- <block wx:else> -->
-    <view class="yellow-btn" bindtap="navigateToContact">
+    <!-- <view class="yellow-btn" bindtap="navigateToContact">
       <view class="bold playfair larger">FOSTER</view>
       <view class="right-border"></view>
       <view class="bold playfair larger">ADOPT</view>
-    </view>
+    </view> -->
   <!-- </block> -->
 
   <!-- back arrow -->
