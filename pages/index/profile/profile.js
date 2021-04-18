@@ -42,17 +42,20 @@ Component({
         console.log('dogs failed failed',err)
       }
     )
+
+    
   },
 
-  navigateToDog: function(e) {
-    console.log('calling a dog', e)
-    wx.navigateTo({
-      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
-    })
-  },
+  
 
 
   methods: {
+    
+    navigateToDogs: function(e) {
+      console.log('see dogs button', e)
+      this.triggerEvent("toAdoptDogs")
+    },
+
     getUserInfo(e) {
       getApp().globalData.userInfo = e.detail.userInfo
       // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
@@ -89,6 +92,12 @@ Component({
         }
       })
     }
-  }
+  },
 
+  navigateToDog: function(e) {
+    console.log('calling a dog', e)
+    wx.navigateTo({
+      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
+    })
+  },
 })

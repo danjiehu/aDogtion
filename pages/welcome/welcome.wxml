@@ -7,7 +7,7 @@
     <view class="paragraph">All these dogs need is a little love.</view>
     <!-- <view class="welcome-text">You can support them in many ways: by adopting, fostering, donating, and simply spreading the word.</view> -->
   </view>
-  <view class="white-button playfair" bindtap="navigateToHome">
-    <button style="font-size: 16pt; margin: 0;">CONTINUE</button>
+  <view class="btn-white playfair bold" bindtap="navigateToHome">
+    <view>CONTINUE</view>
   </view>
 </view>
