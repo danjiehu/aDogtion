@@ -29,7 +29,7 @@
     <view wx:else>
       <view class="empty-container">
         <image class="empty-img" src="/images/empty.svg"></image> 
-        <view class="empty-title bold playfair center-txt">No favorites yet</view>
+        <view class="empty-title bold playfair center-txt">You don't have favorites yet</view>
         <view class="small-txt grey-txt center-txt">Browse the dogs and add them to your favourites by clicking the "like" button</view>
         <view class="btn yellow playfair center" style="width: 130rpx;" bindtap="navigateToDogs">see dogs</view>
       </view>
