@@ -154,7 +154,8 @@ picker {
   text-align: center;
   padding: 20rpx 30rpx;
   margin-right: 20rpx;
-  line-height: 1.3em;
+  line-height: 60rpx; 
+  /* do NOT change line-height */
   border-radius: 70rpx;
 }
 
@@ -166,6 +167,7 @@ picker {
   text-align: center;
   padding: 20rpx 30rpx;
   margin-right: 20rpx;
-  line-height: 1.3em;
+  line-height: 60rpx; 
+  /* do NOT change line-height */
   border-radius: 70rpx;
 }
