@@ -73,17 +73,18 @@ page{
   width: 200rpx;
   height: 100rpx;
   position: relative;
-  right: -72rpx;
-  bottom: -16rpx;
+  left: 74rpx;
+  bottom: -8rpx;
   background-size: cover;
+  display: block;
 }
 
 .dog-butt {
   width: 160rpx;
   height: 140rpx;
   position: relative;
-  right: -114rpx;
-  bottom: 20rpx;
+  left: 114rpx;
+  bottom: 28rpx;
   background-size: cover;
 }
 
@@ -118,16 +119,19 @@ page{
   /* background-color: #F8D35F; */
   border-radius: 50rpx 50rpx 0 50rpx;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .dog-age-gender {
   margin: 0 auto;
   width: 80%;
-  padding-top: 78%;
-  padding-left: 10%;
+  position: relative;
+  top: 210rpx;
   color: white;
   font-size: 9pt;
+  text-align: right;
+  padding-right: 14rpx;
+  text-transform: uppercase;
 }
 
 .mini-flex {
@@ -139,7 +143,7 @@ page{
   padding: 30rpx;
   background-color: #f6c752;
   padding: 16rpx 40rpx 16rpx 50rpx;
-  border-radius: 0 0 0 50rpx;
+  border-radius: 0 0 0 30rpx;
   font-size: 11pt;
 }
 

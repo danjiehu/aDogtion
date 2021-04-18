@@ -29,6 +29,9 @@ page{
   height: 142rpx;
   background-size: cover;
   margin: 0 auto;
+  /* filter: brightness(70%); */
+  background-color: #f1f1f0;
+  border-radius: 50%;
 }
 
 .medium-txt{
@@ -179,11 +182,15 @@ page{
   border-radius: 50rpx;
   padding: 18rpx 40rpx;
   border-radius: 50rpx;
-  font-weight: 700;
   width: 200rpx;
-  /* margin: 0 auto; */
   text-align: center;
   margin-top: 70rpx;
+  font-weight: bold;
+}
+
+.btn .yellow :hover{
+  background-color: rgba(246, 199, 82, 0.8);
+  color: rgba(0,0,0, 0.7)
 }
 
 .white {
@@ -219,14 +226,14 @@ page{
   font-size: small;
 }
 
-.icon-btn{
-  height: 56rpx;
-  width: 56rpx;
+.icon-btn {
+  height: 36rpx;
+  width: 36rpx;
   background-color: #f6c752;
   padding: 30rpx;
   border-radius: 30rpx 0rpx 0 0rpx;
   position: absolute;
-  bottom: 119rpx;
+  bottom: -100rpx;
   right: 21px;
 }
 

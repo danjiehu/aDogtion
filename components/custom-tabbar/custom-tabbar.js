@@ -6,16 +6,16 @@ Component({
   },
   data: {
     selected: 0,
-    color: "#788475",
-    selectedColor: "#251605",
+    color: "#b6b1b1",
+    selectedColor: "#131313",
     list: [{
       text: "Home"
     }, {
       text: "Dogs"
     },
-    {
-      text: "Me"
-    }
+    // {
+    //   text: "Me"
+    // }
   ]
   },
   attached() {
