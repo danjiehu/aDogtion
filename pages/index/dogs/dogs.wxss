@@ -1,5 +1,5 @@
 /* pages/dogs/dogs.wxss */
-page{
+page {
   width: 100%;
   box-sizing: border-box;
 }
@@ -8,6 +8,7 @@ page{
   height: 14vh;
   background-color: #f6c752;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .grey-container {
@@ -15,16 +16,24 @@ page{
   z-index: 10;
   border-radius: 70rpx 70rpx 0 0;
   background-color: #F1F1F0;
-  padding: 70rpx 0;
+  padding: 70rpx 0 200rpx 0;
   width: 100%;
   box-sizing: border-box;
   min-height: 93vh;
+}
+
+.top-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
 }
 
 .title {
   font-size: 20pt;
   margin: 0 0 0 80rpx;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .playfair {
@@ -33,34 +42,31 @@ page{
 }
 
 .filters {
-  display: inline-block;
   color: #B6B1B1;
-  position: absolute;
-  right: 80rpx;
-  top: 280rpx;
   font-size: 11pt;
 }
 
 .sub-title {
-  margin: 20rpx 0 0 80rpx;
+  margin: 10rpx 0 0 80rpx;
   font-size: 15pt;
   font-weight: 600;
   display: inline-block;
-  z-index: 10;
 }
 
 .yellow-line {
   width: 60rpx;
   height: 20rpx;
   background-color: #f6c752;
-  margin: -14rpx 0 0 80rpx;
+  margin: -13rpx 0 0 80rpx;
   z-index: 0;
 }
 
 .cards-masonry {
-  padding: 40rpx 70rpx 100rpx 70rpx;
+  padding: 20rpx 70rpx 100rpx 70rpx;
   column-count: 2;
-  column-gap: 40rpx;
+  column-gap: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card {
@@ -70,33 +76,32 @@ page{
   display: inline-block;
 }
 
-.img-full{
-  /* height: 400rpx; */
-  background-color: #f1f1f0;
+.img-full {
   border-radius: 32rpx 32rpx 0 32rpx;
   width: 100%;
-  /* margin-top: -40rpx; */
   z-index: 0;
+  filter: brightness(80%);
 }
-
+/* 
 .card-image {
   height: 100%;
-  /* background-color: #F8D35F; */
+  background-color: #F8D35F;
   border-radius: 40rpx 40rpx 0 40rpx;
   background-size: cover;
   background-position: center;
-}
+} */
 
 .dog-age-gender {
-  /* margin: -56rpx 0 20rpx 0; */
+  /* margin: 0; */
   z-index: 100;
   position: relative;
-  bottom: 52rpx;
-  right: 0;
+  bottom: 58rpx;
+  /* right: 0; */
   width: 90%;
   color: white;
   font-size: 9pt;
   text-align: right;
+  text-transform: uppercase;
 }
 
 .mini-flex {
@@ -106,8 +111,8 @@ page{
 
 .dog-name-yellow {
   background-color: #f6c752;
-  padding: 16rpx 40rpx 16rpx 50rpx;
-  border-radius: 0 0 0 50rpx;
+  padding: 16rpx 40rpx 16rpx 90rpx;
+  border-radius: 0 0 0 36rpx;
   font-size: 10pt;
   margin-top: -38rpx;
 }
@@ -123,19 +128,32 @@ page{
 }
 
 
-.active {
-  background: #f6c752;
-  width: 80rpx;
-  min-height: auto;
-  height: 20rpx;
-  /* margin-top: 10rpx; */
-  vertical-align: text-bottom;
-  border-radius: 0;
-  margin: -14rpx 0 0 80rpx;
+/* .active {
+  border-bottom: 10px solid #f6c752;
   z-index: 0;
+} */
+
+/* .yellow-underline {
+  display: block;
+} */
+
+.active .yellow-underline {
+  display: block;
+  z-index: 0;
+  width: 80rpx;
+  height: 25rpx;
+  background-color: #f6c752;
+  /* position: relative; */
+  /* left: 80rpx; */
+  margin: -20rpx 0 0 80rpx;
+  display: block;
 }
 
-.yellow-underline{
-  width: 50%;
-  display: block;
+.active .sub-title {
+  z-index: 100;
+}
+
+.menu-tab {
+  display: inline-block;
+  margin-top: 30rpx;
 }

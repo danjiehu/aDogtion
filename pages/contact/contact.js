@@ -12,7 +12,6 @@ Page({
 
   // start of onload get selected dog profile
   onLoad: function (res) {
-
     console.log("onLoadRes",res)
     this.setData({
       // currentUser: app.globalData.userInfo,

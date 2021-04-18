@@ -225,9 +225,9 @@ input {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 80%;
+  /* width: 80%; */
   height: 150rpx;
-  padding: 40rpx 0 0 0;
+  padding: 40rpx 100rpx 0 100rpx;
   box-sizing: border-box;
   border-radius: 50rpx 0 0 0;
   background-color: #f6c752;
@@ -238,14 +238,16 @@ input {
 .right-border {
   border-right: 1px solid #24241E;
   height: 40rpx;
+  padding-right: 70rpx;
+  margin-right: 70rpx;
 }
 
 .top-btn {
   position: fixed;
-  top: 6%;
-  left: 6%;
-  height: 20rpx;
-  width: 40rpx;
+  top: 5%;
+  left: 5%;
+  height: 40rpx;
+  width: 60rpx;
   margin: 2% 0 0 10rpx;
   padding: 0;
 }
@@ -256,4 +258,28 @@ input {
 
 .details {
   font-size: 10pt;
+}
+
+.adopt-text {
+  font-size: small;
+  color: #9e9e9e;
+  text-align: right;
+  padding: 40rpx;
+  width: 50%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 12rpx;
+  right: 320rpx;
+}
+
+.login-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 160rpx;
+  padding: 40rpx 100rpx;
+  box-sizing: border-box;
+  border-radius: 50rpx 0 0 0;
+  background-color: #f6c752;
 }

@@ -36,24 +36,28 @@
   line-height: 1.3em;
 }
 
-.white-button {
+.btn-white {
   display: block;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 70%;
-  height: 190rpx;
-  padding: 50rpx 0 0 20rpx;
-  box-sizing: border-box;
+  height: 134rpx;
+  padding: 40rpx 0rpx 0rpx 55rpx;
   border-radius: 60rpx 0 0 0;
   background-color: white;
+  font-size: 16pt;
 }
 
-button {
-  background-color: white;
-  font-size: 20pt;
+.btn-white :hover {
+  color: #B6B1B1;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .playfair {
   font-family: "Playfair display";
+}
+
+.bold {
+  font-weight: bold;
 }

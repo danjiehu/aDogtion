@@ -7,6 +7,8 @@ Component({
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
+    selected_dogs: []
+    // favourite: []
   },
 
   ready: function (options) {
@@ -29,30 +31,38 @@ Component({
       currentUser: app.globalData.userInfo
     })
 
-    const self = this
-    let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
-
-    Dogs.find().then(
-      (res) => { 
-        console.log('Dogs have been loaded',res)
-        self.setData({
-          dogs: res.data.objects
-        })
-      }, (err) => {
-        console.log('dogs failed failed',err)
-      }
-    )
+  
+    // let self = this
+    // let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
+    // let userQuery = new wx.BaaS.Query();
+    // let user = this.data.user
+    // userQuery.compare('user_id', '=', user.id)
+    // let dogQuery = new wx.BaaS.Query();
+    // let dog = self.data.dog
+    // console.log('dog', dog)
+    // dogQuery.compare('dog_id', '=', dog.id)
+    // let andQuery = wx.BaaS.Query.and(query1, query2)
+    // Favourites.setQuery(andQuery).find().then(
+    //   (res) => {
+    //     self.setData({
+    //       favourite: res.data.objects
+    //     })
+    //     console.log('like turned to true!', res)
+    //   },
+    //   (err) => {
+    //     console.log('err', err)
+    //   }
+    // )
+    
   },
-
-  navigateToDog: function(e) {
-    console.log('calling a dog', e)
-    wx.navigateTo({
-      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
-    })
-  },
-
 
   methods: {
+    
+    navigateToDogs: function(e) {
+      console.log('see dogs button', e)
+      this.triggerEvent("toAdoptDogs")
+    },
+
     getUserInfo(e) {
       getApp().globalData.userInfo = e.detail.userInfo
       // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
@@ -89,6 +99,13 @@ Component({
         }
       })
     }
+  },
+
+  navigateToDog: function(e) {
+    console.log('calling a dog', e)
+    wx.navigateTo({
+      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
+    })
   }
 
 })

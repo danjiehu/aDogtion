@@ -18,7 +18,8 @@
 </view>
 
 <view class="white-container">
-  <image class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicbXFooHVS1Z.svg"></image>
+  <image wx:if="{{!hasLike}}" bindtap="addLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicbXFooHVS1Z.svg"></image>
+  <image wx:if="{{hasLike}}" bindtap="removeLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicSl9lyQAPx9.svg"></image>
   <view class="icon-container">
     <view class="mini-flex">
       <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
@@ -91,14 +92,39 @@
     <view class="btn-grey grey-txt playfair bold" wx:if="{{dog.tag_social}}">social</view>
   </view>
 
-  <view class="yellow-btn" bindtap="navigateToContact">
-    <view class="bold playfair larger">FOSTER</view>
-    <view class="right-border"></view>
-    <view class="bold playfair larger">ADOPT</view>
-  </view>
+
+   <!-- YELLOW BUTTONS BELOW -->
+   <block wx:if="{{currentUser}}">
+    <view class="yellow-btn" bindtap="navigateToContact">
+      <view wx:if="{{dog.foster}}" class="bold playfair larger">FOSTER</view>
+      <view wx:if="{{dog.foster && dog.adopt}}" class="right-border"></view>
+      <view wx:if="{{dog.adopt}}" class="bold playfair larger">ADOPT</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="adopt-text">INTERESTED IN ADOPTING/FOSTERING {{dog.name}}?</view>
+    <view class="login-btn" bindtap="navigateToProfile">
+      <view class="bold playfair larger">LOG IN</view>
+    </view>
+  </block>
+
+  <!-- <block wx:if="{{!currentUser}}">
+    <view class="yellow-btn" bindtap="navigateToUser">
+      <view class="bold playfair larger">FOSTER</view>
+      <view class="right-border"></view>
+      <view class="bold playfair larger">ADOPT</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="yellow-btn" bindtap="navigateToContact">
+      <view class="bold playfair larger">FOSTER</view>
+      <view class="right-border"></view>
+      <view class="bold playfair larger">ADOPT</view>
+    </view>
+  </block> -->
 
   <!-- back arrow -->
-  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXeVTJY3y3AoCNe.svg" bindtap="goBack"></image>
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
 
 </view>
   
