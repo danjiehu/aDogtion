@@ -57,6 +57,19 @@ Component({
   },
 
   methods: {
+    navigateToAbout: function(e) {
+      wx.navigateTo({
+        url: '/pages/about/about'
+      })
+      console.log('navigate to about')
+    },
+  
+    navigateToStories: function(e) {
+      wx.navigateTo({
+        url: '/pages/stories/stories'
+      })
+      console.log('navigate to stories')
+    },
     
     navigateToDogs: function(e) {
       console.log('see dogs button', e)
@@ -108,18 +121,6 @@ Component({
     })
   },
 
-  navigateToAbout: function(e) {
-    wx.navigateTo({
-      url: '/pages/about/about'
-    })
-    console.log('navigate to about')
-  },
-
-  navigateToStories: function(e) {
-    wx.navigateTo({
-      url: '/pages/stories/stories'
-    })
-    console.log('navigate to stories')
-  },
+  
 
 })
