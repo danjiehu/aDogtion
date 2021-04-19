@@ -102,14 +102,13 @@ Page({
           })
         },
         (err)=>{
-          console.log("saveFailed", err)
           console.log(err.message)
-          page.setData({
-            alertPhone: true
-          })
+          console.log("error message validation",err.message.includes("phone"))
+          if(err.message.includes("phone")){
+            page.setData({
+              alertPhone: true })
+          }
           // console.log("type", typeof(err))
-          // if(err.message.includes("phone")){
-          // }
           // if (err.code == 400) {
           //   wx.showModal({
           //     title: 'submit failed',
