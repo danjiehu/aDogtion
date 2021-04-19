@@ -7,7 +7,8 @@
     "pages/bookSuccess/bookSuccess",
     "components/custom-tabbar/custom-tabbar",
     "pages/index/index",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/stories/stories"
   ],
   "window": {
     "backgroundTextStyle": "light",

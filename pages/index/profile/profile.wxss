@@ -156,7 +156,7 @@ page{
   display: flex;
   justify-items: space-around;
   /* border: 1px solid #24241E; */
-  border-radius: 34rpx;
+  border-radius: 40rpx;
   align-items: center;
 }
 
@@ -174,9 +174,11 @@ page{
 
 .round-button {
   border-radius: 20rpx;
-  padding: 18rpx 10rpx;
+  padding: 18rpx 40rpx;
   border-radius: 50rpx;
   font-weight: 700;
+  font-size: medium;
+  width: 150rpx;
 }
 
 .btn {
@@ -217,7 +219,7 @@ page{
   width: 90%;
   height: 260rpx;
   background-color: #fff;
-  border-radius: 50rpx 50rpx 0 50rpx;
+  border-radius: 40rpx 40rpx 0 40rpx;
   background-size: cover;
   background-position: center;
   margin: 30rpx auto;
@@ -240,9 +242,9 @@ page{
 
 .card-about-white {
   background-color: white;
-  margin: 40rpx auto 210rpx auto;
+  margin: 60rpx auto 210rpx auto;
   /* height: 310rpx; */
-  padding: 20rpx 0 40rpx 50rpx;
+  padding: 20rpx 0 16rpx 50rpx;
 }
 
 .about-us-title {

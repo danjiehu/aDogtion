@@ -63,6 +63,12 @@
         {
           "name": "About Us",
           "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Sucess Stories",
+          "pathName": "pages/stories/stories",
           "scene": null
         }
       ]
