@@ -10,12 +10,12 @@
   <view class="butt-flexbox" bindtap="navigateToDogs">
     <view class="butt-card">
       <view class="butt-title playfair bold">Adopt</view>
-      <view class="butt-text">87 dogs</view>
+      <view class="butt-text">{{adoptCount}} dogs</view>
       <view class="dog-head" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg')"></view>
     </view>
     <view class="butt-card" bindtap="navigateToFosterDogs">
       <view class="butt-title playfair bold">Foster</view>
-      <view class="butt-text">45 dogs</view>
+      <view class="butt-text">{{fosterCount}} dogs</view>
       <view class="dog-butt" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicSNi9iNslLZ.svg')"></view>
     </view>
   </view>

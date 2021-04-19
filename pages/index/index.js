@@ -30,18 +30,25 @@ Page({
       }
     })
 
-    this.setData({
-      currentUser: app.globalData.userInfo
-    })
+    // this.setData({
+    //   currentUser: app.globalData.userInfo
+    // })
 
+    // let self = this
     // let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
     // let userQuery = new wx.BaaS.Query();
-    // let user = this.data.currentUser
-    // console.log('user', user)
-    // userQuery.compare('user_id', '=', user.id)
+    // let user = []
+    // try {
+    //   var value = wx.getStorageSync('userInfo')
+    //   if (value) {
+    //     console.log('success!', value)
+    //   }
+    // } catch (e) {
+    //   console.log('failed :(', e)
+    // }
+
+    // userQuery.compare('user_id', '=', value.id)
     // let dogQuery = new wx.BaaS.Query();
-    // let dog = this.data.dog
-    // console.log('dog', dog)
     // dogQuery.compare('dog_id', '=', dog.id)
     // let andQuery = wx.BaaS.Query.and(query1, query2)
     // Favourites.setQuery(andQuery).find().then(

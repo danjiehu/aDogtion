@@ -21,7 +21,7 @@
   "sitemapLocation": "sitemap.json",
   "plugins": {
     "sdkPlugin": {
-      "version": "2.3.0",
+      "version": "3.18.0",
       "provider": "wxc6b86e382a1e3294"
     }
   }
