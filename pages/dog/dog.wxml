@@ -9,7 +9,7 @@
         </swiper-item>
       </block>
     </swiper>
-    <view class="dots" >
+    <view wx:if="{{swiperList[1]}}" class="dots" >
       <block wx:for="{{swiperList}}" wx:key="key2">
         <view class="dot {{index == activeSwiper ? ' active' : ''}}"></view>
       </block>
