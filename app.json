@@ -6,7 +6,8 @@
     "pages/dog/dog",
     "pages/bookSuccess/bookSuccess",
     "components/custom-tabbar/custom-tabbar",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

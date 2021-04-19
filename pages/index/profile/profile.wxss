@@ -240,7 +240,7 @@ page{
 
 .card-about-white {
   background-color: white;
-  margin: 40rpx auto 100rpx auto;
+  margin: 40rpx auto 210rpx auto;
   /* height: 310rpx; */
   padding: 20rpx 0 40rpx 50rpx;
 }

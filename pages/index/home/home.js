@@ -43,6 +43,13 @@ Component({
     navigateToFosterDogs: function(e) {
       this.triggerEvent("toFosterDogs")
     },
+
+    navigateToAbout: function(e) {
+      wx.navigateTo({
+        url: '/pages/about/about'
+      })
+      console.log('navigate to about')
+    }
   }
 
 })

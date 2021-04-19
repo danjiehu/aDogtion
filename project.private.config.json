@@ -59,6 +59,11 @@
           "pathName": "pages/index/profile/profile",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "About Us",
+          "pathName": "pages/about/about",
+          "scene": null
         }
       ]
     }
