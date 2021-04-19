@@ -1,0 +1,232 @@
+page {
+  color: #24241E;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.photo-background {
+  height: 46vh;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 0;
+  background-color: #000;
+  border-radius: 0 0 50rpx 50rpx;
+}
+
+.photo-background image {
+  width: 100vw;
+  filter: opacity(0.55);
+  height: 100%;
+  border-radius: 0 0 50rpx 50rpx;
+}
+ 
+.playfair {
+  font-family: "Playfair display";
+}
+
+.larger {
+  font-size: larger;
+}
+
+/* dog details css */
+
+.white-container {
+  margin: -70rpx auto;
+  z-index: 10;
+  border-radius: 50rpx 50rpx 0 0;
+  background-color: #fff;
+  padding: 60rpx 12px;
+  min-height: 50vh;
+  width: 100;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.tag {
+  background-color: #f6c752;
+  width: 28%;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+  margin: -89rpx 50rpx 40rpx;
+  border-radius: 12rpx;
+  font-size: medium;
+}
+
+
+.title {
+  font-size: 18pt;
+  /* font-weight: 600; */
+  margin: 0 0 0 55rpx;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.small-txt{
+  font-size: 9pt;
+}
+
+.grey-txt{
+  color: #9e9e9f;
+  font-size: medium;
+  line-height: 1.4em;
+}
+
+
+.left-border-box {
+  margin: 25rpx 40rpx 36rpx 80rpx;
+  border-left: 1px solid #707070;
+  padding-left: 30rpx;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+
+.border-shadow {
+  border: 1px solid #24241E;
+  width: 76%;
+  box-sizing: border-box;
+  padding: 60rpx 70rpx;
+  margin: 40rpx 70rpx;
+  border-radius: 22rpx;
+  z-index: 0;
+  height: 137rpx;
+}
+
+.grey-container {
+  background-color: #F1F1F0;
+  width: 76%;
+  box-sizing: border-box;
+  padding: 40rpx 70rpx;
+  margin: -154rpx auto 30rpx auto;
+  border-radius: 22rpx;
+}
+
+.flex-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 90rpx;
+}
+
+.btn-grey{
+  background-color: #f1f1f0;
+  border-radius: 100rpx;
+  padding: 20rpx 36rpx;
+  margin-right: 16rpx;
+}
+
+
+.right-border {
+  border-right: 1px solid #24241E;
+  height: 40rpx;
+  padding-right: 70rpx;
+  margin-right: 70rpx;
+}
+
+.top-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 40rpx;
+  width: 60rpx;
+  margin: 2% 0 0 10rpx;
+  padding: 0;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.details {
+  font-size: 10pt;
+}
+
+.adopt-text {
+  font-size: small;
+  color: #9e9e9e;
+  text-align: right;
+  padding: 40rpx;
+  width: 50%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 12rpx;
+  right: 320rpx;
+}
+
+
+/* swiper styles */
+.swiper-container{
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 85%;
+  margin-top: 30rpx;
+}
+
+.swiper-wrapper {
+  height: auto;
+  position: relative;
+  background-color: #000000;
+  border-radius: 36rpx;
+}
+ 
+.swipers {
+  height: 25vh;
+  opacity: 0.65;
+  border-radius: 36rpx;
+}
+ 
+.swiper-wrapper image {
+  width: 100%;
+  height: 100%;
+  border-radius: 36rpx;
+}
+ 
+.swiper-image{
+  background-position: top;
+}
+
+.dots {
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-evenly;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 45rpx;
+}
+ 
+/* dot css */
+
+.dot {
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin-right: 16rpx;
+  background-color: #fff;
+}
+ 
+/* active dot css  */
+ 
+.active {
+  background-color: #F6C752;
+  width: 9px;
+  height: 9px;
+}
+
+input {
+  font-size: 11pt;
+  padding-bottom: 20rpx;
+}
+
+.new-comment-flexbox {
+  display: flex;
+  align-content: baseline;
+  padding: 20rpx;
+}

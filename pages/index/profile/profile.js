@@ -106,6 +106,13 @@ Component({
     wx.navigateTo({
       url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
     })
+  },
+
+  navigateToAbout: function(e) {
+    wx.navigateTo({
+      url: '/pages/about/about'
+    })
+    console.log('navigate to about')
   }
 
 })
