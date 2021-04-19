@@ -7,7 +7,7 @@ page {
 .yellow-container {
   background-color: #f6c752;
   height: 35vh;
-  position: relative;height: 65vh + 50rpx;
+  position: relative;
 }
 
 .playfair {
@@ -22,9 +22,6 @@ page {
   position: absolute;
   right: 100rpx;
   bottom: 50rpx;
-  /* position: fixed;
-  top: 344rpx;
-  right: 100rpx; */
 }
 
 .white-container {
@@ -50,7 +47,7 @@ page {
   width: 20rpx;
   background-color:#F8D35F;
   border-radius: 50%;
-  margin-right: 30rpx;
+  margin-right: 32rpx;
 }
 
 .top-title {
@@ -94,8 +91,9 @@ page {
 /* start of input name */
 .title {
   color: #B6B1B1;
-  font-size: smaller;
-  margin-bottom: 20rpx;
+  font-size: small;
+  margin-bottom: 10rpx;
+  margin-top: 30rpx;
 }
 
 .date-container {
@@ -131,12 +129,23 @@ picker {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 80%;
   height: 150rpx;
   padding: 40rpx 0 0 0;
   box-sizing: border-box;
   border-radius: 50rpx 0 0 0;
   background-color: #f6c752;
+}
+
+.btn-grey {
+  color: #B6B1B1;
+  font-size: small;
+  position: fixed;
+  bottom: 0;
+  left: 90rpx;
+  width: 20%;
+  height: 150rpx;
+  padding: 40rpx 0 0 0;
+  box-sizing: border-box;
 }
 
 .scroll-view_H{

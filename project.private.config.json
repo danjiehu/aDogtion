@@ -33,13 +33,13 @@
         {
           "name": "booking",
           "pathName": "pages/booking/booking",
-          "query": "id=6075a34cfd4ebb40b9a7a354",
+          "query": "dogId=6075a34cfd4ebb40b9a7a354&formId=607daa7e3e4d05192c299868",
           "scene": null
         },
         {
           "name": "bookSuccess",
           "pathName": "pages/bookSuccess/bookSuccess",
-          "query": "id=6075a34cfd4ebb40b9a7a354",
+          "query": "dogId=6075a34cfd4ebb40b9a7a354&formId=607daa7e3e4d05192c299868",
           "scene": null
         },
         {

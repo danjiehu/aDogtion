@@ -18,7 +18,7 @@ Page({
 
   // start of onload get selected dog profile
   onLoad: function (res) {
-    console.log("onLoadRes",res)
+    console.log("load contact",res)
     this.setData({
       // currentUser: wx.getStorageSync('userInfo.openid'),
       // currentUser: app.globalData.userInfo,
@@ -86,6 +86,7 @@ Page({
 
       if (name&&phone&&message)
       newForm.set({
+        status: 0,
         user_id: page.data.currentUser.id,
         dog_id: page.data.dogId,
         name,
@@ -96,22 +97,18 @@ Page({
       newForm.save().then(
         (res)=>{
           console.log("saveSuccess",res)
-          wx.showToast({
-            title: 'received!',
-          })
           wx.navigateTo({
-            url: `/pages/booking/booking?id=${page.data.dogId}`,
+            url: `/pages/booking/booking?dogId=${page.data.dogId}&formId=${res.data.id}`,
           })
         },
         (err)=>{
-          console.log("saveFailed", err)
           console.log(err.message)
-          page.setData({
-            alertPhone: true
-          })
+          console.log("error message validation",err.message.includes("phone"))
+          if(err.message.includes("phone")){
+            page.setData({
+              alertPhone: true })
+          }
           // console.log("type", typeof(err))
-          // if(err.message.includes("phone")){
-          // }
           // if (err.code == 400) {
           //   wx.showModal({
           //     title: 'submit failed',
