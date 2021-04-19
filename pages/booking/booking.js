@@ -4,16 +4,21 @@ Page({
 
   data: {
     // toView: 'green',
+    // currentUser: wx.getStorageSync('userInfo'),
     selectedDate: null,
     timeSlots: ["09:00","10:00","11:00","12:00","13:00"],
+    selectedIndex:null,
     selectedSlot: null,
     dogProfile:{},
     dogId:null,
     formId:null
-    // dog: []
   },
 
   onLoad: function (e) {
+    wx.showToast({
+      title: 'received!',
+    })
+
     console.log("load booking",e)
     this.setData({
       dogId: e.dogId,
@@ -44,16 +49,9 @@ Page({
 
   // end of onload
   },
-  
-  // onShow: function () {
-  // },
-
-  // scroll(e) {
-  //   console.log(e)
-  // },
 
   bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log('date picker changed, value is', e.detail.value)
     this.setData({
       selectedDate: e.detail.value
     })
@@ -65,11 +63,47 @@ Page({
     let i = e.currentTarget.dataset.index
     console.log("slot selection changed, value is", this.data.timeSlots[i])
     this.setData({
+      selectedIndex: e.currentTarget.dataset.index,
       selectedSlot: this.data.timeSlots[i]
     })
   },
   // start of defining selectTimeslot
 
+  // start of sumit date and time
+  submitVisit: function(e){
+    console.log("submitVisit",e)
+    let Forms = new wx.BaaS.TableObject('adogtion_forms')
+    let formId = this.data.formId
+    let currentForm = Forms.getWithoutData(formId)
+    currentForm.set({
+      status: 1,
+      visit_date: this.data.selectedDate,
+      visit_time: this.data.selectedSlot
+    })
+
+    currentForm.update().then(
+      (res) => {
+        console.log("update form success",res)
+        wx.navigateTo({
+          url: `/pages/bookSuccess/bookSuccess?dogId=${this.data.dogId}&formId=${this.data.formId}`
+        })
+      },
+      (err) => {console.log("update form error",res)}
+    )
+
+  // end of sumit date and time
+  },
+  
+
+  // start of skip
+  skip:function(){
+    wx.navigateTo({
+      url: `/pages/bookSuccess/bookSuccess?dogId=${this.data.dogId}&formId=${this.data.formId}`
+    })
+
+  // end of skip
+  }
+  
 
 
 // end of page

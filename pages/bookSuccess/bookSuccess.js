@@ -4,30 +4,30 @@ const app = getApp()
 Page({
 
   data: {
-    dog: []
+    // currentUser: wx.getStorageSync('userInfo'),
+    dogProfile:{},
+    dogId:null,
+    formId:null
   },
 
-  onLoad: function (options) {
+  onLoad: function (e) {
     this.setData({
-      currentUser: app.globalData.userInfo
+      dogId: e.dogId,
+      formId: e.formId
     })
 
     let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
-    
-    const self = this
-    Dogs.get(options.id).then(
+    const page = this
+    Dogs.get(e.dogId).then(
       (res) => {
         console.log('dog id', res)
-        self.setData ({
-          dog: res.data
+        page.setData ({
+          dogProfile: res.data
         })
-        // console.log(res.data)
-        let image = res.data.image[0].path
-      },
-      (err) => {
-        console.log('error', err)
       }
     )
+  
+  // end of onload
   },
   
   onShow: function () {

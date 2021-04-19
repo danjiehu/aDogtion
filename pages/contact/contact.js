@@ -86,6 +86,7 @@ Page({
 
       if (name&&phone&&message)
       newForm.set({
+        status: 0,
         user_id: page.data.currentUser.id,
         dog_id: page.data.dogId,
         name,
@@ -96,9 +97,6 @@ Page({
       newForm.save().then(
         (res)=>{
           console.log("saveSuccess",res)
-          wx.showToast({
-            title: 'received!',
-          })
           wx.navigateTo({
             url: `/pages/booking/booking?dogId=${page.data.dogId}&formId=${res.data.id}`,
           })

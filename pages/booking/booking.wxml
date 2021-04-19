@@ -23,7 +23,7 @@
 
   <!-- start of form-container -->
   <view class="form-container">
-  <form bindsubmit="submit">
+  <form bindsubmit="submitVisit">
 
     <view class="title">DATE</view>
     <!-- <input type="text" placeholder="input date" /> -->
@@ -43,14 +43,14 @@
 
     <!-- start of timeslots -->
     <view class="timeslots-container">
-        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true">
           <view class="scroll-view-item_H {{index==selectedIndex?'selected':''}}" wx:for="{{timeSlots}}" wx:for-item="timeSlot" wx:for-index="index" bindtap="selectTimeslot" data-index="{{index}}">{{timeSlot}}</view> 
           <!-- <view wx:else class="scroll-view-item_H" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
         </scroll-view>
     </view>
     <!-- end of timeslots -->
 
-    <view class="btn-grey">SKIP</view>
+    <view class="btn-grey" bindtap="skip">SKIP</view>
     <button class="btn-yellow" form-type="submit" style="font-family: 'Playfair Display'">BOOK</button>
   </form>
   </view>
