@@ -57,7 +57,7 @@
 
   <!-- Success Stories -->
  <view class="sub-title playfair bold">Success Stories</view>
-  <view class="wide-card card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1601758124331-9410bf99002f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGRvZyUyMGxvdmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60) ">
+  <view class="wide-card card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUoItobuu7k89p.jpeg)" bindtap="navigateToStories">
     <view>
       <view class="white-txt playfair bold">Olivia & Almond</view>
       <view class="white-txt smaller-txt">A love story</view>
@@ -70,7 +70,7 @@
       <view>
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-        <button class="round-button yellow playfair" style="width: 250rpx;">learn more</button>
+        <view class="round-button yellow playfair">learn more</view>
       </view>
       <view>
         <view class="image-dog-about" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGexLnQ6Ora.svg')"></view>

@@ -113,6 +113,13 @@ Component({
       url: '/pages/about/about'
     })
     console.log('navigate to about')
-  }
+  },
+
+  navigateToStories: function(e) {
+    wx.navigateTo({
+      url: '/pages/stories/stories'
+    })
+    console.log('navigate to stories')
+  },
 
 })
