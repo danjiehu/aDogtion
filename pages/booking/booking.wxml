@@ -13,10 +13,10 @@
 
   <!-- start of selected dog card -->
   <view class="dog-card">
-    <image class="dog-photo" src="{{dog.image[0].path}}"></image>
+    <image class="dog-photo" src="{{dogProfile.image[0].path}}"></image>
     <view>
-      <view class="dog-name playfair">{{dog.name}}</view>
-      <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
+      <view class="dog-name playfair">{{dogProfile.name}}</view>
+      <view class="dog-more">{{dogProfile.age}} • {{dogProfile.gender}}</view>
     </view>
   </view>
   <!-- end of selected dog card -->
@@ -42,25 +42,22 @@
     <!-- end of date picker -->
 
     <!-- start of timeslots -->
-    <!-- <scroll-view scroll-x="true" style="width: 100%; white-space: nowrap;">
-        <view style="width:100px">1</view>
-        <view style="width:100px">2</view>
-        <view style="width:100px">3</view> -->
-        <!-- <view class="time-slot" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
-    <!-- </scroll-view> -->
-
     <view class="timeslots-container">
-        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100vw">
-          <view class="scroll-view-item_H {{index==selectedIndex?'selected':''}}" wx:for="{{timeSlots}}" wx:for-item="timeSlot" wx:for-index="index" bindtap="selectTimeslot" data-id="{{index}}">{{timeSlot}}</view> 
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll">
+          <view class="scroll-view-item_H {{index==selectedIndex?'selected':''}}" wx:for="{{timeSlots}}" wx:for-item="timeSlot" wx:for-index="index" bindtap="selectTimeslot" data-index="{{index}}">{{timeSlot}}</view> 
           <!-- <view wx:else class="scroll-view-item_H" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
         </scroll-view>
     </view>
     <!-- end of timeslots -->
 
+    <view class="btn-grey">SKIP</view>
     <button class="btn-yellow" form-type="submit" style="font-family: 'Playfair Display'">BOOK</button>
   </form>
   </view>
    <!-- end of form-container -->
+
+  <!-- <view style="height:300rpx;"></view> -->
+  <!-- this is a divider for submit button -->
 
 </view>
 <!-- end of white container -->

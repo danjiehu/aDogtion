@@ -18,7 +18,7 @@ Page({
 
   // start of onload get selected dog profile
   onLoad: function (res) {
-    console.log("onLoadRes",res)
+    console.log("load contact",res)
     this.setData({
       // currentUser: wx.getStorageSync('userInfo.openid'),
       // currentUser: app.globalData.userInfo,
@@ -100,7 +100,7 @@ Page({
             title: 'received!',
           })
           wx.navigateTo({
-            url: `/pages/booking/booking?id=${page.data.dogId}`,
+            url: `/pages/booking/booking?dogId=${page.data.dogId}&formId=${res.data.id}`,
           })
         },
         (err)=>{
