@@ -1,6 +1,6 @@
 /* pages/profile/profile.wxss */
 
-page{
+page {
   width: 100%;
   box-sizing: border-box;
 }
@@ -9,7 +9,7 @@ page{
   background-color: #fff;
   padding-top: 150rpx;
   z-index: 500;
-  height: 11vh;
+  height: 13vh;
   margin: 0 auto;
   border-radius: 0 0 70rpx 70rpx;
   position: sticky;
@@ -25,8 +25,8 @@ page{
 }
 
 .user-icon {
-  width: 80rpx;
-  height: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
   background-size: cover;
   margin: 0 auto;
   /* filter: brightness(70%); */
@@ -38,7 +38,7 @@ page{
   padding-top: 15rpx; 
   font-size: medium;
   font-weight: 400;
-  padding-left: 10rpx;
+  /* padding-left: 10rpx; */
   text-align: center;
   margin: 0 auto;
 }
@@ -47,7 +47,7 @@ page{
   margin-top: -50rpx;
   z-index: 0;
   background-color: #F1F1F0;
-  padding: 50rpx 0;
+  padding: 50rpx 20rpx;
   width: 100%;
   box-sizing: border-box;
   min-height: 80vh;
@@ -55,7 +55,7 @@ page{
 
 .title {
   font-size: 30pt;
-  margin: 0 0 0 80rpx;
+  /* margin: 0 0 0 80rpx; */
   width: 100%;
 }
 
@@ -69,8 +69,16 @@ page{
   width: 90%;
   box-sizing: border-box;
   border-radius: 40rpx;
-  margin: 30px auto 0;
-  padding: 60rpx 90rpx;
+  margin: 30px auto;
+  padding: 60rpx;
+}
+
+.dog-container {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40rpx;
+  height: 460rpx;
 }
 
 .empty-img {
@@ -97,15 +105,25 @@ page{
 }
 
 .sub-title {
-  margin: 40rpx 0 0 76rpx;
+  margin: 0 40rpx 40rpx 0;
   font-size: larger;
+  text-align: left;
+  width: 80%;
+  padding: 0 0 0 40rpx;
+}
+
+.dogs-title {
+  margin: 0 40rpx 0 0;
+  font-size: larger;
+  text-align: left;
+  width: 80%;
 }
 
 .card-flexbox {
   display: flex;
   align-items: center;
   /* width: 90%; */
-  padding: 20rpx 0 0 54rpx;
+  /* padding: 20rpx 0 0 54rpx; */
   overflow: auto;
   position: relative;
   top: 4rpx;
@@ -114,14 +132,14 @@ page{
 }
 
 .card {
-  background-color: #f1f1f0;
+  /* background-color: #f1f1f0; */
   display: inline-block;
   margin: 0 20rpx 30rpx 0;
 }
 
 .card-image {
-  width: 260rpx;
-  height: 260rpx;
+  width: 220rpx;
+  height: 220rpx;
   /* background-color: #F8D35F; */
   border-radius: 50rpx 50rpx 0 50rpx;
   background-size: cover;
@@ -237,7 +255,7 @@ page{
   border-radius: 30rpx 0rpx 0 0rpx;
   position: relative;
   bottom: -56rpx;
-  left: 305rpx;
+  left: 269rpx;
 }
 
 .card-about-white {
@@ -268,4 +286,15 @@ page{
   height: 300rpx;
   background-size: cover;
   margin: 0 20rpx 0 30rpx;
+}
+
+
+.like-button {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 82%;
+  z-index: 100;
+  position: relative;
+  top: 58rpx;
+  right: 16rpx;
 }

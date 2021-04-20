@@ -10,61 +10,32 @@ Page({
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
-    favourite: []
+    selected_dogs: []
   },
 
   onLoad: function (options) {
-
+    const self = this
     if (wx.getUserProfile) {
-      this.setData({
+      self.setData({
         canIUseGetUserProfile: true
       })
     }
     wx.getStorage({
       key: 'userInfo',
       success: res=>{
-        this.setData({
+        console.log('user info', res)
+        self.setData({
           currentUser: res.data,
           hasUserInfo: true
+        }, ()=>{
+          // self.getFavourites()
         })
       }
     })
-
-    // this.setData({
-    //   currentUser: app.globalData.userInfo
-    // })
-
-    // let self = this
-    // let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
-    // let userQuery = new wx.BaaS.Query();
-    // let user = []
-    // try {
-    //   var value = wx.getStorageSync('userInfo')
-    //   if (value) {
-    //     console.log('success!', value)
-    //   }
-    // } catch (e) {
-    //   console.log('failed :(', e)
-    // }
-
-    // userQuery.compare('user_id', '=', value.id)
-    // let dogQuery = new wx.BaaS.Query();
-    // dogQuery.compare('dog_id', '=', dog.id)
-    // let andQuery = wx.BaaS.Query.and(query1, query2)
-    // Favourites.setQuery(andQuery).find().then(
-    //   (res) => {
-    //     self.setData({
-    //       favourite: res.data.objects
-    //     })
-    //     console.log('like turned to true!', res)
-    //   },
-    //   (err) => {
-    //     console.log('err', err)
-    //   }
-    // )
-
-  //  wx.hideShareMenu();
   },
+
+//   haveUserInfo(e){
+//     console.log("has user info e")
 
 
 // start of defining share function
@@ -84,6 +55,7 @@ Page({
       imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYqTCCNzPKKuvgD.jpg',
       promise 
     }
+
   },
 // end of defining share function
 
@@ -111,6 +83,8 @@ Page({
       foster: true,
       adopt: false
     })
-  }
+  },
+
+  
   
 })
