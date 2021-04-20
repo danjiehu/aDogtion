@@ -15,5 +15,7 @@
 />
 <profile
   wx:if="{{activeTab == 2}}"
+  currentUser="{{currentUser}}"
   bindtoAdoptDogs="toAdoptDogs"
+  bindhaveUserInfo="haveUserInfo"
 />
