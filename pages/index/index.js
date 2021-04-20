@@ -74,14 +74,14 @@ Page({
         resolve({
           title: 'find your best friend with aDogtion',
           path: '/pages/index/index',
-          // imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg',
+          imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYqTCCNzPKKuvgD.jpg',
         })
       }, 2000)
     })
     return {
       title: 'find your best friend with aDogtion',
       path: '/pages/index/index',
-      // imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg',
+      imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYqTCCNzPKKuvgD.jpg',
       promise 
     }
   },

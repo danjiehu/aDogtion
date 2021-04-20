@@ -9,22 +9,25 @@ Page({
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
-    hasLike: false,
-    favourite: []
+    hasLike: false
   },
 
   onLoad: function (options) {
+    const self = this
     if (wx.getUserProfile) {
-      this.setData({
+      self.setData({
         canIUseGetUserProfile: true
       })
     }
     wx.getStorage({
       key: 'userInfo',
       success: res=>{
-        this.setData({
+        console.log(res)
+        self.setData({
           currentUser: res.data,
           hasUserInfo: true
+        }, ()=>{
+          self.checkIfLiked()
         })
       }
     })
@@ -35,7 +38,6 @@ Page({
 
     let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
     
-    const self = this
     Dogs.get(options.id).then(
       (res) => {
         console.log('dog id', res)
@@ -57,39 +59,6 @@ Page({
       },
       (err) => {
         console.log('error', err)
-      }
-    )
-    
-   // calling the baas to check if a user has this dog in favourites
-    let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
-
-    // query 1, the user match
-    let userQuery = new wx.BaaS.Query();
-    try {
-      var user = wx.getStorageSync('userInfo')
-      if (user) {
-        console.log('success!', user)
-      }
-    } catch (e) {
-      console.log('failed :(', e)
-    }
-    userQuery.compare('user_id', "=", user.id)
-
-    // query 2, the dog match
-    let dogQuery = new wx.BaaS.Query();
-    dogQuery.compare('dog_id', "=", this.data.dog.id)
-
-    // query 1+2, the user + dog match
-    let andQuery = wx.BaaS.Query.and(userQuery, dogQuery)
-    Favourites.setQuery(andQuery).find().then(
-      (res) => {
-        self.setData({
-          favourite: res.data.objects
-        })
-        console.log('like checked', res)
-      },
-      (err) => {
-        console.log('err', err)
       }
     )
   },
@@ -176,16 +145,16 @@ Page({
     const promise = new Promise(resolve => {
       setTimeout(() => {
         resolve({
-          title: 'find your best friend with aDogtion',
-          path: '/pages/index/index',
-          // imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg',
+          title: `meet ${this.data.dog.name} 🥰 - find your best friend with aDogtion`,
+          path: `/pages/dog/dog?id=${this.data.dog.id}`,
+          imageUrl: this.data.dog.image[0].path,
         })
       }, 2000)
     })
     return {
-      title: 'find your best friend with aDogtion',
-      path: '/pages/index/index',
-      // imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg',
+      title: `meet ${this.data.dog.name} 🥰 - find your best friend with aDogtion`,
+      path: `/pages/dog/dog?id=${this.data.dog.id}`,
+      imageUrl: this.data.dog.image[0].path,
       promise 
     }
   },
@@ -193,4 +162,31 @@ Page({
 
 
 // end of page
+  checkIfLiked: function () {    
+    let self = this
+    // calling the baas to check if a user has this dog in favourites
+    let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
+    // query 1, the user match
+    let userQuery = new wx.BaaS.Query();
+    userQuery.compare('user_id', "=", self.data.currentUser.id)
+    console.log("checking ids", self.data.currentUser.id, self.options.id)
+    // query 2, the dog match
+    let dogQuery = new wx.BaaS.Query();
+    dogQuery.compare('dog_id', "=", self.options.id)
+
+    // // query 1+2, the user + dog match
+    let andQuery = wx.BaaS.Query.and(userQuery, dogQuery)
+    Favourites.setQuery(andQuery).find().then(
+      (res) => {
+        self.setData({
+          hasLike: res.data.objects.length > 0
+        })
+      },
+      (err) => {
+        console.log('err', err)
+      }
+    )
+  }
+
+
 })
