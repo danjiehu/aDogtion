@@ -140,6 +140,28 @@ Page({
     )
   },
 
+
+  // start of share
+  onShareAppMessage() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: `meet ${this.data.dog.name} 🥰 - find your best friend with aDogtion`,
+          path: `/pages/dog/dog?id=${this.data.dog.id}`,
+          imageUrl: this.data.dog.image[0].path,
+        })
+      }, 2000)
+    })
+    return {
+      title: `meet ${this.data.dog.name} 🥰 - find your best friend with aDogtion`,
+      path: `/pages/dog/dog?id=${this.data.dog.id}`,
+      imageUrl: this.data.dog.image[0].path,
+      promise 
+    }
+  },
+  // end of share
+
+  // end of page
   checkIfLiked: function () {    
     let self = this
     // calling the baas to check if a user has this dog in favourites
