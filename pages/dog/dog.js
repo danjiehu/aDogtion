@@ -169,6 +169,28 @@ Page({
         console.log('failed deleting a like', res)
       }
     )
-  }
+  },
 
+  // start of share
+  onShareAppMessage() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: 'find your best friend with aDogtion',
+          path: '/pages/index/index',
+          // imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg',
+        })
+      }, 2000)
+    })
+    return {
+      title: 'find your best friend with aDogtion',
+      path: '/pages/index/index',
+      // imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicTBIbXoNjIR.svg',
+      promise 
+    }
+  },
+  // end of share
+
+
+// end of page
 })

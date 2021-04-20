@@ -4,6 +4,9 @@
 
 <!-- TWO BUTTONS -->
 
+<!-- share test -->
+<!-- <button open-type="share">share</button> -->
+
 <view class="grey-container">
 
   <view class="title playfair bold">aDogtion</view>
