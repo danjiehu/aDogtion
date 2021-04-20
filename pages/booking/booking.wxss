@@ -43,6 +43,7 @@ page {
 }
 
 .yellow-circle {
+  margin: auto 0;
   height: 20rpx;
   width: 20rpx;
   background-color:#F8D35F;
@@ -152,7 +153,7 @@ picker {
   margin-top: 50rpx;
   white-space: nowrap;
   padding: 5rpx 0rpx;
-  width: 105%;
+  width: 115%;
 }
 
 .scroll-view-item_H{

@@ -42,6 +42,7 @@ page {
 }
 
 .yellow-circle {
+  margin: auto 0;
   height: 20rpx;
   width: 20rpx;
   background-color:#F8D35F;

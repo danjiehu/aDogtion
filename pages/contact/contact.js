@@ -87,7 +87,7 @@ Page({
           })
       }
 
-      if (name&&phone&&message){
+      if (name&&phone&&message) {
         newForm.set({
           status: 0,
           user_id: page.data.currentUser.id,
@@ -114,16 +114,9 @@ Page({
             }
       })
       
-          // console.log("type", typeof(err))
-          // if (err.code == 400) {
-          //   wx.showModal({
-          //     title: 'submit failed',
-          //     content: 'please make sure all the fields are entered correctly',
-          //     showCancel: false,
-          //     confirmText: "go back"
-          //   })
-          // } 
-        } 
+
+      // end of save
+      } 
   
     //end of submit function
     }
@@ -133,3 +126,12 @@ Page({
 })
 
 
+// console.log("type", typeof(err))
+// if (err.code == 400) {
+//   wx.showModal({
+//     title: 'submit failed',
+//     content: 'please make sure all the fields are entered correctly',
+//     showCancel: false,
+//     confirmText: "go back"
+//   })
+// } 
