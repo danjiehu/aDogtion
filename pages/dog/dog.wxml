@@ -95,10 +95,10 @@
 
    <!-- YELLOW BUTTONS BELOW -->
    <block wx:if="{{currentUser}}">
-    <view class="yellow-btn" bindtap="navigateToContact">
-      <view wx:if="{{dog.foster}}" class="bold playfair larger">FOSTER</view>
+    <view class="yellow-btn">
+      <view wx:if="{{dog.foster}}" class="bold playfair larger" bindtap="fosterToContact">FOSTER</view>
       <view wx:if="{{dog.foster && dog.adopt}}" class="right-border"></view>
-      <view wx:if="{{dog.adopt}}" class="bold playfair larger">ADOPT</view>
+      <view wx:if="{{dog.adopt}}" class="bold playfair larger" bindtap="adoptToContact">ADOPT</view>
     </view>
   </block>
   <block wx:else>

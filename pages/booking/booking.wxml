@@ -22,7 +22,7 @@
   <!-- end of selected dog card -->
 
   <!-- start of form-container -->
-  <view class="form-container">
+  <view class="form-container" bindtap="clearAlert" >
   <form bindsubmit="submitVisit">
 
     <view class="title">DATE</view>
@@ -39,6 +39,7 @@
         </picker>
         <image class="arrow-right" src="/images/arrow_right.png" mode="aspectFit"></image>
       </view>
+      <view class="alert" wx:if="{{alertDate}}">please select a visit date</view>
     <!-- end of date picker -->
 
     <!-- start of timeslots -->
@@ -48,6 +49,7 @@
           <!-- <view wx:else class="scroll-view-item_H" wx:for="{{timeSlots}}" wx:for-item="timeSlot">{{timeSlot}}</view>  -->
         </scroll-view>
     </view>
+    <view class="alert" wx:if="{{alertTime}}">please select a visit time</view>
     <!-- end of timeslots -->
 
     <view class="btn-grey" bindtap="skip">SKIP</view>

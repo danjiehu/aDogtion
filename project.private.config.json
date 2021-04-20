@@ -21,25 +21,25 @@
         {
           "name": "Dog Page",
           "pathName": "pages/dog/dog",
-          "query": "id=6075a34cfd4ebb40b9a7a354",
+          "query": "id=60782c17d6bf664c7cbc849a",
           "scene": null
         },
         {
           "name": "contact",
           "pathName": "pages/contact/contact",
-          "query": "id=6075a34cfd4ebb40b9a7a354",
+          "query": "id=60782c17d6bf664c7cbc849a",
           "scene": null
         },
         {
           "name": "booking",
           "pathName": "pages/booking/booking",
-          "query": "dogId=6075a34cfd4ebb40b9a7a354&formId=607daa7e3e4d05192c299868",
+          "query": "dogId=60782c17d6bf664c7cbc849a&formId=607daa7e3e4d05192c299868",
           "scene": null
         },
         {
           "name": "bookSuccess",
           "pathName": "pages/bookSuccess/bookSuccess",
-          "query": "dogId=6075a34cfd4ebb40b9a7a354&formId=607daa7e3e4d05192c299868",
+          "query": "dogId=60782c17d6bf664c7cbc849a&formId=607daa7e3e4d05192c299868",
           "scene": null
         },
         {
@@ -69,6 +69,7 @@
         {
           "name": "Sucess Stories",
           "pathName": "pages/stories/stories",
+          "query": "",
           "scene": null
         }
       ]

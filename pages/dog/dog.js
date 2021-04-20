@@ -108,10 +108,17 @@ Page({
     })
   },
 
-  navigateToContact: function(e) {
+  fosterToContact: function(e) {
     console.log('going to contact', e)
     wx.navigateTo({
-      url: `/pages/contact/contact?id=${this.data.dog.id}`,
+      url: `/pages/contact/contact?id=${this.data.dog.id}&action=foster`,
+    })
+  },
+
+  adoptToContact: function(e) {
+    console.log('going to contact', e)
+    wx.navigateTo({
+      url: `/pages/contact/contact?id=${this.data.dog.id}&action=adopt`,
     })
   },
 
