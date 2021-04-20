@@ -140,6 +140,7 @@ Page({
     )
   },
 
+
   // start of share
   onShareAppMessage() {
     const promise = new Promise(resolve => {
@@ -160,8 +161,7 @@ Page({
   },
   // end of share
 
-
-// end of page
+  // end of page
   checkIfLiked: function () {    
     let self = this
     // calling the baas to check if a user has this dog in favourites
