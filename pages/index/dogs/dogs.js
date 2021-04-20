@@ -16,7 +16,8 @@ Component({
     dogs:[],
     selected_dogs: [],
     currentUser: null,
-    category:""
+    category:"",
+    filterOn: false
   },
 
   ready: function (options) {
@@ -67,6 +68,10 @@ Component({
           console.log('dogs failed failed',err)
         }
       )
+    },
+
+    openFilter() {
+      this.setData({filterOn: true})
     },
     
     navigateToDog: function(e) {
