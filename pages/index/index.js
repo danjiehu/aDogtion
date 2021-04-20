@@ -34,9 +34,30 @@ Page({
     })
   },
 
-  haveUserInfo(e){
-    console.log("has user info e")
+//   haveUserInfo(e){
+//     console.log("has user info e")
+
+
+// start of defining share function
+ onShareAppMessage() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          title: 'find your best friend with aDogtion',
+          path: '/pages/index/index',
+          imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYqTCCNzPKKuvgD.jpg',
+        })
+      }, 2000)
+    })
+    return {
+      title: 'find your best friend with aDogtion',
+      path: '/pages/index/index',
+      imageUrl:'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYqTCCNzPKKuvgD.jpg',
+      promise 
+    }
+
   },
+// end of defining share function
 
   changeTab(e){
     this.setData({
