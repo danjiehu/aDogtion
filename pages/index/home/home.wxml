@@ -54,18 +54,18 @@
       </view>
   </view> -->
 
-       <!-- ABOUT US  -->
-
-  <view class="wide-card card-about-white">
-      <view class="two-thirds">
+<!-- About Us -->
+<view class="card-about-white" bindtap="navigateToAbout">
+      <view>
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-        <button class="round-button yellow playfair" style="width: 250rpx; margin-right: 90rpx;" bindtap="navigateToAbout">learn more</button>
+        <view class="round-button yellow playfair">learn more</view>
       </view>
       <view>
-        <view class="image-dog-about" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXcJ5jjCGAXtdzz.svg')"></view>
+      <view class="about-us-dog" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGexLnQ6Ora.svg')"></view>
       </view>
   </view>
+  <view class="tall-empty-block"></view>
 </view>
 <view class="container">
  <CustomTab />

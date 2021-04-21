@@ -176,13 +176,6 @@ page{
   background-size: cover;
 }
 
-.round-button {
-  border-radius: 20rpx;
-  padding: 18rpx 10rpx;
-  border-radius: 50rpx;
-  font-weight: 700;
-}
-
 .white {
   background-color: white;
 }
@@ -191,40 +184,57 @@ page{
   background-color: #f6c752;
 }
 
-.card-about-white {
-  background-color: white;
-  margin: 60rpx auto 220rpx auto;
-  /* height: 310rpx; */
-  padding: 0 50rpx 50rpx 50rpx;
-  width: 90%;
-  box-sizing: border-box;
-}
+/* About us block */
 
-.two-thirds {
-  width: 60%;
+.card-about-white {
+  width: 85%;
+  box-sizing: border-box;
+  display: flex;
+  justify-items: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 40rpx;
+  margin: 30rpx auto 0 auto;
+  padding: 40rpx 0 20rpx 50rpx;
 }
 
 .about-us-title {
   font-size: 14pt;
   margin: 0 0 20rpx 0;
+  color: #000
 }
 
 .about-us-text {
   font-size: 9pt;
   color: #24241E;
   line-height: 1em;
-  /* letter-spacing: 0.05em; */
   margin: 0 0 30rpx 0;
 }
 
-.image-dog-about {
+.about-us-dog {
   position: relative;
-  top: -20rpx;
-  right: 40rpx;
+  top: -50rpx;
+  right: 0rpx;
   width: 260rpx;
   height: 280rpx;
   background-size: cover;
-  margin: 0 20rpx 0 30rpx;
+  margin: 0 30rpx 0 0;
+}
+
+.round-button {
+  border-radius: 20rpx;
+  padding: 18rpx 40rpx;
+  border-radius: 50rpx;
+  font-weight: 700;
+  font-size: medium;
+  font-size: 11pt;
+  width: 150rpx;
+  text-align: center;
+}
+
+
+.tall-empty-block {
+  height: 200rpx;
 }
 
 .bold{
