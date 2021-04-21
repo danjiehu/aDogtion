@@ -14,17 +14,16 @@ page {
   border-radius: 0 0 50rpx 50rpx;
 }
 
-.photo-background image {
+/* .photo-background image {
   width: 100vw;
   filter: opacity(0.55);
   height: 100%;
   border-radius: 0 0 50rpx 50rpx;
-}
+} */
  
 .playfair {
   font-family: "Playfair display";
 }
-
 
 .appointment-card {
   background-color: #f1f1f0;
@@ -85,16 +84,6 @@ page {
   position: absolute;
 }
 
-.tag {
-  background-color: #f6c752;
-  width: 40%;
-  box-sizing: border-box;
-  padding: 20rpx 40rpx;
-  margin: -89rpx 50rpx 40rpx;
-  border-radius: 12rpx;
-  font-size: medium;
-}
-
 
 .title {
   font-size: 18pt;
@@ -115,27 +104,12 @@ page {
 }
 
 
-.left-border-box {
-  margin: 25rpx 40rpx 36rpx 80rpx;
-  border-left: 1px solid #707070;
-  padding-left: 30rpx;
-}
 
 .bold{
   font-weight: 600;
 }
 
 
-.border-shadow {
-  border: 1px solid #24241E;
-  width: 76%;
-  box-sizing: border-box;
-  padding: 60rpx 70rpx;
-  margin: 40rpx 70rpx;
-  border-radius: 22rpx;
-  z-index: 0;
-  height: 137rpx;
-}
 
 .subtitle{
   text-transform: uppercase;
@@ -144,14 +118,6 @@ page {
   opacity: 0.5;
 }
 
-.grey-container {
-  background-color: #F1F1F0;
-  width: 76%;
-  box-sizing: border-box;
-  padding: 40rpx 70rpx;
-  margin: -154rpx auto 30rpx auto;
-  border-radius: 22rpx;
-}
 
 .flex-details{
   display: flex;
@@ -160,34 +126,6 @@ page {
   margin-right: 90rpx;
 }
 
-.btn-grey{
-  background-color: #f1f1f0;
-  border-radius: 100rpx;
-  padding: 20rpx 36rpx;
-  margin-right: 16rpx;
-}
-
-
-.right-border {
-  border-right: 1px solid #24241E;
-  height: 40rpx;
-  padding-right: 70rpx;
-  margin-right: 70rpx;
-}
-
-.top-btn {
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  height: 40rpx;
-  width: 60rpx;
-  margin: 2% 0 0 10rpx;
-  padding: 0;
-}
-
-.caps {
-  text-transform: uppercase;
-}
 
 .details {
   font-size: 10pt;
@@ -264,4 +202,162 @@ page {
   padding: 16rpx 40rpx 16rpx 50rpx;
   border-radius: 0 0 0 30rpx;
   font-size: 11pt;
+}
+
+/* swiper styles */
+
+.swiper-wrapper {
+  height: auto;
+  position: relative;
+  background-color: #000000;
+}
+ 
+.swipers {
+  height: 50vh;
+  opacity: 0.65;
+}
+ 
+.swiper-wrapper image {
+  width: 100%;
+  height: 100%;
+  
+}
+ 
+.swiper-image{
+  background-position: top;
+}
+
+.dots {
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-evenly;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125rpx;
+}
+ 
+/* dot css */
+
+.dot {
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin-right: 16rpx;
+  background-color: #fff;
+}
+ 
+/* active dot css  */
+ 
+.active {
+  background-color: #F6C752;
+  width: 9px;
+  height: 9px;
+}
+
+input {
+  font-size: 11pt;
+  padding-bottom: 20rpx;
+}
+
+.new-comment-flexbox {
+  display: flex;
+  align-content: baseline;
+  padding: 20rpx;
+}
+
+
+.yellow-container {
+  height: 14vh;
+  background-color: #f6c752;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grey-container {
+  margin-top: -50rpx;
+  z-index: 10;
+  border-radius: 70rpx 70rpx 0 0;
+  background-color: #F1F1F0;
+  padding: 70rpx 0 200rpx 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80vh;
+}
+
+.top-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.title {
+  font-size: 20pt;
+  margin: 0 0 0 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.cards-masonry {
+  padding: 20rpx 70rpx 100rpx 70rpx;
+  column-count: 2;
+  column-gap: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  box-sizing: border-box;
+  /* padding-bottom: 30rpx; */
+  width: 100%;
+  display: inline-block;
+}
+
+.img-full {
+  border-radius: 32rpx 32rpx 0 32rpx;
+  width: 100%;
+  z-index: 0;
+  filter: brightness(80%);
+}
+
+
+.dog-age-gender {
+  /* margin: 0; */
+  z-index: 100;
+  position: relative;
+  bottom: 58rpx;
+  /* right: 0; */
+  width: 90%;
+  color: white;
+  font-size: 9pt;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.mini-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dog-name-yellow {
+  background-color: #f6c752;
+  padding: 16rpx 40rpx 16rpx 90rpx;
+  border-radius: 0 0 0 36rpx;
+  font-size: 10pt;
+  margin-top: -38rpx;
+}
+
+.like-button {
+  width: 22rpx;
+  height: 22rpx;
+  margin-left: 82%;
+  z-index: 100;
+  position: relative;
+  top: 52rpx;
+  right: 0;
 }

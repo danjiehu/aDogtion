@@ -1,91 +1,67 @@
 
+<block wx:if="{{!filterOn}}">
+  <view class="yellow-container"></view>
+  <view class="grey-container">
+    <view class="top-flex">
+      <view class="title playfair bold">Success Stories</view>
+    </view>
+    
+    <view class="cards-masonry">
+      <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
+          <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
+            <image mode="widthFix" class="img-full" src="{{dog.gallery[0].path}}"></image>
+            <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
+            <view class="mini-flex">
+            <view class="do-not-delete-me"></view>
+            <view class="dog-name-yellow playfair bold">{{dog.name}}</view>
+            </view>
+          </view>
+      </block>
+    </view>
+  </view>
+</block>
+
+<block wx:else>
 <view class="photo-background">
-  <image src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUoItobuu7k89p.jpeg" mode="center"></image>
- 
+  <view class='swiper-wrapper'>
+    <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
+      <block wx:for="{{swiperList}}" wx:key="key1">
+        <swiper-item>
+          <image mode="aspectFill" class="swiper_image" src="{{item}}" lazy-load="true" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view wx:if="{{swiperList[1]}}" class="dots" >
+      <block wx:for="{{swiperList}}" wx:key="key2">
+        <view class="dot {{index == activeSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
 </view>
 
 <view class="white-container">
  
   <!-- Dog description -->
   <view class="tag playfair bold">success stories</view>
-  <view class="title playfair bold">Olivia & Almond</view>
+  <view class="title playfair bold">{{dog.name}}</view>
   <view class="subtitle">A love story</view>
-  <view class="left-border-box grey-txt">Olivia thought that an adopted dog might help her patients in pediatric palliative care. But finding Almond also brought her the comfort and unconditional love she needed most.</view>
+  <view class="left-border-box grey-txt">{{dog.description}}</view>
 
   <view class="appointment-card">
     <view class="dog-card">
-        <image class="dog-photo" src="" mode="center"></image>
+        <image class="dog-photo" src="swiperList[0]" mode="center"></image>
         <view>
-          <view class="dog-name playfair">Almond</view>
-          <view class="dog-more">1YO • FEMALE</view>
+          <view class="dog-name playfair">{{dog.name}}</view>
+          <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
         </view>
     </view>
   </view>
 
 <!-- OTHER SUCCESS STORIES -->
-
-<view class="sub-title playfair">More Success Stories</view>
-  <view class="card-flexbox">
-    <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
-      <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
-        <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.image[0].path}}')">
-          <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
-        </view>
-        <view class="mini-flex">
-          <view class="do-not-delete-me"></view>
-          <view class="dog-name-yellow playfair bold">{{dog.name}}</view>
-        </view>
-      </view>
-    </block>
-  </view>
-
+<view class="sub-title playfair"> See More Success Stories</view> 
 
   <!-- back arrow -->
   <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
 
   </view>
-  
-
-
-<!-- <swiper class="card-swiper " duration="500" bindchange="cardSwiper">
-  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
-    <block wx:if="{{!item.ifend}}" >
-      <view class="swiper-item other ">
-      <image src="{{item.url}}" mode="aspectFill" class="swiper-img"></image>
-      <view class="yiyan-body">{{item.yiyan}}</view>
-      <view wx:if="{{item.form}}" class="yiyan-form">- {{item.form}} -</view>
-      <view wx:if="{{!item.form}}" class="zhanwei"></view>
-      <view class="bottom-box">
-        <view class="like juzhong" bindtap="like" data-likeid="{{item.id}}">
-          <block wx:if="{{item.iflike =='false'}}">
-            <image class="icon-img" src="../../images/icon/xihuan.png"></image>
-          </block>
-          <block wx:if="{{item.iflike =='true'}}">
-            <image class="icon-img" src="../../images/icon/xihuan2.png"></image>
-          </block>
-          <view class="num">{{item.likenum}}</view>
-        </view>
-        <view class="liuyan">
-          <image class="icon-img2" src="../../images/icon/liuyan.png"></image>
-          <view class="num">{{item.liuyannum}}</view>
-        </view>
-        <view class="biaoqian">
-          <image class="icon-img" src="../../images/icon/biaoqian.png"></image>
-        </view>
-        <view class="zhuanfa">
-          <image class="icon-img" src="../../images/icon/zhuanfa.png"></image>
-        </view>
-      </view>
-    </view>
-    </block>
-    <block wx:if="{{item.ifend}}">
-      <view class="swiper-item other juzhong">
-        <view class="end-title"> Ten sentences a day </view>
-        <view class="end-body">
-           Thank you for your support , Every day has a different harvest . If the meaning is not enough , You can click the bottom button to see more recommendations 
-        </view>
-        <view class="end-bottom">  Go to the discovery page for more recommendations </view>
-      </view>
-    </block>
-  </swiper-item>
-</swiper> -->
+</block>
