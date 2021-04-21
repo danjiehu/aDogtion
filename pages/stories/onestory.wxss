@@ -1,0 +1,172 @@
+page {
+  color: #24241E;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.photo-background {
+  height: 46vh;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 0;
+  background-color: #000;
+  border-radius: 0 0 50rpx 50rpx;
+}
+ 
+/* swiper styles */
+
+.swiper-wrapper {
+  height: auto;
+  position: relative;
+  background-color: #000000;
+}
+ 
+.swipers {
+  height: 50vh;
+  opacity: 0.65;
+}
+ 
+.swiper-wrapper image {
+  width: 100%;
+  height: 100%;
+  
+}
+ 
+.swiper-image{
+  background-position: top;
+}
+
+.dots {
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-evenly;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125rpx;
+}
+ 
+/* dot css */
+
+.dot {
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin-right: 16rpx;
+  background-color: #fff;
+}
+ 
+/* active dot css  */
+ 
+.active {
+  background-color: #F6C752;
+  width: 9px;
+  height: 9px;
+}
+
+
+/* dog details css */
+
+.white-container {
+  margin: -70rpx auto;
+  z-index: 10;
+  border-radius: 50rpx 50rpx 0 0;
+  background-color: #fff;
+  padding: 60rpx 12px;
+  min-height: 50vh;
+  width: 100;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.title {
+  font-size: 18pt;
+  /* font-weight: 600; */
+  margin: 0 0 0 55rpx;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.playfair {
+  font-family: "Playfair display";
+}
+
+.bold{
+  font-weight: 600;
+}
+
+.subtitle{
+  text-transform: uppercase;
+  margin-left: 58rpx;
+  padding: 16rpx 0;
+  opacity: 0.5;
+}
+
+.left-border-box {
+  margin: 16rpx 70rpx 16rpx 113rpx;
+  border-left: 1px solid #707070;
+  padding-left: 30rpx;
+}
+
+.grey-txt{
+  color: #9e9e9f;
+  font-size: medium;
+  line-height: 1.4em;
+}
+
+.appointment-card {
+  background-color: #f1f1f0;
+  border-radius: 40rpx;
+  padding: 40rpx;
+  width: 80%;
+  box-sizing: border-box;
+  margin: 56rpx auto;
+}
+
+.dog-card {
+  display: flex;
+  /* border-radius: 32rpx; */
+  background-color:#f1f1f0;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  /* margin-bottom: 50rpx; */
+}
+
+.dog-photo {
+  height: 72px;
+  width: 72px;
+  border-radius: 10px;
+  margin-right: 14px;
+}
+
+.dog-name {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Playfair Display";
+  width: 100%;
+}
+
+.dog-more {
+  color: #B6B1B1;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.top-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 40rpx;
+  width: 60rpx;
+  margin: 2% 0 0 10rpx;
+  padding: 0;
+}
+
+

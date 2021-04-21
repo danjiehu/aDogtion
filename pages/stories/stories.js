@@ -1,34 +1,35 @@
 const app = getApp()
 
 Page({
-
   data: {
-    dog: [],
+    dogs: [],
     currentUser: null,
+    canIUseGetUserProfile: false,
+    hasUserInfo: false,
   },
 
   onLoad: function (options) {
     this.setData({
       currentUser: app.globalData.userInfo
     })
-
     const self = this
     let Dogs = new wx.BaaS.TableObject('adogtion_success_stories')
-    
     Dogs.find().then(
-      (res) => {
-        console.log('success dog id', res)
-        self.setData ({
-          dog: res.data
+      (res) => { 
+        self.setData({
+          dogs: res.data.objects.reverse()
         })
-        // console.log(res.data)
-        let gallery = res.data.image
-        // console.log('gallery', gallery)
-      },
-      (err) => {
-        console.log('error', err)
+      }, (err) => {
+        console.log('dogs failed',err)
       }
     )
+  },
+
+  navigateToDog: function(e) {
+    console.log('calling a success dog', e)
+    wx.navigateTo({
+      url: `/pages/stories/onestory?id=${e.currentTarget.dataset.id}`,
+    })
   },
 
   goBack(e) {
@@ -36,6 +37,7 @@ Page({
     wx.navigateBack({
       delta: 1,
     })
-  }
+  },
+
 
 })

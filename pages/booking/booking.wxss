@@ -43,6 +43,7 @@ page {
 }
 
 .yellow-circle {
+  margin: auto 0;
   height: 20rpx;
   width: 20rpx;
   background-color:#F8D35F;
@@ -106,7 +107,7 @@ picker {
 
 .dateInput {
   font-size: medium;
-  margin-bottom: 50rpx;
+  /* margin-bottom: 50rpx; */
   color: #24241E;
   font-weight: bold;
   border-bottom: 1px solid #E4E4E4;
@@ -149,8 +150,10 @@ picker {
 }
 
 .scroll-view_H{
+  margin-top: 50rpx;
   white-space: nowrap;
-  /* width: 100vw; */
+  padding: 5rpx 0rpx;
+  width: 115%;
 }
 
 .scroll-view-item_H{
@@ -179,4 +182,10 @@ picker {
   line-height: 60rpx; 
   /* do NOT change line-height */
   border-radius: 70rpx;
+}
+
+.alert {
+  margin-top: 5rpx;
+  font-size: medium;
+  color: red;
 }

@@ -11,7 +11,9 @@ Page({
     selectedSlot: null,
     dogProfile:{},
     dogId:null,
-    formId:null
+    formId:null,
+    alertDate: false,
+    alertTime: false,
   },
 
   onLoad: function (e) {
@@ -72,24 +74,42 @@ Page({
   // start of sumit date and time
   submitVisit: function(e){
     console.log("submitVisit",e)
-    let Forms = new wx.BaaS.TableObject('adogtion_forms')
-    let formId = this.data.formId
-    let currentForm = Forms.getWithoutData(formId)
-    currentForm.set({
-      status: 1,
-      visit_date: this.data.selectedDate,
-      visit_time: this.data.selectedSlot
-    })
 
-    currentForm.update().then(
-      (res) => {
-        console.log("update form success",res)
-        wx.navigateTo({
-          url: `/pages/bookSuccess/bookSuccess?dogId=${this.data.dogId}&formId=${this.data.formId}`
+    if (!this.data.selectedDate){
+      this.setData({
+        alertDate: true
         })
-      },
-      (err) => {console.log("update form error",res)}
-    )
+      }
+
+    if (!this.data.selectedSlot){
+      this.setData({
+          alertTime: true
+          })
+        }
+
+    if(this.data.selectedSlot&&this.data.selectedDate) {
+      let Forms = new wx.BaaS.TableObject('adogtion_forms')
+      let formId = this.data.formId
+      let currentForm = Forms.getWithoutData(formId)
+
+      currentForm.set({
+        status: 1,
+        visit_date: this.data.selectedDate,
+        visit_time: this.data.selectedSlot
+      })
+
+      currentForm.update().then(
+        (res) => {
+          console.log("update form success",res)
+          wx.navigateTo({
+            url: `/pages/bookSuccess/bookSuccess?dogId=${this.data.dogId}&formId=${this.data.formId}`
+          })
+        },
+        (err) => {console.log("update form error",res)}
+      )
+
+    }
+   
 
   // end of sumit date and time
   },
@@ -102,7 +122,16 @@ Page({
     })
 
   // end of skip
-  }
+  },
+
+   // start of clearAlert
+   clearAlert: function(){
+    this.setData({
+      alertDate: false,
+      alertTime: false
+    })
+  },
+  // end of clearAlert
   
 
 
