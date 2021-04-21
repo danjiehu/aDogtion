@@ -68,14 +68,14 @@ page {
 
 
 
-.photo-background {
+/* .photo-background {
   height: 46vh;
   width: 100vw;
   box-sizing: border-box;
   z-index: 0;
   background-color: #000;
   border-radius: 0 0 50rpx 50rpx;
-}
+} */
 
 /* .photo-background image {
   width: 100vw;
@@ -85,7 +85,7 @@ page {
 } */
  
 
-
+/* 
 .appointment-card {
   background-color: #f1f1f0;
   border-radius: 40rpx;
@@ -93,43 +93,43 @@ page {
   width: 80%;
   box-sizing: border-box;
   margin: 56rpx auto;
-}
+} */
 
-.dog-card {
+/* .dog-card {
   display: flex;
-  /* border-radius: 32rpx; */
+  border-radius: 32rpx;
   background-color:#f1f1f0;
   width: 100%;
   align-items: center;
   box-sizing: border-box;
-  /* margin-bottom: 50rpx; */
-}
-
+  margin-bottom: 50rpx;
+} */
+/* 
 .dog-photo {
   height: 72px;
   width: 72px;
   border-radius: 10px;
   margin-right: 14px;
-}
+} */
 
-.dog-name {
+/* .dog-name {
   font-size: 18px;
   font-weight: bold;
   font-family: "Playfair Display";
   width: 100%;
-}
+} */
 
-.dog-more {
+/* .dog-more {
   color: #B6B1B1;
   font-size: 14px;
   width: 100%;
   margin-top: 4px;
   font-weight: 500;
-}
+} */
 
-.larger {
+/* .larger {
   font-size: larger;
-}
+} */
 
 /* dog details css */
 
@@ -157,7 +157,7 @@ page {
 }
 
 .cards-masonry {
-  padding: 20rpx 70rpx 100rpx 70rpx;
+  padding: 40rpx 70rpx 100rpx 70rpx;
   column-count: 2;
   column-gap: 30rpx;
   width: 100%;
@@ -166,7 +166,7 @@ page {
 
 .card {
   box-sizing: border-box;
-  /* padding-bottom: 30rpx; */
+  padding: 10rpx 0;
   width: 100%;
   display: inline-block;
 }
@@ -182,7 +182,7 @@ page {
   /* margin: 0; */
   z-index: 100;
   position: relative;
-  bottom: 58rpx;
+  bottom: 115rpx;
   /* right: 0; */
   width: 90%;
   color: white;
@@ -201,7 +201,7 @@ page {
   padding: 16rpx 40rpx 16rpx 90rpx;
   border-radius: 0 0 0 36rpx;
   font-size: 10pt;
-  margin-top: -38rpx;
+  margin-top: -10rpx;
 }
 
 
