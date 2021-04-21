@@ -62,13 +62,12 @@
     <view class="cards-masonry">
       <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
           <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
-            <image class="like-button" src="/images/fav-white.svg"></image>
             <image mode="widthFix" class="img-full" src="{{dog.image[0].path}}"></image>
-            <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
             <view class="mini-flex">
-            <view class="do-not-delete-me"></view>
-            <view class="dog-name-yellow playfair bold">{{dog.name}}</view>
+                <view class="do-not-delete-me"></view>
+                <view class="dog-name-yellow playfair bold">{{dog.name}}</view>
             </view>
+            <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
           </view>
       </block>
     </view>

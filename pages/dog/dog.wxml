@@ -18,37 +18,39 @@
 </view>
 
 <view class="white-container">
-  <image wx:if="{{!hasLike}}" bindtap="addLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicbXFooHVS1Z.svg"></image>
-  <image wx:if="{{hasLike}}" bindtap="removeLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicSl9lyQAPx9.svg"></image>
+  <view wx:if="{{currentUser}}">
+    <image wx:if="{{!hasLike}}" bindtap="addLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicbXFooHVS1Z.svg"></image>
+    <image wx:if="{{hasLike}}" bindtap="removeLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicSl9lyQAPx9.svg"></image>
+  </view>
   <view class="icon-container">
     <view class="mini-flex">
       <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
-      <view class="small-txt grey-txt">5h</view>
+      <view class="detail-txt grey-txt">5h</view>
     </view>
     <view class="two-icons">
-      <view wx:if="{{dog.gender === 'male'}}" class="mini-flex small-txt">
+      <view wx:if="{{dog.gender === 'male'}}" class="mini-flex">
         <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicRrXoHzzxQz.svg"></image>
-        <view>{{dog.gender}}</view>
+        <view class="detail-txt">{{dog.gender}}</view>
       </view>
-      <view wx:if="{{dog.gender === 'female'}}" class="mini-flex small-txt">
+      <view wx:if="{{dog.gender === 'female'}}" class="mini-flex">
         <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicV2LojXDtUV.svg"></image>
-        <view>{{dog.gender}}</view>
+        <view class="detail-txt">{{dog.gender}}</view>
       </view>
-      <view wx:if="{{dog.color === 'white'}}" class="mini-flex small-txt">
+      <view wx:if="{{dog.color === 'white'}}" class="mini-flex">
         <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbic2SmhBRMDUC.svg"></image>
-        <view>{{dog.color}}</view>
+        <view class="detail-txt">{{dog.color}}</view>
       </view> 
-      <view wx:if="{{dog.color === 'brown'}}" class="mini-flex small-txt">
+      <view wx:if="{{dog.color === 'brown'}}" class="mini-flex">
         <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicUrXvwclzRf.svg"></image>
-        <view>{{dog.color}}</view>
+        <view class="detail-txt">{{dog.color}}</view>
       </view> 
-      <view wx:if="{{dog.color === 'black'}}" class="mini-flex small-txt">
+      <view wx:if="{{dog.color === 'black'}}" class="mini-flex">
         <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicuCi19Mzk27.svg"></image>
-        <view>{{dog.color}}</view>
+        <view class="detail-txt">{{dog.color}}</view>
       </view> 
-      <view wx:if="{{dog.color === 'multicolor'}}" class="mini-flex small-txt">
+      <view wx:if="{{dog.color === 'multicolor'}}" class="mini-flex">
         <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicOhab6njbuQ.svg"></image>
-        <view>{{dog.color}}</view>
+        <view class="detail-txt">{{dog.color}}</view>
       </view> 
     </view>
   </view>
@@ -60,16 +62,16 @@
   <view class="border-shadow"></view>
   <view class="grey-container">
     <view>
-      <view class="details bold">{{dog.age}}</view>
-      <view class="small-txt grey-txt">AGE</view>
+      <view class="small-txt bold">{{dog.age}}</view>
+      <view class="detail-txt grey">AGE</view>
     </view>
     <view>
-      <view class="details bold caps">{{dog.size}}</view>
-      <view class="small-txt grey-txt">SIZE</view>
+      <view class="small-txt bold caps">{{dog.size}}</view>
+      <view class="detail-txt grey">SIZE</view>
     </view>
     <view>
-      <view class="details bold">{{dog.weight}} KG</view>
-      <view class="small-txt grey-txt">WEIGHT</view>
+      <view class="small-txt bold">{{dog.weight}} KG</view>
+      <view class="detail-txt grey">WEIGHT</view>
     </view>
   </view>
 
@@ -125,6 +127,8 @@
 
   <!-- back arrow -->
   <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
+
+  <view class="tall-empty-block"></view>
 
 </view>
   
