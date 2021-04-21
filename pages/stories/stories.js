@@ -2,13 +2,10 @@ const app = getApp()
 
 Page({
   data: {
-    dog: [],
     dogs: [],
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
-    swiperList: [],
-    activeSwiper: 0
   },
 
   onLoad: function (options) {
@@ -27,53 +24,20 @@ Page({
       }
     )
   },
-  navigateToDog: function (options) {
-    this.setData({dogOn: true})
-    const self = this
-    let Dogs = new wx.BaaS.TableObject
-    ('adogtion_success_stories')
 
-    //  calling one success dog
-    Dogs.get(options.id).then(
-      (res) => {
-        console.log('dog id', res)
-        self.setData ({
-          dog: res.data
-        })
-        let gallery = res.data.image
-      for (let i = 0; i < gallery.length; i +=1) {
-        let imagePath = gallery[i].path
-        let swiperList = self.data.swiperList
-        swiperList.push(imagePath)
-        self.setData ({
-          swiperList: this.data.swiperList
-        })
-      }
-      },
-      (err) => {
-        console.log('error', err)
-      }
-    )
-    },
-
-  swiperChange(e){
-    // console.log("changed", e.detail.current)
-    this.setData({
-      activeSwiper: e.detail.current
+  navigateToDog: function(e) {
+    console.log('calling a success dog', e)
+    wx.navigateTo({
+      url: `/pages/stories/onestory?id=${e.currentTarget.dataset.id}`,
     })
   },
 
-  
-
-  // goBack(e) {
-  //   console.log("back", e)
-  //   wx.navigateBack({
-  //     delta: 1,
-  //   })
-  // },
-
-  goBack() {
-    this.setData({dogOn: false})
+  goBack(e) {
+    console.log("back", e)
+    wx.navigateBack({
+      delta: 1,
+    })
   },
+
 
 })

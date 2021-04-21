@@ -1,9 +1,9 @@
 
-<block wx:if="{{!filterOn}}">
   <view class="yellow-container"></view>
   <view class="grey-container">
     <view class="top-flex">
       <view class="title playfair bold">Success Stories</view>
+      <view class="subtitle"></view>
     </view>
     
     <view class="cards-masonry">
@@ -18,50 +18,6 @@
           </view>
       </block>
     </view>
+    <!-- back arrow -->
+    <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
   </view>
-</block>
-
-<block wx:else>
-<view class="photo-background">
-  <view class='swiper-wrapper'>
-    <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
-      <block wx:for="{{swiperList}}" wx:key="key1">
-        <swiper-item>
-          <image mode="aspectFill" class="swiper_image" src="{{item}}" lazy-load="true" />
-        </swiper-item>
-      </block>
-    </swiper>
-    <view wx:if="{{swiperList[1]}}" class="dots" >
-      <block wx:for="{{swiperList}}" wx:key="key2">
-        <view class="dot {{index == activeSwiper ? ' active' : ''}}"></view>
-      </block>
-    </view>
-  </view>
-</view>
-
-<view class="white-container">
- 
-  <!-- Dog description -->
-  <view class="tag playfair bold">success stories</view>
-  <view class="title playfair bold">{{dog.name}}</view>
-  <view class="subtitle">A love story</view>
-  <view class="left-border-box grey-txt">{{dog.description}}</view>
-
-  <view class="appointment-card">
-    <view class="dog-card">
-        <image class="dog-photo" src="swiperList[0]" mode="center"></image>
-        <view>
-          <view class="dog-name playfair">{{dog.name}}</view>
-          <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>
-        </view>
-    </view>
-  </view>
-
-<!-- OTHER SUCCESS STORIES -->
-<view class="sub-title playfair"> See More Success Stories</view> 
-
-  <!-- back arrow -->
-  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
-
-  </view>
-</block>
