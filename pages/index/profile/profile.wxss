@@ -3,25 +3,18 @@
 page {
   width: 100%;
   box-sizing: border-box;
+  background-color: #F1F1F0;
 }
+
+/* User block */
 
 .white-container {
   background-color: #fff;
-  padding-top: 150rpx;
+  padding: 150rpx 0 60rpx 0;
   z-index: 500;
-  height: 13vh;
   margin: 0 auto;
   border-radius: 0 0 70rpx 70rpx;
   position: sticky;
-}
-
-.center {
-  margin: 0 auto;
-  /* width: 50%; */
-}
-
-.bold {
-  font-weight: 600;
 }
 
 .user-icon {
@@ -43,14 +36,22 @@ page {
   margin: 0 auto;
 }
 
-.grey-container {
-  margin-top: -50rpx;
-  z-index: 0;
-  background-color: #F1F1F0;
-  padding: 50rpx 20rpx;
-  width: 100%;
-  box-sizing: border-box;
-  min-height: 80vh;
+.adogtion {
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+  font-size: 20pt;
+}
+
+/* Text tags */
+
+.center {
+  margin: 0 auto;
+  /* width: 50%; */
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .title {
@@ -63,7 +64,25 @@ page {
   font-family: "Playfair display";
 }
 
-.empty-container {
+.center-txt {
+  text-align: center;
+  margin: 0rpx auto;
+}
+
+.grey-txt {
+  color: #B6B1B1;
+}
+
+.sub-title {
+  margin: 20rpx 40rpx 40rpx 60rpx;
+  font-size: larger;
+  text-align: left;
+  width: 80%;
+}
+
+/* Unlogged user block */
+
+.container-white {
   background-color: #fff;
   /* height: 620rpx; */
   width: 90%;
@@ -71,14 +90,6 @@ page {
   border-radius: 40rpx;
   margin: 30px auto;
   padding: 60rpx;
-}
-
-.dog-container {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 40rpx;
-  height: 460rpx;
 }
 
 .empty-img {
@@ -95,25 +106,10 @@ page {
   padding-bottom: 20rpx;
 }
 
-.center-txt {
-  text-align: center;
-  margin: 0rpx auto;
-}
-
-.grey-txt {
-  color: #B6B1B1;
-}
-
-.sub-title {
-  margin: 0 40rpx 40rpx 0;
-  font-size: larger;
-  text-align: left;
-  width: 80%;
-  padding: 0 0 0 40rpx;
-}
+/* Favourite dogs block */
 
 .dogs-title {
-  margin: 0 40rpx 0 0;
+  margin: 60rpx 40rpx 0 60rpx;
   font-size: larger;
   text-align: left;
   width: 80%;
@@ -122,13 +118,14 @@ page {
 .card-flexbox {
   display: flex;
   align-items: center;
-  /* width: 90%; */
-  /* padding: 20rpx 0 0 54rpx; */
+  width: 90%;
+  padding: 0 0 0 60rpx;
   overflow: auto;
   position: relative;
   top: 4rpx;
   left: 0rpx;
   overscroll-behavior-x: contain;
+  margin-bottom: 40rpx;
 }
 
 .card {
@@ -141,7 +138,7 @@ page {
   width: 220rpx;
   height: 220rpx;
   /* background-color: #F8D35F; */
-  border-radius: 50rpx 50rpx 0 50rpx;
+  border-radius: 32rpx 32rpx 0 32rpx;
   background-size: cover;
   background-position: center;
 }
@@ -152,7 +149,7 @@ page {
   padding-top: 78%;
   padding-left: 10%;
   color: white;
-  font-size: 9pt;
+  font-size: 8pt;
 }
 
 .mini-flex {
@@ -161,27 +158,36 @@ page {
 }
 
 .dog-name-yellow {
-  padding: 30rpx;
+  /* padding: 30rpx; */
   background-color: #f6c752;
-  padding: 16rpx 40rpx 16rpx 50rpx;
-  border-radius: 0 0 0 50rpx;
-  font-size: 11pt;
+  padding: 16rpx 30rpx 16rpx 40rpx;
+  border-radius: 0 0 0 30rpx;
+  font-size: 10pt;
 }
 
-.wide-card {
-  width: 90%;
+.like-button {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 82%;
+  z-index: 100;
+  position: relative;
+  top: 58rpx;
+  right: 16rpx;
+}
+
+/* Donation block */
+
+.card-donation-yellow {
+  background-color: #f6c752;
+  padding: 60rpx 70rpx;
+  width: 85%;
   box-sizing: border-box;
   display: flex;
   justify-items: space-around;
   /* border: 1px solid #24241E; */
   border-radius: 40rpx;
   align-items: center;
-}
-
-.card-donation-yellow {
-  background-color: #f6c752;
-  margin: 30rpx auto;
-  padding: 60rpx 70rpx;
+  margin: 0 auto;
 }
 
 .donation-title {
@@ -196,7 +202,9 @@ page {
   border-radius: 50rpx;
   font-weight: 700;
   font-size: medium;
+  font-size: 11pt;
   width: 150rpx;
+  text-align: center;
 }
 
 .btn {
@@ -209,7 +217,7 @@ page {
   font-weight: bold;
 }
 
-.btn .yellow :hover{
+.btn .yellow :hover {
   background-color: rgba(246, 199, 82, 0.8);
   color: rgba(0,0,0, 0.7)
 }
@@ -230,17 +238,21 @@ page {
   font-size: smaller;
 }
 
+/* Success stories block */
+
 .card-img-bg {
   display: flex;
   align-items: flex-end;
-  padding: 55rpx;
-  width: 90%;
+  justify-content: space-between;
+  padding: 55rpx 0 55rpx 55rpx;
+  width: 85%;
+  box-sizing: border-box;
+  margin: 30rpx auto;
   height: 260rpx;
   background-color: #fff;
   border-radius: 40rpx 40rpx 0 40rpx;
   background-size: cover;
   background-position: center;
-  margin: 30rpx auto;
 }
 
 .small-txt{
@@ -255,14 +267,21 @@ page {
   border-radius: 30rpx 0rpx 0 0rpx;
   position: relative;
   bottom: -56rpx;
-  left: 269rpx;
+  /* left: 35%; */
 }
 
+/* About us block */
+
 .card-about-white {
+  width: 85%;
+  box-sizing: border-box;
+  display: flex;
+  justify-items: space-around;
+  align-items: center;
   background-color: white;
-  margin: 60rpx auto 210rpx auto;
-  /* height: 310rpx; */
-  padding: 20rpx 0 16rpx 50rpx;
+  border-radius: 40rpx;
+  margin: 60rpx auto 0 auto;
+  padding: 40rpx 0 20rpx 50rpx;
 }
 
 .about-us-title {
@@ -278,23 +297,16 @@ page {
   margin: 0 0 30rpx 0;
 }
 
-.image-dog-about {
+.about-us-dog {
   position: relative;
   top: -50rpx;
-  right: 0;
-  width: 270rpx;
-  height: 300rpx;
+  right: 0rpx;
+  width: 260rpx;
+  height: 280rpx;
   background-size: cover;
-  margin: 0 20rpx 0 30rpx;
+  margin: 0 30rpx 0 0;
 }
 
-
-.like-button {
-  width: 28rpx;
-  height: 28rpx;
-  margin-left: 82%;
-  z-index: 100;
-  position: relative;
-  top: 58rpx;
-  right: 16rpx;
+.tall-empty-block {
+  height: 300rpx;
 }
