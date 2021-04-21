@@ -19,7 +19,7 @@ page {
   padding: 70rpx 0 200rpx 0;
   width: 100%;
   box-sizing: border-box;
-  min-height: 93vh;
+  min-height: 80vh;
 }
 
 .top-flex {
@@ -34,11 +34,6 @@ page {
   margin: 0 0 0 80rpx;
   width: 100%;
   box-sizing: border-box;
-}
-
-.playfair {
-  font-family: "Playfair display";
-  font-weight: bold;
 }
 
 .filters {
@@ -156,4 +151,122 @@ page {
 .menu-tab {
   display: inline-block;
   margin-top: 30rpx;
+}
+
+
+
+.yellow-tagcontainer {
+  height: 7vh;
+  background-color: #f6c752;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grey-tagcontainer {
+  margin-top: -50rpx;
+  z-index: 10;
+  border-radius: 70rpx 70rpx 0 0;
+  background-color: #F1F1F0;
+  padding: 70rpx 0 200rpx 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 40vh;
+}
+
+.dog{
+  width: 240rpx;
+  height: 240rpx;
+  position: relative;
+  top: -121px;
+  right: -340rpx;
+}
+
+.title-container{
+  width: 80%;
+  margin: -242rpx auto 30rpx auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icontag{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.titletag{
+  font-size: 20pt;
+}
+
+.filters-container{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.playfair {
+  font-family: "Playfair display";
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.subtitle-tag{
+  font-size: small;
+  margin: 72rpx 0 20rpx;
+}
+
+.tag {
+  background-color: #FFF;
+  padding: 30rpx 42rpx;
+  border-radius: 8rpx;
+  font-size: 11pt;
+  margin-right: 16rpx;
+}
+
+.center-tag {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 45%;
+}
+
+.tag-container {
+  display: flex;
+}
+
+.yellow-tag {
+  background-color: #f6c752
+}
+
+.buttontag {
+  padding: 30rpx 80rpx;
+  border-radius: 500rpx;
+  font-size: larger;
+  color: #24241E;
+  margin-top: 170rpx;
+}
+
+.selected {
+  background-color: #f6c752;
+  padding: 30rpx 42rpx;
+  border-radius: 8rpx;
+  font-size: 11pt;
+  margin-right: 16rpx;
+}
+
+.animation-slide-top {
+  animation-name: slide-top
+}
+
+.animation-slide-bottom {
+  animation-name: slide-bottom
+}
+
+.animation-slide-left {
+  animation-name: slide-left
+}
+
+.animation-slide-right {
+  animation-name: slide-right
 }

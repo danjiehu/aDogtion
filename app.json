@@ -8,7 +8,8 @@
     "components/custom-tabbar/custom-tabbar",
     "pages/index/index",
     "pages/about/about",
-    "pages/stories/stories"
+    "pages/stories/stories",
+    "pages/stories/onestory"
   ],
   "window": {
     "backgroundTextStyle": "light",
