@@ -1,12 +1,20 @@
 <!--pages/welcome/welcome.wxml-->
 <view class="yellow-container">
-  <view class="text-area">
-    <view class="sub-title playfair">Hawoof!</view>
-    <view class="title playfair">Welcome to aDogtion</view>
-    <view class="paragraph">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-    <view class="paragraph">All these dogs need is a little love.</view>
-    <!-- <view class="welcome-text">You can support them in many ways: by adopting, fostering, donating, and simply spreading the word.</view> -->
+  <view class='swiper-wrapper'>
+    <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
+      <block wx:for="{{swiperList}}" wx:key="key1">
+        <swiper-item>
+          <!-- <image mode="aspectFill" class="swiper_image" src="{{item.image}}" lazy-load="true" /> -->
+          <view class="text-area">
+            <view class="sub-title playfair">{{item.subtitle}}</view>
+            <view class="title playfair">{{item.title}}</view>
+            <view class="paragraph">{{item.description}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
+  
   <view class="btn-white playfair bold" bindtap="navigateToHome">
     <view>CONTINUE</view>
   </view>
