@@ -123,3 +123,13 @@ input {
   border-radius: 50rpx 0 0 0;
   background-color: #f6c752;
 }
+
+.top-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 40rpx;
+  width: 60rpx;
+  margin: 2% 0 0 10rpx;
+  padding: 0;
+}

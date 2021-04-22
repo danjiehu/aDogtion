@@ -60,6 +60,6 @@
 
   <!-- <view style="height:300rpx;"></view> -->
   <!-- this is a divider for submit button -->
-
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZYqTPQCi1epomh.svg" bindtap="goBack"></image>
 </view>
 <!-- end of white container -->

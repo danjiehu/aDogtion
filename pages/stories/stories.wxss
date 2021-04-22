@@ -173,7 +173,7 @@ page {
 .dog-age-gender {
   z-index: 100;
   position: relative;
-  bottom: 168rpx;
+  bottom: 150rpx;
   width: 60%;
   color: white;
   font-size: 9pt;
@@ -224,7 +224,7 @@ page {
   background-color: #f6c752;
   padding: 30rpx 50rpx;
   border-radius: 0 0 32rpx 0;
-  margin-top: -6rpx;
+  margin-top: -15rpx;
   width: 42%;
 }
 
