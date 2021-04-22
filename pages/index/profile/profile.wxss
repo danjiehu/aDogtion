@@ -150,6 +150,7 @@ page {
   padding-left: 10%;
   color: white;
   font-size: 8pt;
+  text-transform: uppercase;
 }
 
 .mini-flex {
@@ -225,6 +226,7 @@ page {
 
 .smaller-txt{
   font-size: smaller;
+  margin-top: 10rpx;
 }
 
 /* Success stories block */

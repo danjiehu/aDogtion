@@ -23,7 +23,7 @@
       <view class="card-flexbox">
         <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
           <view class="card" data-id="{{dog.dog_id.id}}" bindtap="navigateToDog">
-            <image class="like-button" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGF3EpAtKgr.svg"></image>
+            <image class="like-button" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZaomy4turrxNsw.svg"></image>
             <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.dog_id.image[0].path}}')">
               <view class="dog-age-gender">{{dog.dog_id.age}} • {{dog.dog_id.gender}}</view>
             </view>
@@ -59,8 +59,8 @@
  <view class="sub-title playfair bold">Success Stories</view>
   <view class="card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUoItobuu7k89p.jpeg)" bindtap="navigateToStories">
     <view>
-      <view class="white-txt playfair bold">Olivia & Almond</view>
-      <view class="white-txt smaller-txt">A love story</view>
+      <view class="white-txt playfair bold">Our Lucky Dogs</view>
+      <view class="white-txt smaller-txt">aDogtion love stories</view>
     </view>
     <image mode="widthFix" class="icon-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXp4FViufPrbFv3.svg"></image>
   </view>
