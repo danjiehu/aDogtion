@@ -95,7 +95,7 @@ input {
   border-radius: 70rpx 70rpx 0 0;
   background-color: #fff;
   padding: 50rpx 0;
-  min-height: 50vh;
+  min-height: 63vh;
   width: 100%;
   box-sizing: border-box;
   position: absolute;

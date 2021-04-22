@@ -163,7 +163,8 @@ page {
   margin: 0 auto;
   box-sizing: border-box;
   width: 85%;
-  margin-top: 30rpx;
+  margin-top: 50rpx;
+  margin-bottom: 70rpx;
 }
 
 .swiper-wrapper {

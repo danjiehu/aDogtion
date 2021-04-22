@@ -2,7 +2,7 @@ page {
   color: #24241E;
   width: 100%;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #f1f1f0;
 }
 
 .yellow-container {
@@ -10,6 +10,10 @@ page {
   background-color: #f6c752;
   width: 100%;
   box-sizing: border-box;
+}
+
+.txt-container{
+  padding-top: 10rpx;
 }
 
 .grey-container {
@@ -24,7 +28,6 @@ page {
 }
 
 .top-flex {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
@@ -33,8 +36,14 @@ page {
 .title {
   font-size: 20pt;
   margin: 0 0 0 80rpx;
-  width: 100%;
+  width: 48%;
   box-sizing: border-box;
+  color: #24241E;
+  z-index: 500;
+  /* position: absolute;
+  top: 530rpx;
+  left: 80rpx; */
+  margin-bottom: 80rpx;
 }
 
 .playfair {
@@ -47,9 +56,10 @@ page {
 
 .subtitle{
   text-transform: uppercase;
-  margin-left: 58rpx;
+  margin-left: 80rpx;
   padding: 16rpx 0;
-  opacity: 0.5;
+  color: #CFCECB;
+  margin-bottom: 70rpx;
 }
 
 .top-btn {
@@ -74,13 +84,6 @@ page {
   box-sizing: border-box;
   z-index: 0;
   background-color: #000;
-  border-radius: 0 0 50rpx 50rpx;
-} */
-
-/* .photo-background image {
-  width: 100vw;
-  filter: opacity(0.55);
-  height: 100%;
   border-radius: 0 0 50rpx 50rpx;
 } */
  
@@ -133,18 +136,6 @@ page {
 
 /* dog details css */
 
-.white-container {
-  margin: -70rpx auto;
-  z-index: 10;
-  border-radius: 50rpx 50rpx 0 0;
-  background-color: #fff;
-  padding: 60rpx 12px;
-  min-height: 50vh;
-  width: 100;
-  box-sizing: border-box;
-  position: absolute;
-}
-
 
 .small-txt{
   font-size: 9pt;
@@ -169,26 +160,26 @@ page {
   padding: 10rpx 0;
   width: 100%;
   display: inline-block;
+  margin-bottom: 50rpx;
 }
 
 .img-full {
-  border-radius: 32rpx 32rpx 0 32rpx;
+  border-radius: 32rpx;
   width: 100%;
   z-index: 0;
-  filter: brightness(80%);
+  filter: brightness(74%);
 }
 
 .dog-age-gender {
-  /* margin: 0; */
   z-index: 100;
   position: relative;
-  bottom: 115rpx;
-  /* right: 0; */
-  width: 90%;
+  bottom: 168rpx;
+  width: 60%;
   color: white;
   font-size: 9pt;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
+  left: 50rpx;
 }
 
 .mini-flex {
@@ -198,11 +189,48 @@ page {
 
 .dog-name-yellow {
   background-color: #f6c752;
-  padding: 16rpx 40rpx 16rpx 90rpx;
-  border-radius: 0 0 0 36rpx;
+  padding: 56rpx 40rpx 26rpx 40rpx;
+  border-radius: 0 0 26rpx 26rpx;
   font-size: 10pt;
-  margin-top: -10rpx;
+  margin-top: -68rpx;
+  text-align: -webkit-right;
 }
 
 
+.borderbox {
+  background-color: #f1f1f0;
+  width: 77%;
+  margin: 4rpx auto;
+  border-left: 1px dotted #24241E;
+  padding-left: 60rpx;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+}
 
+.imgbox {
+  border-radius: 32rpx 32rpx 32rpx 0;
+  width: 490rpx;
+  filter: brightness(0.7);
+}
+
+.circle {
+  height: 32rpx;
+  position: relative;
+  top: -20rpx;
+  left: -351rpx;
+}
+
+.yellowtag{
+  background-color: #f6c752;
+  padding: 30rpx 50rpx;
+  border-radius: 0 0 32rpx 0;
+  margin-top: -6rpx;
+  width: 42%;
+}
+
+.circlebottom{
+  height: 32rpx;
+  position: relative;
+  top: 30rpx;
+  left: -349rpx;
+}
