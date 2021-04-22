@@ -7,12 +7,12 @@
 <view class="white-container">
   <view class="title-container">
     <view class="yellow-circle"></view>
-    <view class="top-title playfair">Contact</view>
+    <view class="top-title playfair">{{action}}</view>
   </view>
 
   <!-- start of selected dog card -->
   <view class="dog-card">
-    <image class="dog-photo" src="{{dogImagePath}}"></image>
+    <image class="dog-photo" src="{{dogImagePath}}" mode="aspectFill"></image>
     <view>
       <view class="dog-name playfair">{{dogProfile.name}}</view>
       <view class="dog-more">{{dogProfile.age}} • {{dogProfile.gender}}</view>

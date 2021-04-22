@@ -311,3 +311,15 @@ page {
 .tall-empty-block {
   height: 300rpx;
 }
+
+.appointment-button {
+  border-radius: 20rpx;
+  padding: 18rpx 40rpx;
+  border-radius: 50rpx;
+  font-weight: 700;
+  font-size: medium;
+  font-size: 11pt;
+  width: 200rpx;
+  text-align: center;
+  margin: 20rpx 0 20rpx 60rpx;
+}

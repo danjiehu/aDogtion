@@ -9,7 +9,8 @@
     "pages/index/index",
     "pages/about/about",
     "pages/stories/stories",
-    "pages/stories/onestory"
+    "pages/stories/onestory",
+    "pages/appointments/appointments"
   ],
   "window": {
     "backgroundTextStyle": "light",

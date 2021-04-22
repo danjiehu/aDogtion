@@ -82,5 +82,5 @@ page {
   background-color: white;
   margin: 80rpx auto;
   text-align: center;
-  width: 20%;
+  width: 216rpx;
 }
