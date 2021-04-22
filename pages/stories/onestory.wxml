@@ -26,7 +26,7 @@
 
   <view class="appointment-card">
     <view class="dog-card">
-        <image class="dog-photo" src="{{swiperList[0]}}" mode="center"></image>
+        <image class="dog-photo" src="{{swiperList[0]}}" mode="aspectFill"></image>
         <view>
           <view class="dog-name playfair">{{dog.name}}</view>
           <view class="dog-more">{{dog.age}} • {{dog.gender}}</view>

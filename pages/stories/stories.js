@@ -32,12 +32,12 @@ Page({
     })
   },
 
-  goBack(e) {
-    console.log("back", e)
-    wx.navigateBack({
-      delta: 1,
+  navigateToHome: function() {
+    wx.navigateTo({
+      url: '/pages/index/index'
     })
-  },
+    console.log('navigate')
+  }
 
 
 })

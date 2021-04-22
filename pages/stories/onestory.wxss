@@ -5,6 +5,17 @@ page {
   background-color: #fff;
 }
 
+.tag {
+  background-color: #F6C752;
+  width: 210rpx;
+  padding: 24rpx 40rpx;
+  border-radius: 8rpx;
+  position: relative;
+  /* -webkit-text-emphasis-position: over; */
+  top: -100rpx;
+  left: 51rpx;
+}
+
 .photo-background {
   height: 46vh;
   width: 100vw;
@@ -86,7 +97,7 @@ page {
 .title {
   font-size: 18pt;
   /* font-weight: 600; */
-  margin: 0 0 0 55rpx;
+  margin: -40rpx 0 0 55rpx;
   width: 80%;
   box-sizing: border-box;
 }
