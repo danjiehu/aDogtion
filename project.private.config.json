@@ -71,6 +71,12 @@
           "pathName": "pages/stories/stories",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "appointments",
+          "pathName": "pages/appointments/appointments",
+          "query": "id=60782c17d6bf664c7cbc849a",
+          "scene": null
         }
       ]
     }

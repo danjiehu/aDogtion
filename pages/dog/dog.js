@@ -80,14 +80,14 @@ Page({
   fosterToContact: function(e) {
     console.log('going to contact', e)
     wx.navigateTo({
-      url: `/pages/contact/contact?id=${this.data.dog.id}&action=foster`,
+      url: `/pages/contact/contact?id=${this.data.dog.id}&action=Foster`,
     })
   },
 
   adoptToContact: function(e) {
     console.log('going to contact', e)
     wx.navigateTo({
-      url: `/pages/contact/contact?id=${this.data.dog.id}&action=adopt`,
+      url: `/pages/contact/contact?id=${this.data.dog.id}&action=Adopt`,
     })
   },
 

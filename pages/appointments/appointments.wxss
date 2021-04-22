@@ -1,0 +1,135 @@
+/* pages/contact/contact.wxss */
+page {
+  color: #131313;
+}
+
+.top-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 40rpx;
+  width: 60rpx;
+  margin: 2% 0 0 10rpx;
+  padding: 0;
+}
+
+.yellow-container {
+  background-color: #f6c752;
+  height: 15vh;
+  position: relative;
+}
+
+.playfair {
+  font-family: "Playfair display";
+}
+
+.dog {
+  width: 240rpx;
+  height: 260rpx;
+  background-size: cover;
+  margin: 0 20rpx 0 30%;
+  position: absolute;
+  right: 100rpx;
+  bottom: 50rpx;
+}
+
+.white-container {
+  position: relative;
+  border-radius: 70rpx 70rpx 0 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: -50rpx;
+  padding: 60rpx 90rpx 300rpx 90rpx;
+  height: 85vh + 50rpx;
+  background-color: #F1F1F0;
+  padding-bottom: 0px;
+}
+
+.title-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 50rpx;
+}
+
+.yellow-circle {
+  margin: auto 0;
+  height: 20rpx;
+  width: 20rpx;
+  background-color:#F8D35F;
+  border-radius: 50%;
+  margin-right: 32rpx;
+}
+
+.top-title {
+  font-size: 20pt;
+}
+
+.dog-card {
+  display: flex;
+  /* align-items: baseline; */
+  border-radius: 30rpx;
+  padding: 30rpx;
+  background-color:#F1F1F0;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.dog-photo {
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 20rpx;
+  margin-right: 30rpx;
+}
+
+.dog-name {
+  font-size: 12pt;
+  width: 100%;
+}
+
+.dog-more {
+  color: #B6B1B1;
+  font-size: 10pt;
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.form-container {
+  margin-top: 50rpx;
+}
+
+/* start of input name */
+.title {
+  color: #B6B1B1;
+  font-size: small;
+  margin-bottom: 10rpx;
+  margin-top: 30rpx;
+}
+
+input {
+  font-size: medium;
+  color: #24241E;
+  font-weight: regular;
+  border-bottom: 1px solid #E4E4E4;
+  padding-bottom: 16rpx;
+}
+/* end of input message */
+
+.alert {
+  margin-top: 5rpx;
+  font-size: medium;
+  color: red;
+}
+
+
+.btn-yellow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 150rpx;
+  padding: 40rpx 0 0 0;
+  box-sizing: border-box;
+  border-radius: 50rpx 0 0 0;
+  background-color: #f6c752;
+}

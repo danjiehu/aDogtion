@@ -1,0 +1,35 @@
+<!--pages/appointments/appointments.wxml-->
+
+<view class="yellow-container">
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
+</view>
+
+<view class="white-container">
+  <view class="top-title playfair">Your Appointments</view>
+
+  <!-- start of selected dog card -->
+  <view class="dog-card">
+    <image class="dog-photo" src="{{dogImagePath}}" mode="aspectFill"></image>
+    <view>
+      <view class="dog-name playfair">{{dogProfile.name}}</view>
+      <view class="dog-more">{{dogProfile.age}} • {{dogProfile.gender}}</view>
+    </view>
+  </view>
+  <!-- end of selected dog card -->
+
+  <!-- start of form-container -->
+  <view class="form-container" bindtap="clearAlert">
+    <!-- insert address icon -->
+    <view class="title">The Haven</view>
+
+    <!-- insert clock icon -->
+    <view class="title">Wed 24 April</view>
+    <view>09:30 am</view>
+   
+    <view style="height:300rpx;"></view>
+    <!-- this is a divider for submit button -->
+
+  </view>
+   <!-- end of form-container -->
+
+</view>

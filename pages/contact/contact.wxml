@@ -7,7 +7,7 @@
 <view class="white-container">
   <view class="title-container">
     <view class="yellow-circle"></view>
-    <view class="top-title playfair">Contact</view>
+    <view class="top-title playfair">{{action}}</view>
   </view>
 
   <!-- start of selected dog card -->
