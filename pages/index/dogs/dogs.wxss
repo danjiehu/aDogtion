@@ -76,6 +76,7 @@ page {
   width: 100%;
   z-index: 0;
   filter: brightness(80%);
+  margin: 0;
 }
 /* 
 .card-image {
@@ -90,7 +91,7 @@ page {
   /* margin: 0; */
   z-index: 100;
   position: relative;
-  bottom: 58rpx;
+  bottom: 115rpx;
   /* right: 0; */
   width: 90%;
   color: white;
@@ -102,6 +103,7 @@ page {
 .mini-flex {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 
 .dog-name-yellow {
@@ -109,7 +111,8 @@ page {
   padding: 16rpx 40rpx 16rpx 90rpx;
   border-radius: 0 0 0 36rpx;
   font-size: 10pt;
-  margin-top: -38rpx;
+  margin-top: -10rpx;
+  /* margin-top: -38rpx; */
 }
 
 .like-button {

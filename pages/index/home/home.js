@@ -4,10 +4,12 @@ const app = getApp()
 Component({
 
   data: {
+    allDogs: [],
     dogs: [],
     currentUser: null,
     adoptCount: 0,
-    fosterCount: 0
+    fosterCount: 0,
+    tenDogs: []
   },
 
   ready: function (options) {
@@ -18,13 +20,14 @@ Component({
     const self = this
     let Dogs = new wx.BaaS.TableObject('adogtion_dogs')
 
-    Dogs.limit(10).find().then(
+    Dogs.find().then(
       (res) => { 
         console.log('Dogs have been loaded',res)
         self.setData({
-          dogs: res.data.objects.reverse()
+          allDogs: res.data.objects.reverse()
         })
         this.countDogs()
+        this.limitDogs()
       }, (err) => {
         console.log('dogs failed failed',err)
       }
@@ -58,7 +61,7 @@ Component({
     // COUNTING DOGGIES TO SHOW THE CORRECT NUMBERS
     countDogs: function() {
       let self = this
-      let dogs = self.data.dogs
+      let dogs = self.data.allDogs
       console.log(dogs)
       for (let i = 0; i < dogs.length; i++) {
         let dogAdopt = dogs[i].adopt
@@ -80,6 +83,20 @@ Component({
           // console.log('foster count:', updatedFosterCount)
         }
         // console.log('foster count:', fosterCount)
+      }
+    },
+
+    limitDogs: function() {
+      let self = this
+      let dogs = self.data.allDogs
+      console.log('all your dogs', dogs)
+      let newDogs = self.data.dogs
+      for (let i = 0; i < 5; i++) {
+        newDogs.push(dogs[i])
+        console.log('your limited dogs', newDogs)
+        self.setData({
+          dogs: newDogs
+        })
       }
     }
   },

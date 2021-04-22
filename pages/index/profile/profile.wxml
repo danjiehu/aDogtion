@@ -1,53 +1,52 @@
 <!--pages/profile/profile.wxml-->
 <view class="white-container">
-  <view class="center">
+  <view wx:if="{{currentUser}}" class="center">
     <view class="user-icon" style="background-image: url('{{currentUser.avatar}}')"></view>
     <view class="medium-txt">{{currentUser.nickname}}</view>
-  </view>   
+  </view>  
+  <view wx:else>
+    <view class="adogtion bold playfair">aDogtion</view>
+  </view> 
 </view>
 
-<view class="grey-container">  
-  <block wx:if="{{currentUser}}">
-    <view wx:if="{{selected_dogs}}">
-      <view class="dog-container">
-        <view class="dogs-title playfair bold">Your Favorite Dogs</view>
-          <view class="card-flexbox">
-            <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
-                <view class="card">
-                  <image class="like-button" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGF3EpAtKgr.svg"></image>
-                  <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.dog_id.image[0].path}}')">
-                  <view class="dog-age-gender">{{dog.dog_id.age}} • {{dog.dog_id.gender}}</view>
-                  </view>
-                  <view class="mini-flex">
-                    <view class="do-not-delete-me"></view>
-                    <view class="dog-name-yellow playfair">{{dog.dog_id.name}}</view>
-                  </view>
-                </view>
-            </block>
+<block wx:if="{{!currentUser}}" >
+  <view class="container-white">
+    <image class="empty-img" src="/images/empty.svg"></image> 
+      <view class="empty-title bold playfair center-txt">Oops!</view>
+      <view class="small-txt grey-txt center-txt center-txt">Looks like you haven't logged in yet. Log in to save dogs to favourites & contact us about fostering/adoption</view>
+      <button bindtap="getProfile" class="round-button yellow playfair" style="width: 250rpx; margin-top: 50rpx;"> log in </button>
+  </view>
+</block>
+<block wx:else>
+  <view wx:if="{{selected_dogs[0]}}">
+    <view class="dogs-title playfair bold">Your Favorite Dogs</view>
+      <view class="card-flexbox">
+        <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
+          <view class="card" data-id="{{dog.dog_id.id}}" bindtap="navigateToDog">
+            <image class="like-button" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGF3EpAtKgr.svg"></image>
+            <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.dog_id.image[0].path}}')">
+              <view class="dog-age-gender">{{dog.dog_id.age}} • {{dog.dog_id.gender}}</view>
+            </view>
+            <view class="mini-flex">
+              <view class="do-not-delete-me"></view>
+              <view class="dog-name-yellow playfair">{{dog.dog_id.name}}</view>
+            </view>
           </view>
+        </block>
       </view>
     </view>
     <view wx:else>
-      <view class="empty-container">
+      <view class="container-white">
         <image class="empty-img" src="/images/empty.svg"></image> 
         <view class="empty-title bold playfair center-txt">You don't have favorites yet</view>
         <view class="small-txt grey-txt center-txt">Browse the dogs and add them to your favourites by clicking the "like" button</view>
         <view class="btn yellow playfair center" style="width: 130rpx;" bindtap="navigateToDogs">see dogs</view>
       </view>
-  </view> 
-  </block>
-  <block wx:else>
-    <view class="empty-container">
-      <image class="empty-img" src="/images/empty.svg"></image> 
-        <view class="empty-title bold playfair center-txt">Oops!</view>
-        <view class="small-txt grey-txt center-txt center-txt">Looks like you haven't logged in yet. Log in to save dogs to favourites & contact us about fostering/adoption</view>
-
-         <button bindtap="getProfile" class="round-button yellow playfair" style="width: 250rpx; margin-top: 50rpx;"> log in </button>
-    </view>
+    </view> 
   </block>
   
   <!-- Donate  -->
-  <!-- <view class="wide-card card-donation-yellow">
+  <!-- <view class="card-donation-yellow">
       <view>
         <view class="donation-title playfair bold">Donate and save lives!</view>
       </view>
@@ -58,7 +57,7 @@
 
   <!-- Success Stories -->
  <view class="sub-title playfair bold">Success Stories</view>
-  <view class="wide-card card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUoItobuu7k89p.jpeg)" bindtap="navigateToStories">
+  <view class="card-img-bg" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUoItobuu7k89p.jpeg)" bindtap="navigateToStories">
     <view>
       <view class="white-txt playfair bold">Olivia & Almond</view>
       <view class="white-txt smaller-txt">A love story</view>
@@ -67,17 +66,17 @@
   </view>
 
   <!-- About Us -->
-  <view class="wide-card card-about-white" bindtap="navigateToAbout">
+  <view class="card-about-white" bindtap="navigateToAbout">
       <view>
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
         <view class="round-button yellow playfair">learn more</view>
       </view>
       <view>
-        <view class="image-dog-about" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGexLnQ6Ora.svg')"></view>
+      <view class="about-us-dog" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGexLnQ6Ora.svg')"></view>
       </view>
   </view>
-</view>
+  <view class="tall-empty-block"></view>
 <view class="container">
  <CustomTab />
 </view>

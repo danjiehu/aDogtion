@@ -150,13 +150,21 @@ input {
 }
 
 .small-txt{
-  font-size: 9pt;
+  font-size: 11pt;
+}
+
+.detail-txt {
+  font-size: 10pt;
 }
 
 .grey-txt{
   color: #9e9e9f;
-  font-size: medium;
+  font-size: 11pt;
   line-height: 1.4em;
+}
+
+.grey {
+  color: #9e9e9f;
 }
 
 .mini-flex {
@@ -257,21 +265,21 @@ input {
   text-transform: uppercase;
 }
 
-.details {
-  font-size: 10pt;
-}
 
 .adopt-text {
-  font-size: small;
+  font-size: 9pt;
   color: #9e9e9e;
   text-align: right;
-  padding: 40rpx;
-  width: 50%;
+  padding: 20rpx 140rpx 20rpx 80rpx;
+  width: 70%;
   box-sizing: border-box;
   text-transform: uppercase;
   position: fixed;
-  bottom: 12rpx;
-  right: 320rpx;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  height: 160rpx;
+  box-sizing: border-box;
 }
 
 .login-btn {
@@ -283,4 +291,8 @@ input {
   box-sizing: border-box;
   border-radius: 50rpx 0 0 0;
   background-color: #f6c752;
+}
+
+.tall-empty-block {
+  height: 200rpx;
 }

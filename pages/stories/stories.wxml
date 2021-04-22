@@ -17,8 +17,6 @@
 
     </block>
 
-
-
     <!-- back arrow -->
     <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZYqTPQCi1epomh.svg" bindtap="navigateToHome"></image>
   </view>

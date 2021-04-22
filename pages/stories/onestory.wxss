@@ -34,7 +34,7 @@ page {
 }
  
 .swipers {
-  height: 50vh;
+  height: 45vh;
   opacity: 0.65;
 }
  

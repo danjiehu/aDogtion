@@ -19,10 +19,10 @@
 <view class="white-container">
  
   <!-- Dog description -->
-  <view class="tag playfair bold">success stories</view>
+  <view class="tag playfair bold">success story</view>
   <view class="title playfair bold">{{dog.name}}</view>
   <view class="subtitle">A love story</view>
-  <view class="left-border-box grey-txt">{{dog.description}}</view>
+  <view class="left-border-box grey-txt">{{dog.story}}</view>
 
   <view class="appointment-card">
     <view class="dog-card">
