@@ -123,7 +123,7 @@ Page({
   goBack(e) {
     console.log("back", e)
     wx.navigateTo({
-      url: '/pages/index/index',
+      url: '/pages/index/index'
     })
   },
 

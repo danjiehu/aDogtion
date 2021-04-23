@@ -1,7 +1,7 @@
 <!--pages/appointments/appointments.wxml-->
 
 <view class="yellow-container">
-  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZYqTPQCi1epomh.svg" bindtap="goBack"></image>
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZYqTPQCi1epomh.svg" bindtap="navigateToHome"></image>
 </view>
 
 <view class="grey-container">
