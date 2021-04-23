@@ -81,6 +81,13 @@
         {
           "name": "Appointments",
           "pathName": "pages/appointments/appointments",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Appointments",
+          "pathName": "pages/appointments/appointments",
+          "query": "",
           "scene": null
         }
       ]

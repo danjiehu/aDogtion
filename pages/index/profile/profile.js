@@ -132,6 +132,13 @@ Component({
       wx.navigateTo({
         url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
       })
+    },
+
+    navigateToAppointments: function(e) {
+      console.log('going to appointments', e)
+      wx.navigateTo({
+        url: '/pages/appointments/appointments',
+      })
     }
   }
 

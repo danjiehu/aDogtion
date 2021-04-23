@@ -18,7 +18,7 @@
   </view>
 </block>
 <block wx:else>
-  <view class="appointment-button playfair bold">
+  <view class="appointment-button playfair bold" bindtap="navigateToAppointments">
     <view class="txt-notification">Your Appointments</view>
     <image mode="aspectFit" class="img-notification" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZo2jG3aQx9uNNw.svg"></image>
     <image mode="widthFix" class="icon-btn-notification" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXp4FViufPrbFv3.svg"></image>
@@ -74,7 +74,7 @@
 
 
   <!-- About Us -->
-  <view class="card-about-white" bindtap="navigateToAbout">
+  <!-- <view class="card-about-white" bindtap="navigateToAbout">
       <view>
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
@@ -83,7 +83,7 @@
       <view>
       <view class="about-us-dog" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGexLnQ6Ora.svg')"></view>
       </view>
-  </view>
+  </view> -->
   <view class="tall-empty-block"></view>
 <view class="container">
  <CustomTab />
