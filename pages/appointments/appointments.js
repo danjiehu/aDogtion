@@ -17,10 +17,22 @@ Page({
 
   onReady: function () {
 
-
   },
   
   onShow: function () {
+    wx.showLoading({
+      title: 'loading',
+    })
+
+    // console.log("1",this.data.appointments[0])
+    // if(this.data.appointments[0]) {
+    //   wx.hideLoading()
+    // }
+    // console.log("2",this.data.appointments[0])
+    
+    // setTimeout(function () {
+    //   wx.hideLoading()
+    // }, 3000)
 
     const page = this
 
@@ -39,11 +51,17 @@ Page({
 
     forms.setQuery(andQuery).expand('dog_id').find().then(
       (res)=>{console.log("36",res)
+      
       page.setData({
         appointments:res.data.objects
-      })
-    }
-    )
+      },()=>{
+        wx.hideLoading()
+      //   if(this.data.appointments[0]) {
+      //   wx.hideLoading()
+      // }
+    })
+     
+    })
 
   // end of onShow
   },
@@ -67,9 +85,10 @@ Page({
 
     wx.showModal({
       // title: '提示',
-      content: 'are you sure you want to cancel the appointment?',
-      confirmText: "yes",
-      cancelText: "no",
+      content: 'Are you sure you want to cancel the appointment?',
+      confirmText: "Yes",
+      cancelText: "No",
+      cancelColor: "#606060",
       confirmColor: "#FF0000",
 
       success (res) {
@@ -84,9 +103,9 @@ Page({
               wx.reLaunch({
                 url: "/pages/appointments/appointments"
               })
-              wx.navigateBack({
-                delta: 1
-              })
+              // wx.navigateBack({
+              //   delta: 1
+              // })
             },
             (err) => {console.log("update form error",res)}
           )
@@ -103,8 +122,8 @@ Page({
 
   goBack(e) {
     console.log("back", e)
-    wx.navigateBack({
-      delta: 1,
+    wx.navigateTo({
+      url: '/pages/index/index',
     })
   },
 

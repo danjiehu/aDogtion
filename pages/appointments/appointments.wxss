@@ -1,6 +1,7 @@
 /* pages/contact/contact.wxss */
 page {
   color: #131313;
+  background-color: #F1F1F0;
 }
 
 .empty{
@@ -52,7 +53,7 @@ page {
   width: 100%;
   margin-top: -50rpx;
   padding: 60rpx 90rpx 300rpx 90rpx;
-  height: 100vh;
+  height: auto;
   background-color: #F1F1F0;
   padding-bottom: 0px;
 }
