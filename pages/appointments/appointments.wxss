@@ -6,24 +6,64 @@ page {
 
 .empty{
   width: 200rpx;
-  height: 177rpx;
-  margin: 150rpx auto;
+  margin: 210rpx auto 70rpx;
   display: block;
   padding-bottom: 20rpx;
+}
+
+.empty-img {
+  width: 200rpx;
+  height: 177rpx;
+  margin: 20rpx auto;
+  display: block;
+  padding-bottom: 20rpx;
+}
+
+.empty-title {
+  margin: 0rpx auto;
+  font-size: larger;
+  padding-bottom: 36rpx;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.playfair {
+  font-family: "Playfair display";
+}
+
+.center-txt {
+  text-align: center;
+  margin: 0rpx auto;
+}
+
+.grey-txt {
+  color: #B6B1B1;
+  width: 80%;
+  padding-bottom: 100rpx;
 }
 
 .empty-txt{
   text-align: center;
 }
 
+.small-txt{
+  font-size: small;
+}
+
 .top-btn {
   position: fixed;
   top: 5%;
   left: 5%;
-  height: 32rpx;
-  width: 48rpx;
-  margin: 4% 0 0 10rpx;
+  height: 40rpx;
+  width: 60rpx;
+  margin: 2% 0 0 10rpx;
   padding: 0;
+}
+
+.bold{
+  font-weight: 700;
 }
 
 .yellow-container {
@@ -52,8 +92,8 @@ page {
   box-sizing: border-box;
   width: 100%;
   margin-top: -50rpx;
-  padding: 60rpx 90rpx 300rpx 90rpx;
-  height: auto;
+  padding: 70rpx 80rpx 300rpx 80rpx;
+  height: 85vh;
   background-color: #F1F1F0;
   padding-bottom: 0px;
 }
@@ -62,6 +102,7 @@ page {
   background-color: #FFFFFF;
   margin-top: 46rpx;
   border-radius: 48rpx;
+  height: 580rpx;
 }
 
 .location-icon {
@@ -81,7 +122,10 @@ page {
 } */
 
 .top-title {
-  font-size: 20pt;
+  font-size: 18pt;
+  margin-left: 23rpx;
+  margin-top: 10rpx;
+
 }
 
 .dog-card {
@@ -112,6 +156,7 @@ page {
   font-size: 10pt;
   width: 100%;
   margin-top: 10rpx;
+  text-transform: uppercase;
 }
 
 .info-card{
@@ -146,37 +191,29 @@ page {
   justify-content: space-between;
 } */
 
-.btn {
-  display: inline-block;
-  border-radius: 50rpx;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  padding: 20rpx 50rpx;
-  background-color: #F1F1F0;
-  margin: 50rpx 0 50rpx 0;
-  text-align: center;
-  position: relative;
-  left: 55%;}
 
-.btn-hover{
-  display: inline-block;
-  border-radius: 50rpx;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  padding: 20rpx 50rpx;
-  background-color: #f6c752;
-  margin: 50rpx 0 50rpx 0;
-  text-align: center;
+.btn :hover{
+  opacity: 0.85;
+  transform: scale(0.98);
 }
 
-/* .btn-yellow {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 80%;
-  height: 150rpx;
-  padding: 40rpx 0 0 0;
-  box-sizing: border-box;
-  border-radius: 50rpx 0 0 0;
+
+.btn {
+  border-radius: 50rpx;
+  padding: 18rpx 40rpx;
+  border-radius: 50rpx;
+  width: 200rpx;
+  text-align: center;
+  margin: 50rpx auto 0 auto;
+  font-weight: bold;
+}
+
+
+.center {
+  margin: 0 auto;
+  /* width: 50%; */
+}
+
+.yellow {
   background-color: #f6c752;
-} */
+}
