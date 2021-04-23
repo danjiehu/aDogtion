@@ -73,19 +73,14 @@ page {
 }
 
 
-
-
-
-
-
-/* .photo-background {
+.photo-background {
   height: 46vh;
   width: 100vw;
   box-sizing: border-box;
   z-index: 0;
   background-color: #000;
   border-radius: 0 0 50rpx 50rpx;
-} */
+}
  
 
 /* 
@@ -209,7 +204,7 @@ page {
 
 .imgbox {
   border-radius: 32rpx 32rpx 32rpx 0;
-  width: 490rpx;
+  width: 320rpx;
   filter: brightness(0.7);
 }
 

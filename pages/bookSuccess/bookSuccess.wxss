@@ -18,14 +18,15 @@ page {
   width: 120rpx;
   height: 120rpx;
   border-radius: 50%;
-  margin: 0 auto 30rpx auto;
+  margin: 100rpx auto 0rpx auto;
   display: block;
 }
 
 .title {
   font-size: 20pt;
   text-align: center;
-  margin: 60rpx;
+  margin: 46rpx auto 80rpx;
+  font-weight: 600;
 }
 
 .sub-title {
@@ -37,9 +38,9 @@ page {
   background-color: #FFFFFF;
   border-radius: 40rpx;
   padding: 40rpx;
-  width: 60%;
+  width: 73%;
   box-sizing: border-box;
-  margin: 100rpx auto;
+  margin: 40rpx auto 140rpx;
 }
 
 .dog-card {
@@ -72,15 +73,22 @@ page {
   width: 100%;
   margin-top: 4px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .button-home {
   border-radius: 50rpx;
   font-family: "Playfair Display";
   font-weight: bold;
-  padding: 20rpx 50rpx;
+  padding: 32rpx 13rpx;
   background-color: white;
   margin: 80rpx auto;
   text-align: center;
   width: 216rpx;
+  font-size: medium;
+}
+
+.button-home:hover {
+  opacity: 0.85;
+  transform: scale(0.98);
 }

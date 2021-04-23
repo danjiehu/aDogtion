@@ -68,7 +68,7 @@ page {
 
 .grey-txt{
   color: #9e9e9f;
-  font-size: medium;
+  font-size: 11pt;
   line-height: 1.4em;
 }
 

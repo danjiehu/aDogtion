@@ -11,14 +11,19 @@
 
 <block wx:if="{{!currentUser}}" >
   <view class="container-white">
-    <image class="empty-img" src="/images/empty.svg"></image> 
+    <image class="empty-img" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbiccrE9Kdr5bd.svg"></image> 
       <view class="empty-title bold playfair center-txt">Oops!</view>
-      <view class="small-txt grey-txt center-txt center-txt">Looks like you haven't logged in yet. Log in to save dogs to favourites & contact us about fostering/adoption</view>
+      <view class="small-txt grey-txt center-txt">Looks like you haven't logged in yet. Log in to save dogs to favourites & contact us about fostering/adoption</view>
       <button bindtap="getProfile" class="round-button yellow playfair" style="width: 250rpx; margin-top: 50rpx;"> log in </button>
   </view>
 </block>
 <block wx:else>
-  <view class="appointment-button yellow playfair">appointments</view>
+  <view class="appointment-button playfair bold">
+    <view class="txt-notification">Your Appointments</view>
+    <image mode="aspectFit" class="img-notification" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZo2jG3aQx9uNNw.svg"></image>
+    <image mode="widthFix" class="icon-btn-notification" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXp4FViufPrbFv3.svg"></image>
+  </view> 
+
   <view wx:if="{{selected_dogs[0]}}">
     <view class="dogs-title playfair bold">Your Favorite Dogs</view>
       <view class="card-flexbox">
@@ -30,7 +35,7 @@
             </view>
             <view class="mini-flex">
               <view class="do-not-delete-me"></view>
-              <view class="dog-name-yellow playfair">{{dog.dog_id.name}}</view>
+              <view class="dog-name-yellow playfair bold">{{dog.dog_id.name}}</view>
             </view>
           </view>
         </block>
@@ -73,7 +78,7 @@
       <view>
         <view class="about-us-title playfair bold">About us</view>
         <view class="about-us-text">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
-        <view class="round-button yellow playfair">learn more</view>
+        <view class="round-button yellow playfair" bindtap="navigateToAbout">learn more</view>
       </view>
       <view>
       <view class="about-us-dog" style="background-image: url('https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicGexLnQ6Ora.svg')"></view>

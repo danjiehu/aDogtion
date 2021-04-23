@@ -85,11 +85,11 @@ page {
 .container-white {
   background-color: #fff;
   /* height: 620rpx; */
-  width: 90%;
+  width: 85%;
   box-sizing: border-box;
   border-radius: 40rpx;
   margin: 30px auto;
-  padding: 60rpx;
+  padding: 60rpx 90rpx;
 }
 
 .empty-img {
@@ -132,6 +132,11 @@ page {
   /* background-color: #f1f1f0; */
   display: inline-block;
   margin: 0 20rpx 30rpx 0;
+}
+
+.card:hover{
+  opacity: 0.85;
+  transform: scale(0.98);
 }
 
 .card-image {
@@ -246,6 +251,11 @@ page {
   background-position: center;
 }
 
+.card-img-bg:hover {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
 .small-txt{
   font-size: small;
 }
@@ -304,10 +314,16 @@ page {
   border-radius: 50rpx;
   font-weight: 700;
   font-size: medium;
-  font-size: 11pt;
+  /* font-size: 11pt; */
   width: 150rpx;
   text-align: center;
 }
+
+.round-button:hover{
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
 
 
 .tall-empty-block {
@@ -315,13 +331,42 @@ page {
 }
 
 .appointment-button {
-  border-radius: 20rpx;
-  padding: 18rpx 40rpx;
-  border-radius: 50rpx;
-  font-weight: 700;
+  border-radius: 40rpx;
+  padding: 55rpx 0 55rpx 55rpx;
   font-size: medium;
-  font-size: 11pt;
-  width: 200rpx;
-  text-align: center;
-  margin: 20rpx 0 20rpx 60rpx;
+  width: 85%;
+  box-sizing: border-box;
+  margin: 88rpx auto 30rpx;
+  background-color: #fff;
+  height: 200rpx;
+}
+
+.appointment-button:hover {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+
+.icon-btn-notification {
+  height: 36rpx;
+  width: 36rpx;
+  background-color: #f6c752;
+  padding: 30rpx;
+  border-radius: 30rpx 0rpx 0 0rpx;
+  position: relative;
+  bottom: 210rpx;
+  right: -490rpx;
+}
+
+.img-notification {
+  height: 122rpx;
+  margin-top: 40rpx;
+  position: relative;
+  top: -225rpx;
+  right: 220rpx;
+}
+
+.txt-notification {
+  width: 80%;
+  margin-top: 56rpx;
 }

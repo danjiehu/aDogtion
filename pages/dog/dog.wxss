@@ -112,6 +112,11 @@ input {
   position: absolute;
   top: -6%;
   left: 70%;
+  transition: transform 0.1s ease 0ms;
+}
+
+.btn-fav:hover{
+  transform: scale(0.95);
 }
 
 .icon-container{
@@ -155,6 +160,7 @@ input {
 
 .detail-txt {
   font-size: 10pt;
+  margin-top: 10rpx;
 }
 
 .grey-txt{
@@ -242,6 +248,10 @@ input {
   background-color: #f6c752;
   align-items: flex-start;
   justify-content: space-evenly;
+}
+
+.yellow-btn:hover{
+  color: rgba(70, 70, 70, 0.8);
 }
 
 .right-border {
