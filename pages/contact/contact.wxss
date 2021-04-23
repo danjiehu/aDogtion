@@ -109,7 +109,7 @@ input {
 .alert {
   margin-top: 5rpx;
   font-size: medium;
-  color: red;
+  color: #F75B36;
 }
 
 

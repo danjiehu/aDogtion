@@ -35,7 +35,7 @@
     <input type="text" placeholder="Type..." name="message" placeholder-class="placeholder-txt"/>
     <view class="alert" wx:if="{{alertMessage}}">A message for {{dogProfile.name}} is required</view>
 
-    <view style="height:300rpx;"></view>
+    <view style="height: 40vh;"></view>
     <!-- this is a divider for submit button -->
 
     <button class="btn-yellow" form-type="submit" style="font-family: 'Playfair Display';">SUBMIT</button>
