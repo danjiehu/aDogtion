@@ -1,3 +1,19 @@
+<view class="photo-background">
+  <view class="a">
+    <image src=""></image>
+  </view>
+</view>
+
+<view class="white-container">
+ 
+  <!-- Dog description -->
+  <view class="tag playfair bold">success story</view>
+  <view class="title playfair bold">{{dog.name}}</view>
+  <view class="subtitle">A love story</view>
+  <view class="left-border-box grey-txt">{{dog.story}}</view>
+
+
+
 
   <view class="yellow-container"></view>
   <view class="grey-container">
@@ -20,3 +36,4 @@
     <!-- back arrow -->
     <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZYqTPQCi1epomh.svg" bindtap="navigateToHome"></image>
   </view>
+</view>

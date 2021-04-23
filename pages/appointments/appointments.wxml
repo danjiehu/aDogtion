@@ -6,8 +6,10 @@
 
 <view class="grey-container">
   <view wx:if="{{!appointments[0]}}">
-    <image class="empty" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbiccrE9Kdr5bd.svg"></image>
-    <view class="empty-txt">you don't have any appointment yet</view>
+    <image class="empty" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbiccrE9Kdr5bd.svg" mode="widthFix"></image>
+      <view class="empty-title bold playfair center-txt">Oops!</view>
+      <view class="small-txt grey-txt center-txt">Looks like you you don't have any appointment yet.</view>
+      <view class="btn yellow playfair center" style="width: 130rpx;" bindtap="navigateToHome">go home</view>
   </view>
 
   <view wx:else>

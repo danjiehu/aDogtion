@@ -11,9 +11,9 @@
 
 <block wx:if="{{!currentUser}}" >
   <view class="container-white">
-    <image class="empty-img" src="/images/empty.svg"></image> 
+    <image class="empty-img" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbiccrE9Kdr5bd.svg"></image> 
       <view class="empty-title bold playfair center-txt">Oops!</view>
-      <view class="small-txt grey-txt center-txt center-txt">Looks like you haven't logged in yet. Log in to save dogs to favourites & contact us about fostering/adoption</view>
+      <view class="small-txt grey-txt center-txt">Looks like you haven't logged in yet. Log in to save dogs to favourites & contact us about fostering/adoption</view>
       <button bindtap="getProfile" class="round-button yellow playfair" style="width: 250rpx; margin-top: 50rpx;"> log in </button>
   </view>
 </block>

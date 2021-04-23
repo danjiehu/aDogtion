@@ -89,7 +89,7 @@ page {
   box-sizing: border-box;
   border-radius: 40rpx;
   margin: 30px auto;
-  padding: 60rpx;
+  padding: 60rpx 90rpx;
 }
 
 .empty-img {

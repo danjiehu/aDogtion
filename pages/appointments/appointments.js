@@ -108,4 +108,11 @@ Page({
     })
   },
 
+  navigateToHome: function() {
+    wx.navigateTo({
+      url: '/pages/index/index'
+    })
+    console.log('navigate')
+  }
+
 })

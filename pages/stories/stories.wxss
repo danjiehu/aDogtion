@@ -73,19 +73,14 @@ page {
 }
 
 
-
-
-
-
-
-/* .photo-background {
+.photo-background {
   height: 46vh;
   width: 100vw;
   box-sizing: border-box;
   z-index: 0;
   background-color: #000;
   border-radius: 0 0 50rpx 50rpx;
-} */
+}
  
 
 /* 
