@@ -7,7 +7,7 @@ page {
 
 .tag {
   background-color: #F6C752;
-  width: 210rpx;
+  width: 179rpx;
   padding: 24rpx 40rpx;
   border-radius: 8rpx;
   position: relative;
@@ -21,8 +21,13 @@ page {
   width: 100vw;
   box-sizing: border-box;
   z-index: 0;
-  background-color: #000;
+  /* background-color: #000; */
   border-radius: 0 0 50rpx 50rpx;
+  background-image: url(https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUoItobuu7k89p.jpeg);
+}
+
+.bgimage{
+  width: 100%;
 }
  
 /* swiper styles */
