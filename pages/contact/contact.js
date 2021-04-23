@@ -58,7 +58,13 @@ Page({
     })
   },
   // end of clearAlert
-
+  goBack(e) {
+    console.log("back", e)
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  
   submitContact: function(res) {
     console.log("subContact-res",res)
       let page = this

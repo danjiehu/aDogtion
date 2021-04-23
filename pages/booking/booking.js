@@ -18,7 +18,7 @@ Page({
 
   onLoad: function (e) {
     wx.showToast({
-      title: 'received!',
+      title: 'Got it!',
     })
 
     console.log("load booking",e)
@@ -70,6 +70,12 @@ Page({
     })
   },
   // start of defining selectTimeslot
+  goBack(e) {
+    console.log("back", e)
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
 
   // start of sumit date and time
   submitVisit: function(e){
