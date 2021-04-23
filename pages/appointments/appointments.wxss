@@ -102,6 +102,7 @@ page {
   background-color: #FFFFFF;
   margin-top: 46rpx;
   border-radius: 48rpx;
+  height: 580rpx;
 }
 
 .location-icon {
