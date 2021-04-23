@@ -321,5 +321,5 @@ page {
   font-size: 11pt;
   width: 200rpx;
   text-align: center;
-  margin: 20rpx 0 20rpx 60rpx;
+  margin: 50rpx auto 0 50rpx;
 }
