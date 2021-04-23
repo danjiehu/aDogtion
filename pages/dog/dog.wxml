@@ -77,11 +77,11 @@
 
   <view class="flex-details">
     <view class="mini-flex">
-      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
+      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZzK7m8em1V8ion.svg"></image>
       <view class="bold grey-txt" wx:if="{{dog.vaccinated}}">VACCINATED</view>
     </view>
     <view class="mini-flex">
-      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
+      <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZzK7xJSXNIwN7u.svg"></image>
       <view class="bold grey-txt" wx:if="{{dog.spayed}}">SPAYED</view>
     </view>
   </view>

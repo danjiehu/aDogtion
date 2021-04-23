@@ -1,5 +1,9 @@
 /* pages/welcome/welcome.wxss */
 
+page {
+  background-color: #F6C752;
+}
+
 .yellow-container {
   height: 100vh;
   background-color: #F6C752;
@@ -17,9 +21,11 @@
 }
 
 .sub-title {
-  font-size: larger;
-  font-weight: 600;
+  font-size: 16pt;
   margin-bottom: 30rpx;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-top: 18rpx;
 }
 
 .title {
@@ -41,7 +47,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 70%;
+  width: 46%;
   height: 134rpx;
   padding: 40rpx 0rpx 0rpx 55rpx;
   border-radius: 60rpx 0 0 0;
@@ -60,4 +66,118 @@
 
 .bold {
   font-weight: bold;
+}
+
+
+
+
+/* TESTING !!!!! */
+
+/* .swiper-img {
+  height: 60% !important;
+  margin-left: 50rpx  
+} */
+
+.swiper-item image,
+.swiper-item video {
+  width: 30%;
+  display: block;
+  /* height: 100%;
+  margin: 0;
+  pointer-events: none; */
+}
+
+.card-swiper {
+  height: 65vh !important;
+  background-color: #F6C752;
+  padding-top: 490rpx;
+}
+
+.card-swiper swiper-item {
+  width: 610rpx !important;
+  left: 70rpx;
+  box-sizing: border-box;
+  padding: 40rpx 0rpx 70rpx;
+  overflow: initial;
+  background-color: #F6C752;
+}
+
+.card-swiper swiper-item .swiper-item {
+  width: 100%;
+  display: block;
+  height: 100%;
+  border-radius: 10rpx;
+  transform: scale(0.9);
+  transition: all 0.2s ease-in 0s;
+  overflow: hidden;
+  background-color: #F6C752;
+  padding-left: 50rpx;
+}
+
+.card-swiper swiper-item.cur .swiper-item {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}
+
+.other {
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  /*flex Layout method */
+  flex-direction: column;
+  /* Vertical layout */
+  align-items: center;
+  /* Center horizontally */
+}
+
+/*  Content  */
+.yiyan-body {
+  line-height: 1.3em;
+  margin-top: 38rpx;
+  font-size: 14pt;
+  width: 60%;
+  height: 35%;
+  /* margin-left: 45rpx; */
+  color: #24241E;
+}
+
+.yiyan-form {
+  margin-top: 40rpx;
+  font-size: 28pt;
+  width: 50%;
+  font-weight: 600;
+  font-family: "Playfair display";
+  color: #24241E;
+}
+
+ 
+.dots {
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-evenly;
+  left: 24%;
+  transform: translateX(-50%);
+  bottom: 107rpx;
+}
+ 
+/* dot css */
+
+.dot {
+  margin-top: 15rpx;
+  margin-bottom: 20rpx;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  margin-right: 16rpx;
+  background-color: rgba(0,0,0,0.3);
+}
+ 
+/* active dot css  */
+ 
+.active {
+  background-color: #24241E;
+  width: 42rpx;
+  border-radius: 100rpx;
 }
