@@ -46,7 +46,7 @@
   <view class="grey-container">
     <view class="top-flex">
       <view class="title playfair bold">Find your dog</view>
-      <view class="filters playfair bold" bindtap="openFilter">FILTERS</view>
+      <!-- <view class="filters playfair bold" bindtap="openFilter">FILTERS</view> -->
     </view>
     <view class="menu-tab {{category == 'adopt'? 'active' : ''}}" bindtap="switchTab" data-category='adopt'>
       <view class="sub-title playfair">Adopt</view>
