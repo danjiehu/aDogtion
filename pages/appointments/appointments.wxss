@@ -1,6 +1,7 @@
 /* pages/contact/contact.wxss */
 page {
   color: #131313;
+  background-color: #F1F1F0;
 }
 
 .empty{
@@ -19,10 +20,14 @@ page {
   position: fixed;
   top: 5%;
   left: 5%;
-  height: 32rpx;
-  width: 48rpx;
-  margin: 4% 0 0 10rpx;
+  height: 40rpx;
+  width: 60rpx;
+  margin: 2% 0 0 10rpx;
   padding: 0;
+}
+
+.bold{
+  font-weight: 700;
 }
 
 .yellow-container {
@@ -51,7 +56,7 @@ page {
   box-sizing: border-box;
   width: 100%;
   margin-top: -50rpx;
-  padding: 60rpx 90rpx 300rpx 90rpx;
+  padding: 70rpx 80rpx 300rpx 80rpx;
   height: 100vh;
   background-color: #F1F1F0;
   padding-bottom: 0px;
@@ -80,7 +85,10 @@ page {
 } */
 
 .top-title {
-  font-size: 20pt;
+  font-size: 18pt;
+  margin-left: 23rpx;
+  margin-top: 10rpx;
+
 }
 
 .dog-card {
@@ -111,6 +119,7 @@ page {
   font-size: 10pt;
   width: 100%;
   margin-top: 10rpx;
+  text-transform: uppercase;
 }
 
 .info-card{
@@ -155,17 +164,12 @@ page {
   margin: 50rpx 0 50rpx 0;
   text-align: center;
   position: relative;
-  left: 55%;}
+  left: 28%;
+}
 
-.btn-hover{
-  display: inline-block;
-  border-radius: 50rpx;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  padding: 20rpx 50rpx;
-  background-color: #f6c752;
-  margin: 50rpx 0 50rpx 0;
-  text-align: center;
+.btn :hover{
+  opacity: 0.85;
+  transform: scale(0.98);
 }
 
 /* .btn-yellow {

@@ -1,7 +1,7 @@
 <!--pages/appointments/appointments.wxml-->
 
 <view class="yellow-container">
-  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZWJukzLSmWRAfe.svg" bindtap="goBack"></image>
+  <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZYqTPQCi1epomh.svg" bindtap="goBack"></image>
 </view>
 
 <view class="grey-container">
@@ -11,7 +11,7 @@
   </view>
 
   <view wx:else>
-    <view class="top-title playfair">Your Appointments</view>
+    <view class="top-title playfair bold">Your Appointments</view>
 
     <view class="appoinment-card" wx:for="{{appointments}}" wx:for-item="a">
     <!-- <view class="appoinment-card"> -->
@@ -19,7 +19,7 @@
       <view class="dog-card">
         <image class="dog-photo" src="{{a.dog_id.image[0].path}}" mode="aspectFill"></image>
         <view>
-          <view class="dog-name playfair">{{a.dog_id.name}}</view>
+          <view class="dog-name playfair bold">{{a.dog_id.name}}</view>
           <view class="dog-more">{{a.dog_id.age}} • {{a.dog_id.gender}}</view>
         </view>
       </view>
@@ -44,7 +44,7 @@
       
         <!-- <view class="btn-flex"> -->
           <!-- <button data-dogid="{{a.dog_id.id}}" data-formid="{{a.id}}" class="btn playfair" hover-class="btn-hover" style="width: 216rpx" bindtap="edit">edit</button> -->
-          <button data-dogid="{{a.dog_id.id}}" data-formid="{{a.id}}" class="btn playfair" hover-class="btn-hover" style="width: 216rpx" bindtap="cancel">cancel</button>
+          <button data-dogid="{{a.dog_id.id}}" data-formid="{{a.id}}" class="btn playfair bold" hover-class="btn-hover" style="width: 216rpx" bindtap="cancel">cancel</button>
         <!-- </view> -->
 
         

@@ -83,6 +83,7 @@ page {
   font-size: 10pt;
   width: 100%;
   margin-top: 10rpx;
+  text-transform: uppercase;
 }
 
 .form-container {
@@ -198,4 +199,8 @@ picker {
   width: 60rpx;
   margin: 2% 0 0 10rpx;
   padding: 0;
+}
+
+.btn-yellow:hover{
+  color: rgba(70, 70, 70, 0.8);
 }

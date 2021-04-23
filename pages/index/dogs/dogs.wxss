@@ -71,6 +71,11 @@ page {
   display: inline-block;
 }
 
+.card:hover{
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
 .img-full {
   border-radius: 32rpx 32rpx 0 32rpx;
   width: 100%;
@@ -200,6 +205,11 @@ page {
 
 .titletag{
   font-size: 20pt;
+}
+
+.filters:hover{
+  opacity: 0.7;
+  transform: scale(0.98);
 }
 
 .filters-container{

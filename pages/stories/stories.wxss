@@ -209,7 +209,7 @@ page {
 
 .imgbox {
   border-radius: 32rpx 32rpx 32rpx 0;
-  width: 490rpx;
+  width: 320rpx;
   filter: brightness(0.7);
 }
 

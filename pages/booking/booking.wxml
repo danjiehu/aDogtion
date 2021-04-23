@@ -13,7 +13,7 @@
 
   <!-- start of selected dog card -->
   <view class="dog-card">
-    <image class="dog-photo" src="{{dogProfile.image[0].path}}"></image>
+    <image class="dog-photo" src="{{dogProfile.image[0].path}}" mode="aspectFill"></image>
     <view>
       <view class="dog-name playfair">{{dogProfile.name}}</view>
       <view class="dog-more">{{dogProfile.age}} • {{dogProfile.gender}}</view>

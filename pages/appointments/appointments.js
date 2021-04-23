@@ -67,10 +67,10 @@ Page({
 
     wx.showModal({
       // title: '提示',
-      content: 'are you sure you want to cancel the appointment?',
-      confirmText: "yes",
-      cancelText: "no",
-      confirmColor: "#FF0000",
+      content: 'Are you sure you want to cancel the appointment?',
+      confirmText: "YES",
+      cancelText: "NO",
+      confirmColor: "#EFC861",
 
       success (res) {
         if (res.confirm) {

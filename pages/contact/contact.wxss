@@ -82,6 +82,7 @@ page {
   font-size: 10pt;
   width: 100%;
   margin-top: 10rpx;
+  text-transform: uppercase;
 }
 
 .form-container {
@@ -124,6 +125,10 @@ input {
   background-color: #f6c752;
 }
 
+.btn-yellow:hover{
+  color: rgba(70, 70, 70, 0.8);
+}
+
 .top-btn {
   position: fixed;
   top: 5%;
@@ -132,4 +137,10 @@ input {
   width: 60rpx;
   margin: 2% 0 0 10rpx;
   padding: 0;
+}
+
+.placeholder-txt{
+  color: #B6B1B1;
+  font-family: "Verdana", "Helvetica Neue", sans-serif;
+  
 }

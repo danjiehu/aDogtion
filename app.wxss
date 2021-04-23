@@ -3,7 +3,6 @@
 
 page {
   font-family: "Verdana", "Helvetica Neue", sans-serif;
-  transition: all 0.2s ease-in 0s;
 }
 
 .container {
