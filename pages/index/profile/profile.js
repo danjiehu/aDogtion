@@ -134,12 +134,14 @@ Component({
       })
     },
 
-    navigateToAppointments: function(e) {
-      console.log('going to appointments', e)
-      wx.navigateTo({
-        url: '/pages/appointments/appointments',
-      })
+    navigateToAppointments: function(e){
+      console.log('calling a dog', e)
+        wx.navigateTo({
+          url: "/pages/appointments/appointments",
+        })
     }
+
+
   }
 
 })
