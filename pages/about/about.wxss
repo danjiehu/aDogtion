@@ -68,7 +68,7 @@ page {
 
 .grey-txt{
   color: #9e9e9f;
-  font-size: medium;
+  font-size: 11pt;
   line-height: 1.4em;
 }
 
@@ -164,7 +164,7 @@ page {
   box-sizing: border-box;
   width: 85%;
   margin-top: 50rpx;
-  margin-bottom: 70rpx;
+  margin-bottom: 160rpx;
 }
 
 .swiper-wrapper {
@@ -175,8 +175,8 @@ page {
 }
  
 .swipers {
-  height: 25vh;
-  opacity: 0.65;
+  height: 40vh;
+  opacity: 0.9;
   border-radius: 36rpx;
 }
  

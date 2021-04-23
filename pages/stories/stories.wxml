@@ -8,11 +8,16 @@
     
     <block wx:for="{{dogs}}" wx:key="key" wx:for-item="dog">
       <view class="borderbox" data-id="{{dog.id}}" bindtap="navigateToDog">
-        <image src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZZiTCzyKdlw8FW.svg" class="circle"></image>
+        <!-- <image src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZZiTCzyKdlw8FW.svg" class="circle"></image> -->
         <image mode="widthFix" class="imgbox" src="{{dog.gallery[0].path}}"></image>
-        <view class="yellowtag playfair bold">{{dog.name}}</view>
+        <view class="yellowtag playfair bold">ADOPTED</view>
         <view class="dog-age-gender">{{dog.age}} • {{dog.gender}}</view>
-        <image src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZZiTCzyKdlw8FW.svg" class="circlebottom"></image>
+        <!-- <image src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZZiTCzyKdlw8FW.svg" class="circlebottom"></image> -->
+      </view>
+      <view class="whitebox">
+        <view class="sub-title playfair bold">{{dog.name}}</view>
+        <view class="grey-txt">{{dog.description}}</view>
+        <view class="link small-txt grey-txt">READ THE STORY</view>
       </view>
 
     </block>

@@ -6,7 +6,7 @@ Page({
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
-    images: ['https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYSDLOOJq8xnW4Z.jpg', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYT7KRqs8OpXnl7.jpg', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYT7KfH12wShO4G.jpg', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYT7KCQAvrmNcfx.jpg'],
+    images: ['https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZxOhrrJTW93My9.jpg', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZxOhr7KPaBVeLA.jpg', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZxOhml4S2d1QXV.jpg','https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUgyCg6xV96EWD.JPG', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUgxFnPeYG1XLS.JPG', 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lYUgyZ0bhUmyQyG.JPG'],
     activeSwiper: 0
   },
 

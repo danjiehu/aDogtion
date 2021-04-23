@@ -86,10 +86,10 @@ Page({
     wx.showModal({
       // title: '提示',
       content: 'Are you sure you want to cancel the appointment?',
-      confirmText: "Yes",
-      cancelText: "No",
-      cancelColor: "#606060",
-      confirmColor: "#FF0000",
+
+      confirmText: "YES",
+      cancelText: "NO",
+      confirmColor: "#EFC861",
 
       success (res) {
         if (res.confirm) {
@@ -126,5 +126,12 @@ Page({
       url: '/pages/index/index',
     })
   },
+
+  navigateToHome: function() {
+    wx.navigateTo({
+      url: '/pages/index/index'
+    })
+    console.log('navigate')
+  }
 
 })

@@ -173,9 +173,9 @@ page {
 .dog-age-gender {
   z-index: 100;
   position: relative;
-  bottom: 150rpx;
+  bottom: 160rpx;
   width: 60%;
-  color: white;
+  color: #f1f1f0;
   font-size: 9pt;
   text-align: left;
   text-transform: uppercase;
@@ -201,16 +201,18 @@ page {
   background-color: #f1f1f0;
   width: 77%;
   margin: 4rpx auto;
-  border-left: 1px dotted #24241E;
-  padding-left: 60rpx;
+  /* border-left: 1px dotted #24241E; */
+  /* padding-left: 60rpx; */
   padding-bottom: 10rpx;
   box-sizing: border-box;
 }
 
 .imgbox {
-  border-radius: 32rpx 32rpx 32rpx 0;
-  width: 490rpx;
+  border-radius: 0rpx 32rpx 0 32rpx;
+  width: 320rpx;
   filter: brightness(0.7);
+  /* position: relative;
+  top: -360rpx; */
 }
 
 .circle {
@@ -222,10 +224,13 @@ page {
 
 .yellowtag{
   background-color: #f6c752;
-  padding: 30rpx 50rpx;
-  border-radius: 0 0 32rpx 0;
-  margin-top: -15rpx;
-  width: 42%;
+  padding: 30rpx 33rpx;
+  border-radius: 0 32rpx 0 0;
+  /* margin-top: -25rpx; */
+  width: 27%;
+  position: relative;
+  top: -100rpx;
+  right: -318rpx;
 }
 
 .circlebottom{
@@ -233,4 +238,37 @@ page {
   position: relative;
   top: 30rpx;
   left: -349rpx;
+}
+
+.whitebox {
+  background-color: #fff;
+  padding: 40rpx 65rpx 60rpx;
+  border-radius: 0 0 32rpx 32rpx;
+  position: relative;
+  z-index: 0;
+  top: -141rpx;
+  right: -199rpx;
+  width: 40%;
+}
+
+.small-txt{
+  font-size: 9pt;
+}
+
+.grey-txt{
+  color: #9e9e9f;
+  font-size: 11pt;
+  line-height: 1.4em;
+}
+
+.sub-title{
+  font-size: 16pt;
+  margin-bottom: 10rpx;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.link{
+  margin-top: 20rpx;
+  
 }

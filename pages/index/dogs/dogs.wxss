@@ -57,7 +57,7 @@ page {
 }
 
 .cards-masonry {
-  padding: 20rpx 70rpx 100rpx 70rpx;
+  padding: 60rpx 70rpx 100rpx 70rpx;
   column-count: 2;
   column-gap: 30rpx;
   width: 100%;
@@ -69,6 +69,11 @@ page {
   /* padding-bottom: 30rpx; */
   width: 100%;
   display: inline-block;
+}
+
+.card:hover{
+  opacity: 0.85;
+  transform: scale(0.98);
 }
 
 .img-full {
@@ -176,15 +181,15 @@ page {
   min-height: 40vh;
 }
 
-.dog{
+.dog {
   width: 240rpx;
   height: 240rpx;
   position: relative;
   top: -121px;
-  right: -340rpx;
+  right: -400rpx;
 }
 
-.title-container{
+.title-container {
   width: 80%;
   margin: -242rpx auto 30rpx auto;
   box-sizing: border-box;
@@ -200,6 +205,11 @@ page {
 
 .titletag{
   font-size: 20pt;
+}
+
+.filters:hover{
+  opacity: 0.7;
+  transform: scale(0.98);
 }
 
 .filters-container{
