@@ -1,13 +1,29 @@
 <!--pages/welcome/welcome.wxml-->
-<view class="yellow-container">
-  <view class="text-area">
+<swiper class="card-swiper" duration="500" bindchange="cardSwiper">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item other">
+      <image src="{{item.url}}" mode="widthFix" class="swiper-img"></image>
+      <view wx:if="{{item.title}}" class="yiyan-form">{{item.title}}</view>
+      <view wx:if="{{item.subtitle}}" class="sub-title">{{item.subtitle}}</view>
+      <view class="yiyan-body">{{item.yiyan}}</view>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="dots" >
+  <block wx:for="{{swiperList}}" wx:key="key2">
+    <view class="dot {{index == cardCur ? ' active' : ''}}"></view>
+  </block>
+</view>
+
+<!-- <view class="yellow-container"> -->
+  <!-- <view class="text-area">
     <view class="sub-title playfair">Hawoof!</view>
     <view class="title playfair">Welcome to aDogtion</view>
     <view class="paragraph">We are The Haven Shelter in Anhui province, and we have over 200 dogs.</view>
     <view class="paragraph">All these dogs need is a little love.</view>
     <!-- <view class="welcome-text">You can support them in many ways: by adopting, fostering, donating, and simply spreading the word.</view> -->
-  </view>
+  <!-- </view> --> 
   <view class="btn-white playfair bold" bindtap="navigateToHome">
-    <view>CONTINUE</view>
-  </view>
+  <view>CONTINUE</view>
+  <!-- </view> -->
 </view>

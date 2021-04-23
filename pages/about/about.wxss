@@ -74,7 +74,7 @@ page {
 
 
 .left-border-box {
-  margin: 25rpx 40rpx 36rpx 80rpx;
+  margin: 45rpx 40rpx 56rpx 80rpx;
   border-left: 1px solid #707070;
   padding-left: 30rpx;
 }
@@ -100,7 +100,7 @@ page {
   width: 76%;
   box-sizing: border-box;
   padding: 40rpx 70rpx;
-  margin: -154rpx auto 30rpx auto;
+  margin: -154rpx auto 60rpx auto;
   border-radius: 22rpx;
 }
 
