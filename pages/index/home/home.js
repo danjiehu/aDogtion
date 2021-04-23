@@ -62,7 +62,7 @@ Component({
     countDogs: function() {
       let self = this
       let dogs = self.data.allDogs
-      console.log(dogs)
+      // console.log(dogs)
       for (let i = 0; i < dogs.length; i++) {
         let dogAdopt = dogs[i].adopt
         let adoptCount = this.data.adoptCount
@@ -89,11 +89,11 @@ Component({
     limitDogs: function() {
       let self = this
       let dogs = self.data.allDogs
-      console.log('all your dogs', dogs)
+      // console.log('all your dogs', dogs)
       let newDogs = self.data.dogs
       for (let i = 0; i < 5; i++) {
         newDogs.push(dogs[i])
-        console.log('your limited dogs', newDogs)
+        // console.log('your limited dogs', newDogs)
         self.setData({
           dogs: newDogs
         })

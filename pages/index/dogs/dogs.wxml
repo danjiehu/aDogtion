@@ -30,12 +30,12 @@
       </view>
 
     <!-- TAG - AGE  -->
-    <view class="subtitle-tag bold">AGE</view>
+    <!-- <view class="subtitle-tag bold">AGE</view>
       <view class="tag-container">
         <view wx:for="{{age}}" wx:key="{{index}}" wx:for-item="age">
           <view class="tag {{age.checked ? 'selected' : ''}}" bindtap="selectAgeTag" data-value="{{age.value}}">{{age.name}}</view> 
         </view> 
-      </view>
+      </view> -->
 
     </view>
   <view class="buttontag yellow-tag center-tag playfair bold" bindtap="showFilteredDogs">show dogs</view>
@@ -46,7 +46,8 @@
   <view class="grey-container">
     <view class="top-flex">
       <view class="title playfair bold">Find your dog</view>
-      <view class="filters playfair bold" bindtap="openFilter">FILTERS</view>
+      <view wx:if="{{!filtered_dogs[0]}}" class="filters playfair bold" bindtap="openFilter">FILTERS</view>
+      <view wx:else class="filters playfair bold" bindtap="clearFilter">CLEAR</view>
     </view>
     <view class="menu-tab {{category == 'adopt'? 'active' : ''}}" bindtap="switchTab" data-category='adopt'>
       <view class="sub-title playfair">Adopt</view>
@@ -60,7 +61,7 @@
     <!-- <view class="yellow-line"></view> -->
 
     <view class="cards-masonry">
-      <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
+      <block wx:for="{{filtered_dogs[0] ? filtered_dogs : selected_dogs}}" wx:key="key" wx:for-item="dog">
           <view class="card" data-id="{{dog.id}}" bindtap="navigateToDog">
             <image mode="widthFix" class="img-full" src="{{dog.image[0].path}}"></image>
             <view class="mini-flex">

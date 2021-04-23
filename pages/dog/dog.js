@@ -44,6 +44,7 @@ Page({
         self.setData ({
           dog: res.data
         })
+        this.ageConverter()
         // console.log(res.data)
         let gallery = res.data.image
         // console.log('gallery', gallery)
@@ -186,6 +187,23 @@ Page({
         console.log('err', err)
       }
     )
+  },
+
+  ageConverter: function() {
+    let self = this
+    let dogAge = self.data.dog.monthsold
+    console.log('dog age', dogAge, 'months')
+    let newAge
+    if (dogAge < 12) {
+      newAge = dogAge + 'MO'
+    } else {
+      newAge = dogAge / 12 + 'YO'
+    }
+    console.log('new age', newAge)
+    self.data.dog.age = newAge
+    self.setData({
+      dog: self.data.dog
+    })
   }
 
 
