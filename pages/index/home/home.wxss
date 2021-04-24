@@ -80,7 +80,7 @@ page{
   height: 100rpx;
   position: relative;
   left: 74rpx;
-  bottom: -15rpx;
+  bottom: -25rpx;
   background-size: cover;
   display: block;
 }
@@ -90,7 +90,7 @@ page{
   height: 140rpx;
   position: relative;
   left: 114rpx;
-  bottom: 20rpx;
+  bottom: 10rpx;
   background-size: cover;
 }
 

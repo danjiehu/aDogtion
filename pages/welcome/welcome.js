@@ -28,24 +28,24 @@ Page({
       subtitle: 'Adopt & Foster Dogs',
       yiyan: 'Find your new best friend here',
     }, {
-      id: 2,
+      id: 1,
       type: 'image',
       url: 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbiccrE9Kdr5bd.svg',
-      title: 'aDogtion',
-      subtitle: 'Adopt & Foster Dogs',
+      title: 'More than 350 dogs',
+      subtitle: 'looking for their humans',
       yiyan: 'Browse dogs & find your perfect match',
     }, {
       id: 2,
       type: 'image',
       url: 'https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZo2jG3aQx9uNNw.svg',
-      title: 'aDogtion',
-      subtitle: 'Adopt & Foster Dogs',
+      title: 'Located near Shanghai',
+      subtitle: 'meet the dogs',
       yiyan: 'Contact us to make an appointment & meet the dog',
     }],
   },
 
   onLoad: function (options) {
-    this.towerSwiper('swiperList');
+    // this.towerSwiper('swiperList');
   },
 
   onShow: function () {

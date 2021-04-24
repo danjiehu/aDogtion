@@ -25,7 +25,7 @@
   <view class="icon-container">
     <view class="mini-flex">
       <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicQv3aGAJMu5.svg"></image>
-      <view class="detail-txt grey-txt">5h</view>
+      <view class="detail-txt grey-txt">5d</view>
     </view>
     <view class="two-icons">
       <view wx:if="{{dog.gender === 'male'}}" class="mini-flex">
@@ -82,7 +82,7 @@
     </view>
     <view class="mini-flex">
       <image class="icon-small" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZzK7xJSXNIwN7u.svg"></image>
-      <view class="bold grey-txt" wx:if="{{dog.spayed}}">SPAYED</view>
+      <view class="bold grey-txt" wx:if="{{dog.spayed}}">NEUTERED</view>
     </view>
   </view>
 
@@ -128,6 +128,8 @@
   <!-- back arrow -->
   <image class="top-btn" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXhBC9vmtKxXXzF.svg" bindtap="goBack"></image>
 
+  <image class="top-btn-share" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1la8brLmu3TWeIfx.svg" bindtap="onShareAppMessage"></image>
+  <button open-type="share" class="transparent" style="width: 200rpx;">share</button>
   <view class="tall-empty-block"></view>
 
 </view>

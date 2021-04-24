@@ -21,7 +21,7 @@ Component({
   ready: function (options) {
     console.log("im inside profile", !wx.getUserProfile)
     const self = this
-    self.data.currentUser ? self.getFavourites() : ''
+    if (self.data.currentUser) {self.getFavourites()}
     if (wx.getUserProfile) {
       self.setData({
         canIUseGetUserProfile: true
