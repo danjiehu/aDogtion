@@ -7,8 +7,8 @@ Component({
     allDogs: [],
     dogs: [],
     currentUser: null,
-    adoptCount: 0,
-    fosterCount: 0,
+    // adoptCount: 0,
+    // fosterCount: 0,
     tenDogs: []
   },
 
@@ -26,7 +26,7 @@ Component({
         self.setData({
           allDogs: res.data.objects.reverse()
         })
-        this.countDogs()
+        // this.countDogs()
         this.limitDogs()
       }, (err) => {
         console.log('dogs failed failed',err)
@@ -59,32 +59,32 @@ Component({
     },
 
     // COUNTING DOGGIES TO SHOW THE CORRECT NUMBERS
-    countDogs: function() {
-      let self = this
-      let dogs = self.data.allDogs
-      // console.log(dogs)
-      for (let i = 0; i < dogs.length; i++) {
-        let dogAdopt = dogs[i].adopt
-        let adoptCount = this.data.adoptCount
-        if (dogAdopt) {
-          let updatedCount = adoptCount + 1
-          self.setData({
-            adoptCount: updatedCount
-          })
-        // console.log('adopt count:', updatedCount)
-        }
-        let dogFoster = dogs[i].foster
-        let fosterCount = this.data.fosterCount
-        if (dogFoster) {
-          let updatedFosterCount = adoptCount + 1
-          self.setData({
-            fosterCount: updatedFosterCount
-          })
-          // console.log('foster count:', updatedFosterCount)
-        }
-        // console.log('foster count:', fosterCount)
-      }
-    },
+    // countDogs: function() {
+    //   let self = this
+    //   let dogs = self.data.allDogs
+    //   // console.log(dogs)
+    //   for (let i = 0; i < dogs.length; i++) {
+    //     let dogAdopt = dogs[i].adopt
+    //     let adoptCount = this.data.adoptCount
+    //     if (dogAdopt) {
+    //       let updatedCount = adoptCount + 1
+    //       self.setData({
+    //         adoptCount: updatedCount
+    //       })
+    //     // console.log('adopt count:', updatedCount)
+    //     }
+    //     let dogFoster = dogs[i].foster
+    //     let fosterCount = this.data.fosterCount
+    //     if (dogFoster) {
+    //       let updatedFosterCount = adoptCount + 1
+    //       self.setData({
+    //         fosterCount: updatedFosterCount
+    //       })
+    //       // console.log('foster count:', updatedFosterCount)
+    //     }
+    //     // console.log('foster count:', fosterCount)
+    //   }
+    // },
 
     limitDogs: function() {
       let self = this

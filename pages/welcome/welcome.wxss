@@ -21,7 +21,7 @@ page {
 }
 
 .sub-title {
-  font-size: 16pt;
+  font-size: 14pt;
   margin-bottom: 30rpx;
   text-transform: uppercase;
   opacity: 0.4;
@@ -143,8 +143,8 @@ page {
 
 .yiyan-form {
   margin-top: 40rpx;
-  font-size: 28pt;
-  width: 50%;
+  font-size: 20pt;
+  width: 96%;
   font-weight: 600;
   font-family: "Playfair display";
   color: #24241E;

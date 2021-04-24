@@ -271,6 +271,32 @@ input {
   padding: 0;
 }
 
+.top-btn-share {
+  position: fixed;
+  top: 5%;
+  right: 26%;
+  height: 50rpx;
+  width: 50rpx;
+  margin: 1% 0 0 10rpx;
+  padding: 0;
+  z-index: 1;
+}
+
+.top-btn-share:hover {
+  opacity: 0.3;
+  transform: scale(0.98);
+}
+
+.transparent {
+  position: fixed;
+  top: 5%;
+  right: 23%;
+  height: 71rpx;
+  margin: 1% 0 0 10rpx;
+  padding: 0;
+  opacity: 0;
+  z-index: 2;
+}
 .caps {
   text-transform: uppercase;
 }
