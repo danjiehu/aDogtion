@@ -100,9 +100,11 @@ page {
 
 .appoinment-card{
   background-color: #FFFFFF;
+  padding: 0 0 50rpx 0;
   margin-top: 46rpx;
   border-radius: 48rpx;
-  height: 580rpx;
+  height: auto;
+  /* height: 580rpx; */
 }
 
 .location-icon {
@@ -204,7 +206,7 @@ page {
   border-radius: 50rpx;
   width: 200rpx;
   text-align: center;
-  margin: 50rpx auto 0 auto;
+  margin: 50rpx auto 0rpx auto;
   font-weight: bold;
 }
 
