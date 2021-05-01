@@ -35,7 +35,7 @@
           <view class="title">The Haven</view>
         </view>
 
-        <view class="info-container">
+        <view wx:if="{{a.visit_date}}" class="info-container">
           <image class="clock-icon" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZWPWM3m5Am6m9o.svg"></image>
           <view>
             <view class="title">{{a.visit_date}}</view>
