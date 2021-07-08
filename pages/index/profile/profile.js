@@ -19,7 +19,7 @@ Component({
   },
 
   ready: function (options) {
-    console.log("im inside profile", !wx.getUserProfile)
+    console.log("im inside profile, !wx.getUserProfile boolean is", !wx.getUserProfile)
     const self = this
     self.data.currentUser ? self.getFavourites() : ''
     if (wx.getUserProfile) {
@@ -85,25 +85,32 @@ Component({
       wx.getUserProfile({
         desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
         success: (res) => {
+          console.log("getUserProfile complete res",res)
+          console.log("getUserProfile res.userInfo",res.userInfo)
           let userInfo = res.userInfo
+          console.log("varibale userInfo", userInfo)
           wx.setStorageSync('userInfo', userInfo)
+          
           getApp().globalData.userInfo = userInfo
           this.setData({
             currentUser: userInfo,
             hasUserInfo: true
           })
-          wx.BaaS.auth.loginWithWechat(userInfo).then(
-          (res) => {
-            console.log('bass update', res);
-            self.setData({currentUser: res});
-            self.triggerEvent("haveUserInfo", res)
-            self.getFavourites()
-            wx.setStorageSync('userInfo', res)
-          },
-          err => {
-            console.log('error!', err)
-          }
-         )
+
+        //   wx.BaaS.auth.updateUserInfo()
+
+        //   wx.BaaS.auth.loginWithWechat(userInfo).then(
+        //   (res) => {
+        //     console.log('baas update', res);
+        //     self.setData({currentUser: res});
+        //     self.triggerEvent("haveUserInfo", res)
+        //     self.getFavourites()
+        //     wx.setStorageSync('userInfo', res)
+        //   },
+        //   err => {
+        //     console.log('error!', err)
+        //   }
+        //  )
         }
       })
     },

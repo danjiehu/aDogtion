@@ -1,7 +1,7 @@
 <!--pages/profile/profile.wxml-->
 <view class="white-container">
   <view wx:if="{{currentUser}}" class="center">
-    <view class="user-icon" style="background-image: url('{{currentUser.avatar}}')"></view>
+    <view class="user-icon" style="background-image: url('{{currentUser.avatarUrl}}')"></view>
     <view class="medium-txt">{{currentUser.nickname}}</view>
   </view>  
   <view wx:else>
