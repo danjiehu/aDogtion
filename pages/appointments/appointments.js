@@ -54,7 +54,7 @@ Page({
       (res)=>{console.log(res)
       
       page.setData({
-        appointments:res.data.objects
+        appointments:res.data.objects.reverse()
       },()=>{
         wx.hideLoading()
       //   if(this.data.appointments[0]) {
