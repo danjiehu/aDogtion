@@ -18,7 +18,7 @@
 </view>
 
 <view class="white-container">
-  <view wx:if="{{currentUser}}">
+  <view wx:if="{{userInfo}}">
     <image wx:if="{{!hasLike}}" bindtap="addLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicbXFooHVS1Z.svg"></image>
     <image wx:if="{{hasLike}}" bindtap="removeLike" class="btn-fav" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbicSl9lyQAPx9.svg"></image>
   </view>
@@ -96,7 +96,7 @@
 
 
    <!-- YELLOW BUTTONS BELOW -->
-   <block wx:if="{{currentUser}}">
+   <block wx:if="{{userInfo}}">
     <view class="yellow-btn">
       <view wx:if="{{dog.foster}}" class="bold playfair larger" bindtap="fosterToContact">FOSTER</view>
       <view wx:if="{{dog.foster && dog.adopt}}" class="right-border"></view>

@@ -1,15 +1,15 @@
 <!--pages/profile/profile.wxml-->
 <view class="white-container">
-  <view wx:if="{{currentUser}}" class="center">
-    <view class="user-icon" style="background-image: url('{{currentUser.avatar}}')"></view>
-    <view class="medium-txt">{{currentUser.nickname}}</view>
+  <view wx:if="{{userInfo}}" class="center">
+    <view class="user-icon" style="background-image: url('{{userInfo.avatarUrl}}')"></view>
+    <view class="medium-txt">{{userInfo.nickname}}</view>
   </view>  
   <view wx:else>
     <view class="adogtion bold playfair">aDogtion</view>
   </view> 
 </view>
 
-<block wx:if="{{!currentUser}}" >
+<block wx:if="{{!userInfo}}" >
   <view class="container-white">
     <image class="empty-img" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXbiccrE9Kdr5bd.svg"></image> 
       <view class="empty-title bold playfair center-txt">Oops!</view>
@@ -24,10 +24,10 @@
     <image mode="widthFix" class="icon-btn-notification" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lXp4FViufPrbFv3.svg"></image>
   </view> 
 
-  <view wx:if="{{selected_dogs[0]}}">
+  <view wx:if="{{favouritedDogs[0]}}">
     <view class="dogs-title playfair bold">Your Favorite Dogs</view>
       <view class="card-flexbox">
-        <block wx:for="{{selected_dogs}}" wx:key="key" wx:for-item="dog">
+        <block wx:for="{{favouritedDogs}}" wx:key="key" wx:for-item="dog">
           <view class="card" data-id="{{dog.dog_id.id}}" bindtap="navigateToDog">
             <image class="like-button" src="https://cloud-minapp-39668.cloud.ifanrusercontent.com/1lZaomy4turrxNsw.svg"></image>
             <view class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url('{{dog.dog_id.image[0].path}}')">

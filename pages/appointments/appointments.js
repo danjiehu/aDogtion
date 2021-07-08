@@ -1,7 +1,8 @@
 
 Page({
   data: {
-    currentUser: wx.getStorageSync('userInfo'),
+    currentUser: wx.getStorageSync('userId'),
+    // currentUser: getApp().globalData.userId,
     action:null,
     appointments: [],
     // dogProfiles:[]
@@ -12,7 +13,7 @@ Page({
   },
 
   onLoad: function () {
-
+    console.log("appointments loaded")
   },
 
   onReady: function () {
@@ -38,7 +39,7 @@ Page({
 
     let forms = new wx.BaaS.TableObject('adogtion_forms')
 
-    let user = page.data.currentUser.id
+    let user = page.data.currentUser
     let queryUser = new wx.BaaS.Query()
     queryUser.compare('user_id', "=", user)
 
@@ -50,10 +51,10 @@ Page({
     // let dogs = new wx.BaaS.TableObject('adogtion_dogs')
 
     forms.setQuery(andQuery).expand('dog_id').find().then(
-      (res)=>{console.log("36",res)
+      (res)=>{console.log(res)
       
       page.setData({
-        appointments:res.data.objects
+        appointments:res.data.objects.reverse()
       },()=>{
         wx.hideLoading()
       //   if(this.data.appointments[0]) {

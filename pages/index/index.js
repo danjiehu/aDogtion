@@ -7,32 +7,32 @@ Page({
     // for the dogs tab\
     adopt: false,
     foster: false,
-    currentUser: null,
-    canIUseGetUserProfile: false,
-    hasUserInfo: false,
-    selected_dogs: []
+    // userInfo: null,
+    // canIUseGetUserProfile: false,
+    // hasUserInfo: false,
+    // favouritedDogs: []
   },
 
-  onLoad: function (options) {
-    const self = this
-    if (wx.getUserProfile) {
-      self.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-    wx.getStorage({
-      key: 'userInfo',
-      success: res=>{
-        console.log('user info', res)
-        self.setData({
-          currentUser: res.data,
-          hasUserInfo: true
-        }, ()=>{
-          // self.getFavourites()
-        })
-      }
-    })
-  },
+  // onLoad: function (options) {
+  //   const self = this
+  //   if (wx.getUserProfile) {
+  //     self.setData({
+  //       canIUseGetUserProfile: true
+  //     })
+  //   }
+  //   wx.getStorage({
+  //     key: 'userInfo',
+  //     success: res=>{
+  //       console.log('user info', res)
+  //       self.setData({
+  //         userInfo: res.data,
+  //         hasUserInfo: true
+  //       }, ()=>{
+  //         // self.getFavourites()
+  //       })
+  //     }
+  //   })
+  // },
 
 //   haveUserInfo(e){
 //     console.log("has user info e")
