@@ -159,7 +159,7 @@ Page({
     const promise = new Promise(resolve => {
       setTimeout(() => {
         resolve({
-          title: `meet ${this.data.dog.name} 🥰 - find your best friend with aDogtion`,
+          title: `Meet ${this.data.dog.name} 🥰 - find your best friend with aDogtion`,
           path: `/pages/dog/dog?id=${this.data.dog.id}`,
           imageUrl: this.data.dog.image[0].path,
         })
