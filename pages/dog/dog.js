@@ -33,6 +33,17 @@ Page({
       }
     })
 
+    wx.getStorage({
+      key: 'userInfo',
+      success: res=>{
+        console.log(res)
+        self.setData({
+          userInfo: res.data,
+        }, ()=>{
+        })
+      }
+    })
+
     // this.setData({
     //   currentUser: app.globalData.userInfo
     // })
