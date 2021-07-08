@@ -17,7 +17,7 @@ Component({
             userId: res.id
           })
           this.getFavourites()
-          wx.setStorage('userId', res.id)
+          wx.setStorageSync('userId', res.id)
         }, err => {
           // 静默获取openid等基础信息失败
         })

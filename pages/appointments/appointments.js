@@ -2,6 +2,7 @@
 Page({
   data: {
     currentUser: wx.getStorageSync('userId'),
+    // currentUser: getApp().globalData.userId,
     action:null,
     appointments: [],
     // dogProfiles:[]
@@ -12,7 +13,7 @@ Page({
   },
 
   onLoad: function () {
-
+    console.log("appointments loaded")
   },
 
   onReady: function () {
@@ -50,7 +51,7 @@ Page({
     // let dogs = new wx.BaaS.TableObject('adogtion_dogs')
 
     forms.setQuery(andQuery).expand('dog_id').find().then(
-      (res)=>{console.log("36",res)
+      (res)=>{console.log(res)
       
       page.setData({
         appointments:res.data.objects
