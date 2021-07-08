@@ -1,7 +1,7 @@
 
 Page({
   data: {
-    currentUser: wx.getStorageSync('userInfo'),
+    currentUser: wx.getStorageSync('userId'),
     action:null,
     appointments: [],
     // dogProfiles:[]
@@ -38,7 +38,7 @@ Page({
 
     let forms = new wx.BaaS.TableObject('adogtion_forms')
 
-    let user = page.data.currentUser.id
+    let user = page.data.currentUser
     let queryUser = new wx.BaaS.Query()
     queryUser.compare('user_id', "=", user)
 

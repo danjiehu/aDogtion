@@ -1,154 +1,128 @@
-const app = getApp()
-
 Component({
-  properties: {
-    currentUser: {
-      type: Object
-    },
-    selected_dogs: {
-      type: Array
-    }
-  },
 
   data: {
-    dogs: [],
-    currentUser: null,
-    canIUseGetUserProfile: false,
-    hasUserInfo: false,
-    selected_dogs: []
+    userId: null,
+    userInfo: null,
+    favouritedDogs: []
   },
 
-  ready: function (options) {
-    console.log("im inside profile, !wx.getUserProfile boolean is", !wx.getUserProfile)
-    const self = this
-    self.data.currentUser ? self.getFavourites() : ''
-    if (wx.getUserProfile) {
-      self.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-    wx.getStorage({
-      key: 'userInfo',
-      success: res=>{
-        console.log(res)
-        self.setData({
-          currentUser: res.data,
-          hasUserInfo: true
-        }, ()=>{
-          // self.getFavourites()
-        })
-      }
-    })
+  ready: function(){
 
-    // this.setData({
-    //   currentUser: app.globalData.userInfo
-    // })
-    
+    const page = this
+
+        wx.BaaS.auth.loginWithWechat().then(res => {
+          // 静默获取openid等基础信息
+          console.log("user ids",res)
+          page.setData({
+            userId: res.id
+          })
+          this.getFavourites()
+          wx.setStorage('userId', res.id)
+        }, err => {
+          // 静默获取openid等基础信息失败
+        })
+      
+      wx.getStorage({
+        key:"userInfo",
+        success: res=>{
+          console.log("getStorage success res", res)
+          page.setData({
+            userInfo: res.data
+          })
+          getApp().globalData.userInfo = res.data
+        }
+      })
+
+  },
+
+  pageLifetimes: {
+
+    show: function(){ 
+
+       
+
+      
+
+    // end of show function
+    }
+
   },
 
   methods: {
-    getFavourites: function () {    
-      let self = this
-      // calling the baas to check if a user has this dog in favourites
-      let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
-      // query, the user match
-      let userQuery = new wx.BaaS.Query();
-      userQuery.compare('user_id', "=", self.data.currentUser.id)
-      console.log("checking ids", self.data.currentUser.id)
-      Favourites.expand('dog_id').setQuery(userQuery).find().then(
-        (res) => {
-          self.setData({
-            selected_dogs: res.data.objects
-          })
-          console.log('loaded dogs', self.data.selected_dogs)
-        },
-        (err) => {
-          console.log('err', err)
-        }
-      )
-    },
 
-    getUserInfo(e) {
-      getApp().globalData.userInfo = e.detail.userInfo
-      // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-      this.setData({
-        userInfo: e.detail.userInfo,
-        hasUserInfo: true
-      })
-    },
+   getProfile(){
 
-    getProfile(e) {
-      console.log("getUserProfile", e)
-      // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-      // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-      let self = this
-      wx.getUserProfile({
-        desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-        success: (res) => {
-          console.log("getUserProfile complete res",res)
-          console.log("getUserProfile res.userInfo",res.userInfo)
-          let userInfo = res.userInfo
-          console.log("varibale userInfo", userInfo)
-          wx.setStorageSync('userInfo', userInfo)
-          
-          getApp().globalData.userInfo = userInfo
-          this.setData({
-            currentUser: userInfo,
-            hasUserInfo: true
-          })
-
-        //   wx.BaaS.auth.updateUserInfo()
-
-        //   wx.BaaS.auth.loginWithWechat(userInfo).then(
-        //   (res) => {
-        //     console.log('baas update', res);
-        //     self.setData({currentUser: res});
-        //     self.triggerEvent("haveUserInfo", res)
-        //     self.getFavourites()
-        //     wx.setStorageSync('userInfo', res)
-        //   },
-        //   err => {
-        //     console.log('error!', err)
-        //   }
-        //  )
-        }
-      })
-    },
-
-    navigateToAbout: function(e) {
-      wx.navigateTo({
-        url: '/pages/about/about'
-      })
-      console.log('navigate to about')
-    },
-  
-    navigateToStories: function(e) {
-      wx.navigateTo({
-        url: '/pages/stories/stories'
-      })
-      console.log('navigate to stories')
-    },
-    
-    navigateToDogs: function(e) {
-      console.log('see dogs button', e)
-      this.triggerEvent("toAdoptDogs")
-    },
-
-    navigateToDog: function(e) {
-      console.log('calling a dog', e)
-      wx.navigateTo({
-        url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
-      })
-    },
-
-    navigateToAppointments: function(e){
-      console.log('calling a dog', e)
-        wx.navigateTo({
-          url: "/pages/appointments/appointments",
+    wx.getUserProfile({
+      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log("getUserProfile api res", res)
+        this.setData({
+          userInfo: res.userInfo,
         })
-    }
+        wx.setStorageSync('userInfo', res.userInfo)
+      }
+    })
 
+  //  end of getProfile method, end of login
+  },
 
+  getFavourites: function () {    
+    let self = this
+    // calling the baas to check if a user has this dog in favourites
+    let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
+    // query, the user match
+    let userQuery = new wx.BaaS.Query();
+    userQuery.compare('user_id', "=", self.data.userId)
+    console.log("checking ids", self.data.userId)
+    Favourites.expand('dog_id').setQuery(userQuery).find().then(
+      (res) => {
+        self.setData({
+          favouritedDogs: res.data.objects
+        })
+        console.log('favouritedDogs', self.data.favouritedDogs)
+      },
+      (err) => {
+        console.log('err', err)
+      }
+    )
+  },
+
+  navigateToAbout: function(e) {
+    wx.navigateTo({
+      url: '/pages/about/about'
+    })
+    console.log('navigate to about')
+  },
+
+  navigateToStories: function(e) {
+    wx.navigateTo({
+      url: '/pages/stories/stories'
+    })
+    console.log('navigate to stories')
+  },
+  
+  navigateToDogs: function(e) {
+    console.log('see dogs button', e)
+    this.triggerEvent("toAdoptDogs")
+  },
+
+  navigateToDog: function(e) {
+    console.log('calling a dog', e)
+    wx.navigateTo({
+      url: `/pages/dog/dog?id=${e.currentTarget.dataset.id}`,
+    })
+  },
+
+  navigateToAppointments: function(e){
+    console.log('calling a dog', e)
+      wx.navigateTo({
+        url: "/pages/appointments/appointments",
+      })
   }
 
+    
+  //end of methods
+  }
+
+// end of component
 })

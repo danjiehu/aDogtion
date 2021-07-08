@@ -6,6 +6,7 @@ Page({
     swiperList: [],
     activeSwiper: 0,
     dog: [],
+    // userId: null,
     currentUser: null,
     canIUseGetUserProfile: false,
     hasUserInfo: false,
@@ -20,7 +21,7 @@ Page({
       })
     }
     wx.getStorage({
-      key: 'userInfo',
+      key: 'userId',
       success: res=>{
         console.log(res)
         self.setData({
@@ -110,7 +111,7 @@ Page({
     let newLike = Likes.create()
     newLike.set({
       dog_id: this.data.dog.id,
-      user_id: this.data.currentUser.id
+      user_id: this.data.currentUser
     })
 
     newLike.save().then(
@@ -169,8 +170,8 @@ Page({
     let Favourites = new wx.BaaS.TableObject('adogtion_favourites')
     // query 1, the user match
     let userQuery = new wx.BaaS.Query();
-    userQuery.compare('user_id', "=", self.data.currentUser.id)
-    console.log("checking ids", self.data.currentUser.id, self.options.id)
+    userQuery.compare('user_id', "=", self.data.currentUser)
+    console.log("checking ids", self.data.currentUser, self.options.id)
     // query 2, the dog match
     let dogQuery = new wx.BaaS.Query();
     dogQuery.compare('dog_id', "=", self.options.id)

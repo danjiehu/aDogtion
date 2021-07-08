@@ -4,7 +4,7 @@ const app = getApp()
 Page({
 
   data: {
-    currentUser: wx.getStorageSync('userInfo'),
+    currentUser: wx.getStorageSync('userId'),
     action:null,
     dogId: null,
     dogProfile: {},
@@ -96,7 +96,7 @@ Page({
       if (name&&phone&&message) {
         newForm.set({
           status: 0,
-          user_id: page.data.currentUser.id,
+          user_id: page.data.currentUser,
           dog_id: page.data.dogId,
           name,
           phone,
